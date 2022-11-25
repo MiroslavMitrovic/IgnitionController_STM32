@@ -165,4 +165,5 @@ void Firing_v_Cylinder1(void)
        GlobalDataValues.FiringState = en_FiringCylinder2Completed;
        g_usSinceDetection = 0; //reset the value since detection
     }
+
 }
