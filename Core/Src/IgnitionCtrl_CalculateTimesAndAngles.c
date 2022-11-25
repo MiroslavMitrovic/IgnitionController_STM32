@@ -83,8 +83,7 @@ uint8_t get_u_AdvanceAngle(uint16_t in_u8_RPM)
      {
          //Do nothing
      }
-//     l_AdvanceAngleInt = (int8_t) round( ( ( l_p1 * pow(in_u8_RPM,5) ) + (l_p2 * pow(in_u8_RPM,4))
-//             + (l_p3 * pow(in_u8_RPM,3))   ));
+
           l_AdvanceAngleInt = (int8_t) round( ( ( l_p1 * pow(in_u8_RPM,5) ) + (l_p2 * pow(in_u8_RPM,4))
              + (l_p3 * pow(in_u8_RPM,3)) + (l_p4 * pow(in_u8_RPM,2)) + (l_p5 * in_u8_RPM) + l_p6  ));
       l_AdvanceAngleInt = (int8_t) round( ( ( l_p1 * (in_u8_RPM^5) ) + (l_p2 * (in_u8_RPM^4))
@@ -97,30 +96,7 @@ uint8_t get_u_AdvanceAngle(uint16_t in_u8_RPM)
      {
          //do nothing
      }
-/*To be checked what is faster Polynomial calculation or read from memory, investigate Pros and Cons*/	 
-/*	 if (!(( in_u8_RPM >= l_RPMMinValue) && ( in_u8_RPM <= l_RPMMaxValue))) //Value range check
-	 {
-		  while(1); //error WDT will reset the MCU
-	 }
-	 
-	 for(int i =0, j = 1 ; i < IGNITION_ANGLE_TABLE_ROWS; i++ , j++ )
-	 {
-		 if( (g_cIgnitionAngleTable[0][i] <= in_u8_RPM) && ( in_u8_RPM <= g_cIgnitionAngleTable[0][j] ) && (j <= IGNITION_ANGLE_TABLE_ROWS ) )
-		 {
-			l_AdvanceAngle =  map(in_u8_RPM, g_cIgnitionAngleTable[0][i], g_cIgnitionAngleTable[0][j],
-                    g_cIgnitionAngleTable[1][i], g_cIgnitionAngleTable[1][j] );
-         }
-         else if( g_cIgnitionAngleTable[0][i] == in_u8_RPM )
-         {
-             l_AdvanceAngle = g_cIgnitionAngleTable[1][i];
-         }
-         else
-         {
-             //This case should not happen, variable put just in case
-             l_AdvanceAngle = 0;
-         }
-	 }
-*/  // PORTB &= ~( 1<< PB1); //for debug purposes only 
+
 	 return (uint8_t)l_AdvanceAngleInt;
       
 }
