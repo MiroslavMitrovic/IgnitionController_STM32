@@ -1,0 +1,6 @@
+../Core/Src/IgnitionCtrl_HW_Wrapper.c:55:6:HW_GPIO_v_Init	4	static
+../Core/Src/IgnitionCtrl_HW_Wrapper.c:67:6:HW_Timer_v_Init	4	static
+../Core/Src/IgnitionCtrl_HW_Wrapper.c:77:6:HW_FiringPin_v_Cylinder_1_Set	8	static
+../Core/Src/IgnitionCtrl_HW_Wrapper.c:83:6:HW_FiringPin_v_Cylinder_1_Reset	8	static
+../Core/Src/IgnitionCtrl_HW_Wrapper.c:89:6:HW_FiringPin_v_Cylinder_2_Set	8	static
+../Core/Src/IgnitionCtrl_HW_Wrapper.c:95:6:HW_FiringPin_v_Cylinder_2_Reset	8	static
