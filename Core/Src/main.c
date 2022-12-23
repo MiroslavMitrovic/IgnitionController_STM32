@@ -282,7 +282,22 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	/* Prevent unused argument(s) compilation warning */
+	if(Signal_1_Pin == GPIO_Pin)
+	{
+		if(10 < g_uSDebouncingSignalCounter)
+		{
+			IgnitionControl_v_UpdateSignalTime();
+			g_uSDebouncingSignalCounter = 0;
+		}
+	}
+	else{}
+  /* NOTE: This function Should not be modified, when the callback is needed,
+           the HAL_GPIO_EXTI_Callback could be implemented in the user file
+   */
+}
 /* USER CODE END 4 */
 
 /**

@@ -1,6 +1,6 @@
 ../Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:40:13:map	24	static
 ../Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:45:9:get_u_AdvanceAngle	64	static
-../Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:128:10:CalculateTime_u_FromAngle	32	static
-../Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:149:11:Calculate_u_FiringTimeCylinder	24	static
-../Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:156:6:Firing_v_Cylinder1	8	static
-../Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:174:8:Firing_v_Cylinder2	8	static
+../Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:103:10:CalculateTime_u_FromAngle	32	static
+../Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:124:17:Calculate_u_FiringTimeCylinder	24	static
+../Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:131:6:Firing_v_Cylinder1	8	static
+../Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:151:8:Firing_v_Cylinder2	8	static

@@ -27,20 +27,21 @@
     
 #include "IgnitionCotrol_Main.h"
 
-tst_GlobalData GlobalDataValues;
+volatile tst_GlobalData GlobalDataValues;
 
 void Data_v_Init(void)
 {
 	GlobalDataValues.RPM = 0;
 	GlobalDataValues.AdvanceAngle = 0;
 	GlobalDataValues.CalculationState = en_InitState; 
-	GlobalDataValues.IsSynchronised = 0;
+	GlobalDataValues.SynchronizationStatus = 0;
 	GlobalDataValues.Microseconds = 0;
     GlobalDataValues.FiringState = en_FiringStateInit;
     GlobalDataValues.FiringTimeCyl_1 = 0;
     GlobalDataValues.FiringTimeCyl_2 = 0;
     GlobalDataValues.TimeElapsedSinceDetection = 0;
-    
+    GlobalDataValues.isCylinder1CoilCharging = false;
+    GlobalDataValues.isCylinder2CoilCharging = false;
     
 }
 
@@ -50,7 +51,9 @@ void IgnitionCtrl_v_Init(void)
 	GPIO_v_Init();
 	Clock_v_Init();
 	Timer_v_Init();
-	//sei();
+#ifdef ATMEL_MCU
+	sei();
+#endif /*ATMEL_MCU*/
 	GlobalDataValues.CalculationState = en_InitFinished;
 	
 	
@@ -65,8 +68,7 @@ void Clock_v_Init(void)
 {
 	
 }
-/*For one interrupt routine there is a need for about 10 cycles, if we set it up to 1uS at 1 or 8MHz losses are significant.
-To be seen if there is a possibility to fetch around 250uS or even 500uS at each ISR and then multiply the counter respectively */
+
 void Timer_v_Init(void)
 {
 	HW_Timer_v_Init();
