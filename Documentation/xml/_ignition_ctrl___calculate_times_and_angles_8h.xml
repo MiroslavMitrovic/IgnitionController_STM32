@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_ignition_ctrl___calculate_times_and_angles_8h" kind="file" language="C++">
+    <compoundname>IgnitionCtrl_CalculateTimesAndAngles.h</compoundname>
+    <includes refid="_ignition_cotrol___main_8h" local="yes">IgnitionCotrol_Main.h</includes>
+    <includedby refid="_ignition_cotrol___main_8h" local="yes">IgnitionController_STM32/Core/Inc/IgnitionCotrol_Main.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>IgnitionCotrol_Main.h</label>
+        <link refid="_ignition_cotrol___main_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h</label>
+        <link refid="_ignition_ctrl___calculate_times_and_angles_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IgnitionCtrl_Config.h</label>
+        <link refid="_ignition_ctrl___config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>IgnitionCtrl_HW_Wrapper.h</label>
+        <link refid="_ignition_ctrl___h_w___wrapper_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>IgnitionCtrl_IgnAngleTable.h</label>
+        <link refid="_ignition_ctrl___ign_angle_table_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>IgnitionCtrl_Init.h</label>
+        <link refid="_ignition_ctrl___init_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>math.h</label>
+      </node>
+      <node id="10">
+        <label>stdbool.h</label>
+      </node>
+      <node id="9">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="7">
+        <label>stm32f4xx_hal.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCotrol_Main.h</label>
+        <link refid="_ignition_cotrol___main_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h</label>
+        <link refid="_ignition_ctrl___calculate_times_and_angles_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h</label>
+        <link refid="_ignition_ctrl___h_w___wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_IgnAngleTable.h</label>
+        <link refid="_ignition_ctrl___ign_angle_table_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h</label>
+        <link refid="_ignition_ctrl___init_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>IgnitionController_STM32/Core/Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCotrol_Main.c</label>
+        <link refid="_ignition_cotrol___main_8c"/>
+      </node>
+      <node id="11">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c</label>
+        <link refid="_ignition_ctrl___calculate_times_and_angles_8c"/>
+      </node>
+      <node id="12">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c</label>
+        <link refid="_ignition_ctrl___h_w___wrapper_8c"/>
+      </node>
+      <node id="13">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_IgnAngleTable.c</label>
+        <link refid="_ignition_ctrl___ign_angle_table_8c"/>
+      </node>
+      <node id="14">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c</label>
+        <link refid="_ignition_ctrl___init_8c"/>
+      </node>
+      <node id="7">
+        <label>IgnitionController_STM32/Core/Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="8">
+        <label>IgnitionController_STM32/Core/Src/stm32f4xx_hal_msp.c</label>
+        <link refid="stm32f4xx__hal__msp_8c"/>
+      </node>
+      <node id="9">
+        <label>IgnitionController_STM32/Core/Src/stm32f4xx_it.c</label>
+        <link refid="stm32f4xx__it_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_ignition_ctrl___calculate_times_and_angles_8h_1a646bb9caf33760e0b52a8ee6a5b9f963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t CalculateTime_u_FromAngle</definition>
+        <argsstring>(uint16_t in_u16_RPM, uint16_t in_u16_Angle)</argsstring>
+        <name>CalculateTime_u_FromAngle</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>in_u16_RPM</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>in_u16_Angle</declname>
+        </param>
+        <briefdescription>
+<para>Function that will perform the calculation of Time based on RPMs and given Angle<linebreak/>
+. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_u16_RPM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_u16_Angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Angle value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" line="37" column="10" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c" bodystart="104" bodyend="123" declfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" declline="37" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___calculate_times_and_angles_8h_1acb1372567c5860c1623505b302cc675d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t CalculateAngle_u_FromTime</definition>
+        <argsstring>(uint16_t in_u16_RPM, uint32_t in_u32_Time)</argsstring>
+        <name>CalculateAngle_u_FromTime</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>in_u16_RPM</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>in_u32_Time</declname>
+        </param>
+        <briefdescription>
+<para>Function that will perform the calculation of Angle based on RPMs and given Time<linebreak/>
+. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_u16_RPM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_u32_Time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Angle value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" line="43" column="10" declfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" declline="43" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___calculate_times_and_angles_8h_1a939e813cf5c8132fa695151454b5c502" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t Calculate_u_RPM</definition>
+        <argsstring>(void)</argsstring>
+        <name>Calculate_u_RPM</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function that will perform the calculation of RPM based on time between two High Signals<linebreak/>
+. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>[none]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RPM value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" line="48" column="17" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCotrol_Main.c" bodystart="319" bodyend="340" declfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" declline="48" declcolumn="17"/>
+        <references refid="_ignition_cotrol___main_8c_1ab584a2f8065f9cbf2a8274053c5c16c6" compoundref="_ignition_cotrol___main_8c" startline="34">g_FirstSensorTimeCurrent_us</references>
+        <references refid="_ignition_cotrol___main_8c_1a65e6326f39cc167bf68244ba9754b213" compoundref="_ignition_cotrol___main_8c" startline="33">g_FirstSensorTimePrevious_us</references>
+        <references refid="_ignition_cotrol___main_8c_1ab4b9e8a901568f46ce86e5a11edd88dc" compoundref="_ignition_cotrol___main_8c" startline="41">g_SignalState</references>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___calculate_times_and_angles_8h_1a660403edb1c0facbab9c155959b52e3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t get_u_AdvanceAngle</definition>
+        <argsstring>(uint16_t in_u16_RPM)</argsstring>
+        <name>get_u_AdvanceAngle</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>in_u16_RPM</declname>
+        </param>
+        <briefdescription>
+<para>Function that gets the Advance angle value based on RPMs mapped in LUT<linebreak/>
+. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_u16_RPM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Advance Angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" line="53" column="9" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c" bodystart="45" bodyend="102" declfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" declline="53" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___calculate_times_and_angles_8h_1aada2d75bc8a8c6eb845bd940eadfa3fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long map</definition>
+        <argsstring>(long x, long in_min, long in_max, long out_min, long out_max)</argsstring>
+        <name>map</name>
+        <param>
+          <type>long</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>in_min</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>in_max</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>out_min</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>out_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" line="55" column="6" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c" bodystart="40" bodyend="42" declfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" declline="55" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___calculate_times_and_angles_8h_1a4580ed039652830762d8b8702cdc6e52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Calculate_u_FiringTimeCylinder</definition>
+        <argsstring>(uint32_t in_u32_AdvanceAngleTime, uint32_t in_u32_360degRevolutionTime)</argsstring>
+        <name>Calculate_u_FiringTimeCylinder</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>in_u32_AdvanceAngleTime</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>in_u32_360degRevolutionTime</declname>
+        </param>
+        <briefdescription>
+<para>Function for calculation of ignition firing time<linebreak/>
+Calculation performed by taking time for 360deg f(t) - Advance Angle f(t) Signal must be raised to HIGH before this calculated time for the value of IGNITION_DWELL_TIME_US to charge the ignition coil then to return it to LOW pin state. Pin HIGH start time - 360deg f(t) - Advance Angle f(t) - IGNITION_DWELL_TIME_US Pin LOW start time - 360deg f(t) - Advance Angle f(t) <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_u16_AdvanceAngleTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_u32_360degRevolutionTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FiringTime </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" line="67" column="11" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c" bodystart="125" bodyend="130" declfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" declline="67" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___calculate_times_and_angles_8h_1a3bebf44fe8ed57a3509fa5392002e359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Firing_v_Cylinder1</definition>
+        <argsstring>(void)</argsstring>
+        <name>Firing_v_Cylinder1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function for Firing Cylinder1<linebreak/>
+Firing will be performed According to the Calculated time - IGNITION_DWELL_TIME_US Signal must be raised to HIGH before this calculated time for the value of IGNITION_DWELL_TIME_US to charge the ignition coil then to return it to LOW pin state. Pin HIGH start time - 360deg f(t) - Advance Angle f(t) - IGNITION_DWELL_TIME_US Pin LOW start time - 360deg f(t) - Advance Angle f(t) <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" line="75" column="8" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c" bodystart="132" bodyend="149" declfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" declline="75" declcolumn="8"/>
+        <references refid="_ignition_cotrol___main_8h_1a710bd901715e9269e6d6ad69e21d487fadee73b92c8b73f0965f62b4954b63536" compoundref="_ignition_cotrol___main_8h" startline="57">en_FiringCylinder1Completed</references>
+        <references refid="structtst___global_data_1a1cfd72f018ee67350d267881b0ea6016" compoundref="_ignition_cotrol___main_8h" startline="66">tst_GlobalData::FiringState</references>
+        <references refid="structtst___global_data_1a8958a5843f9ebdd5d739faf158e5484e" compoundref="_ignition_cotrol___main_8h" startline="71">tst_GlobalData::FiringTimeCyl_1</references>
+        <references refid="_ignition_ctrl___calculate_times_and_angles_8c_1a02bec61a2faac061b16f6e8485df1a1f" compoundref="_ignition_ctrl___init_8c" startline="30">GlobalDataValues</references>
+        <references refid="_ignition_ctrl___h_w___wrapper_8h_1ae0ef308764e5d6996ba4ae0cca59f852" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="83" endline="87">HW_FiringPin_v_Cylinder_1_Reset</references>
+        <references refid="_ignition_ctrl___h_w___wrapper_8h_1a5135dd8ad7033595f8e06894491b4d27" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="77" endline="81">HW_FiringPin_v_Cylinder_1_Set</references>
+        <references refid="_ignition_ctrl___config_8h_1a1bb3ba304faf350d68c2c094aaaaf5f1" compoundref="_ignition_ctrl___config_8h" startline="41">IGNITION_DWELL_TIME_US</references>
+        <references refid="structtst___global_data_1ac984068150e375bc43d3b2ef7bc99e52" compoundref="_ignition_cotrol___main_8h" startline="73">tst_GlobalData::TimeElapsedSinceDetection</references>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___calculate_times_and_angles_8h_1a248b7c0d091b3047f96cd05d75e96ce8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Firing_v_Cylinder2</definition>
+        <argsstring>(void)</argsstring>
+        <name>Firing_v_Cylinder2</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function for Firing Cylinder2<linebreak/>
+Firing will be performed According to the Calculated time - IGNITION_DWELL_TIME_US Signal must be raised to HIGH before this calculated time for the value of IGNITION_DWELL_TIME_US to charge the ignition coil then to return it to LOW pin state. Pin HIGH start time - 360deg + 90deg f(t) - Advance Angle f(t) - IGNITION_DWELL_TIME_US Pin LOW start time - 360deg + 90deg f(t) - Advance Angle f(t) <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" line="83" column="8" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c" bodystart="150" bodyend="169" declfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h" declline="83" declcolumn="8"/>
+        <references refid="_ignition_cotrol___main_8h_1a710bd901715e9269e6d6ad69e21d487fa5563bc20a5fe9af1c494bbb4341d4fac" compoundref="_ignition_cotrol___main_8h" startline="59">en_FiringCylinder2Completed</references>
+        <references refid="structtst___global_data_1a1cfd72f018ee67350d267881b0ea6016" compoundref="_ignition_cotrol___main_8h" startline="66">tst_GlobalData::FiringState</references>
+        <references refid="structtst___global_data_1af5a5e10dc60bbb58070a2679bd1d4973" compoundref="_ignition_cotrol___main_8h" startline="72">tst_GlobalData::FiringTimeCyl_2</references>
+        <references refid="_ignition_ctrl___calculate_times_and_angles_8c_1a092aacf4a5d96a3ff4189089c5afa060" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="41">g_usSinceDetection</references>
+        <references refid="_ignition_ctrl___calculate_times_and_angles_8c_1a02bec61a2faac061b16f6e8485df1a1f" compoundref="_ignition_ctrl___init_8c" startline="30">GlobalDataValues</references>
+        <references refid="_ignition_ctrl___h_w___wrapper_8h_1a590cf5a2723e29159eb734bcecd6ca73" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="95" endline="99">HW_FiringPin_v_Cylinder_2_Reset</references>
+        <references refid="_ignition_ctrl___h_w___wrapper_8h_1ad55d5e5a3aa2255aae4dce69f422c42e" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="89" endline="93">HW_FiringPin_v_Cylinder_2_Set</references>
+        <references refid="_ignition_ctrl___config_8h_1a1bb3ba304faf350d68c2c094aaaaf5f1" compoundref="_ignition_ctrl___config_8h" startline="41">IGNITION_DWELL_TIME_US</references>
+        <references refid="structtst___global_data_1ac984068150e375bc43d3b2ef7bc99e52" compoundref="_ignition_cotrol___main_8h" startline="73">tst_GlobalData::TimeElapsedSinceDetection</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>[description] </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Miroslav Mitrovic Created on September 16, 2022, 7:33 PM @Copyright 2022 by Miroslav Mitrovic <ulink url="mailto:mmitrovicmas13@gmail.com">mmitrovicmas13@gmail.com</ulink></para>
+</simplesect>
+This file is part of open source application.</para>
+<para>Open source application is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</para>
+<para>Open source application is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para>
+<para>You should have received a copy of the GNU General Public License along with this application. If not, see <ulink url="http://www.gnu.org/licenses">http://www.gnu.org/licenses</ulink>.</para>
+<para>@license GPL-3.0+ <ulink url="http://spdx.org/licenses/GPL-3.0+">http://spdx.org/licenses/GPL-3.0+</ulink> </para>
+    </detaileddescription>
+    <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_ignition_ctrl___h_w___wrapper_8c" kind="file" language="C++">
+    <compoundname>IgnitionCtrl_HW_Wrapper.c</compoundname>
+    <includes refid="_ignition_cotrol___main_8h" local="yes">IgnitionCotrol_Main.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>IgnitionCotrol_Main.h</label>
+        <link refid="_ignition_cotrol___main_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>IgnitionCtrl_CalculateTimesAndAngles.h</label>
+        <link refid="_ignition_ctrl___calculate_times_and_angles_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IgnitionCtrl_Config.h</label>
+        <link refid="_ignition_ctrl___config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>IgnitionCtrl_HW_Wrapper.h</label>
+        <link refid="_ignition_ctrl___h_w___wrapper_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>IgnitionCtrl_IgnAngleTable.h</label>
+        <link refid="_ignition_ctrl___ign_angle_table_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>IgnitionCtrl_Init.h</label>
+        <link refid="_ignition_ctrl___init_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c</label>
+        <link refid="_ignition_ctrl___h_w___wrapper_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>math.h</label>
+      </node>
+      <node id="10">
+        <label>stdbool.h</label>
+      </node>
+      <node id="9">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="7">
+        <label>stm32f4xx_hal.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_ignition_ctrl___h_w___wrapper_8c_1a092aacf4a5d96a3ff4189089c5afa060" prot="public" static="no" mutable="no">
+        <type>volatile uint32_t</type>
+        <definition>volatile uint32_t g_usSinceDetection</definition>
+        <argsstring></argsstring>
+        <name>g_usSinceDetection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" line="41" column="20" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" bodystart="41" bodyend="-1"/>
+        <referencedby refid="_ignition_ctrl___calculate_times_and_angles_8h_1a248b7c0d091b3047f96cd05d75e96ce8" compoundref="_ignition_ctrl___calculate_times_and_angles_8c" startline="150" endline="169">Firing_v_Cylinder2</referencedby>
+        <referencedby refid="_ignition_ctrl___h_w___wrapper_8h_1af4a6d2b50759f9aa757f6e2e10a060b7" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="67" endline="75">HW_Timer_v_Init</referencedby>
+        <referencedby refid="stm32f4xx__it_8h_1a38ad4725462bdc5e86c4ead4f04b9fc2" compoundref="stm32f4xx__it_8c" startline="206" endline="217">TIM2_IRQHandler</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_ignition_ctrl___h_w___wrapper_8c_1afc637b5bcfc6d598ff2e2b1d0ab4edd0" prot="public" static="no" mutable="no">
+        <type>volatile uint32_t</type>
+        <definition>volatile uint32_t g_uSCounter</definition>
+        <argsstring></argsstring>
+        <name>g_uSCounter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" line="42" column="20" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" bodystart="42" bodyend="-1"/>
+        <referencedby refid="_ignition_ctrl___h_w___wrapper_8h_1af4a6d2b50759f9aa757f6e2e10a060b7" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="67" endline="75">HW_Timer_v_Init</referencedby>
+        <referencedby refid="stm32f4xx__it_8h_1a38ad4725462bdc5e86c4ead4f04b9fc2" compoundref="stm32f4xx__it_8c" startline="206" endline="217">TIM2_IRQHandler</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_ignition_ctrl___h_w___wrapper_8c_1a1c115895137c180f27875c28cb277e59" prot="public" static="no" mutable="no">
+        <type>volatile uint32_t</type>
+        <definition>volatile uint32_t g_uSDebouncingSignalCounter</definition>
+        <argsstring></argsstring>
+        <name>g_uSDebouncingSignalCounter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" line="43" column="20" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" bodystart="43" bodyend="-1"/>
+        <referencedby refid="_ignition_ctrl___h_w___wrapper_8h_1af4a6d2b50759f9aa757f6e2e10a060b7" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="67" endline="75">HW_Timer_v_Init</referencedby>
+        <referencedby refid="stm32f4xx__it_8h_1a38ad4725462bdc5e86c4ead4f04b9fc2" compoundref="stm32f4xx__it_8c" startline="206" endline="217">TIM2_IRQHandler</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_ignition_ctrl___h_w___wrapper_8c_1a0b4565ca857f7032c2d82697d36d26bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HW_GPIO_v_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>HW_GPIO_v_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialization of GPIO registers and Interrupt for input/output Pins<linebreak/>
+. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@params none <simplesect kind="return"><para>none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" line="55" column="6" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" bodystart="55" bodyend="65"/>
+        <referencedby refid="_ignition_ctrl___init_8h_1acbc6cd87e983c7303bb97021bf23413e" compoundref="_ignition_ctrl___init_8c" startline="60" endline="63">GPIO_v_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___h_w___wrapper_8c_1af4a6d2b50759f9aa757f6e2e10a060b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HW_Timer_v_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>HW_Timer_v_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialization of Timer for microseconds Counter<linebreak/>
+. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@params none <simplesect kind="return"><para>none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" line="67" column="6" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" bodystart="67" bodyend="75"/>
+        <references refid="_ignition_ctrl___h_w___wrapper_8c_1afc637b5bcfc6d598ff2e2b1d0ab4edd0" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="42">g_uSCounter</references>
+        <references refid="_ignition_ctrl___h_w___wrapper_8c_1a1c115895137c180f27875c28cb277e59" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="43">g_uSDebouncingSignalCounter</references>
+        <references refid="_ignition_ctrl___h_w___wrapper_8c_1a092aacf4a5d96a3ff4189089c5afa060" compoundref="_ignition_ctrl___h_w___wrapper_8c" startline="41">g_usSinceDetection</references>
+        <referencedby refid="_ignition_ctrl___init_8h_1ac25cd6967969086ea17c97f3b5d00eac" compoundref="_ignition_ctrl___init_8c" startline="70" endline="73">Timer_v_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___h_w___wrapper_8c_1a5135dd8ad7033595f8e06894491b4d27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HW_FiringPin_v_Cylinder_1_Set</definition>
+        <argsstring>(void)</argsstring>
+        <name>HW_FiringPin_v_Cylinder_1_Set</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Firing Pin for Cylinder 1 set to HIGH<linebreak/>
+. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@params none <simplesect kind="return"><para>none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" line="77" column="6" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" bodystart="77" bodyend="81"/>
+        <references refid="main_8h_1a6664d0311f9f672b321e0daff34b7ad4" compoundref="main_8h" startline="78">LD4_Pin</references>
+        <referencedby refid="_ignition_ctrl___calculate_times_and_angles_8h_1a3bebf44fe8ed57a3509fa5392002e359" compoundref="_ignition_ctrl___calculate_times_and_angles_8c" startline="132" endline="149">Firing_v_Cylinder1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___h_w___wrapper_8c_1ae0ef308764e5d6996ba4ae0cca59f852" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HW_FiringPin_v_Cylinder_1_Reset</definition>
+        <argsstring>(void)</argsstring>
+        <name>HW_FiringPin_v_Cylinder_1_Reset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Firing Pin for Cylinder 1 set to LOW<linebreak/>
+. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@params none <simplesect kind="return"><para>none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" line="83" column="6" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" bodystart="83" bodyend="87"/>
+        <references refid="main_8h_1a6664d0311f9f672b321e0daff34b7ad4" compoundref="main_8h" startline="78">LD4_Pin</references>
+        <referencedby refid="_ignition_ctrl___calculate_times_and_angles_8h_1a3bebf44fe8ed57a3509fa5392002e359" compoundref="_ignition_ctrl___calculate_times_and_angles_8c" startline="132" endline="149">Firing_v_Cylinder1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___h_w___wrapper_8c_1ad55d5e5a3aa2255aae4dce69f422c42e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HW_FiringPin_v_Cylinder_2_Set</definition>
+        <argsstring>(void)</argsstring>
+        <name>HW_FiringPin_v_Cylinder_2_Set</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Firing Pin for Cylinder 2 set to HIGH<linebreak/>
+. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@params none <simplesect kind="return"><para>none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" line="89" column="6" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" bodystart="89" bodyend="93"/>
+        <references refid="main_8h_1aee7b888dd4dbc9a801963f319ed98b11" compoundref="main_8h" startline="82">LD5_Pin</references>
+        <referencedby refid="_ignition_ctrl___calculate_times_and_angles_8h_1a248b7c0d091b3047f96cd05d75e96ce8" compoundref="_ignition_ctrl___calculate_times_and_angles_8c" startline="150" endline="169">Firing_v_Cylinder2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_ignition_ctrl___h_w___wrapper_8c_1a590cf5a2723e29159eb734bcecd6ca73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HW_FiringPin_v_Cylinder_2_Reset</definition>
+        <argsstring>(void)</argsstring>
+        <name>HW_FiringPin_v_Cylinder_2_Reset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Firing Pin for Cylinder 2 set to LOW<linebreak/>
+. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@params none <simplesect kind="return"><para>none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" line="95" column="6" bodyfile="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c" bodystart="95" bodyend="99"/>
+        <references refid="main_8h_1aee7b888dd4dbc9a801963f319ed98b11" compoundref="main_8h" startline="82">LD5_Pin</references>
+        <referencedby refid="_ignition_ctrl___calculate_times_and_angles_8h_1a248b7c0d091b3047f96cd05d75e96ce8" compoundref="_ignition_ctrl___calculate_times_and_angles_8c" startline="150" endline="169">Firing_v_Cylinder2</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>[description] </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Miroslav Mitrovic Created on September 16, 2022, 7:33 PM @Copyright 2022 by Miroslav Mitrovic <ulink url="mailto:mmitrovicmas13@gmail.com">mmitrovicmas13@gmail.com</ulink></para>
+</simplesect>
+This file is part of open source application.</para>
+<para>Open source application is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</para>
+<para>Open source application is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para>
+<para>You should have received a copy of the GNU General Public License along with this application. If not, see <ulink url="http://www.gnu.org/licenses">http://www.gnu.org/licenses</ulink>.</para>
+<para>@license GPL-3.0+ <ulink url="http://spdx.org/licenses/GPL-3.0+">http://spdx.org/licenses/GPL-3.0+</ulink> </para>
+    </detaileddescription>
+    <location file="IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c"/>
+  </compounddef>
+</doxygen>

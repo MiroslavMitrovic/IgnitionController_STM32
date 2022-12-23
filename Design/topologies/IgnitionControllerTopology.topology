@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<core:topology xmlns:constraint="http://www.ibm.com/ccl/soa/deploy/core/constraint/1.0.0/" xmlns:core="http://www.ibm.com/ccl/soa/deploy/core/1.0.0/" uuid="_VecF8R8oEe2AMdNk3rU9EA" description="Created on Thursday, 18 August 2022 21:02:41 o'clock CEST" displayName="IgnitionControllerTopology" name="IgnitionControllerTopology" decoratorSemantic="com.ibm.ccl.soa.deploy.core.tdds" mutabilityConfigurable="true">
+  <constraint:constraint.palette uuid="_VfE_IB8oEe2AMdNk3rU9EA" displayName="IgnitionControllerTopology_Palette_Entry" name="paletteID" resourceTypeId="IgnitionControllerTopology_Palette_Entry"/>
+  <core:contract.explicit uuid="_VemeAB8oEe2AMdNk3rU9EA" displayName="Make All Units Public-Editable By Default" name="ExplicitContract_361888" defaultConceptualPolicy="public_editable" defaultPolicy="public_editable"/>
+</core:topology>

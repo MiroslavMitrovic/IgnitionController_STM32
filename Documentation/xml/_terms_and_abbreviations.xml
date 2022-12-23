@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_terms_and_abbreviations" kind="page">
+    <compoundname>TermsAndAbbreviations</compoundname>
+    <title>TermsAndAbbreviations</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="_terms_and_abbreviations_1autotoc_md5">
+<title>Terms And Abbreviations</title>
+<para><bold>Ignition Controller is licensed under the GNU General Public License v3.0</bold> Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.</para>
+<sect4 id="_terms_and_abbreviations_1autotoc_md6">
+<title>Permissions</title>
+<para><itemizedlist>
+<listitem><para>Commercial use</para>
+</listitem><listitem><para>Modification</para>
+</listitem><listitem><para>Distribution</para>
+</listitem><listitem><para>Patent use</para>
+</listitem><listitem><para>Private use </para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="_terms_and_abbreviations_1autotoc_md7">
+<title>Limitations</title>
+<para><itemizedlist>
+<listitem><para>x Liability</para>
+</listitem><listitem><para>x Warranty </para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+</sect1>
+    </detaileddescription>
+    <location file="IgnitionController_STM32/Documentation/genericmdf.markdown"/>
+  </compounddef>
+</doxygen>

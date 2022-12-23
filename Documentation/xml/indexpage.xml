@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Design Document</title>
+    <innerpage refid="_description">Description</innerpage>
+    <innerpage refid="_terms_and_abbreviations">TermsAndAbbreviations</innerpage>
+    <innerpage refid="_resources">Resources</innerpage>
+    <innerpage refid="_exceptions">Exceptions</innerpage>
+    <innerpage refid="_tests">Tests</innerpage>
+    <innerpage refid="_links">Links</innerpage>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_IgnitionController_STM32_Documentation_genericmdf"/> Project:Ignition Controller <linebreak/>
+Version: v1.00.00 <linebreak/>
+ </para>
+<sect1 id="index_1autotoc_md0">
+<title>Table of Contents</title>
+<para><ref refid="_description" kindref="compound">Description</ref></para>
+<para><ref refid="_terms_and_abbreviations" kindref="compound">TermsAndAbbreviations</ref></para>
+<para><ref refid="_resources" kindref="compound">Resources</ref></para>
+<para><ref refid="_exceptions" kindref="compound">Exceptions</ref></para>
+<para><ref refid="_tests" kindref="compound">Tests</ref></para>
+<para><ref refid="_links" kindref="compound">Links</ref> </para>
+</sect1>
+    </detaileddescription>
+    <location file="IgnitionController_STM32/Documentation/genericmdf.markdown"/>
+  </compounddef>
+</doxygen>

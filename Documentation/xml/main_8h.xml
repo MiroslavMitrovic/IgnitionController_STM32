@@ -1,0 +1,650 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="main_8h" kind="file" language="C++">
+    <compoundname>main.h</compoundname>
+    <includes local="yes">stm32f4xx_hal.h</includes>
+    <includes refid="_ignition_cotrol___main_8h" local="yes">IgnitionCotrol_Main.h</includes>
+    <includedby refid="_ignition_cotrol___main_8h" local="yes">IgnitionController_STM32/Core/Inc/IgnitionCotrol_Main.h</includedby>
+    <includedby refid="main_8c" local="yes">IgnitionController_STM32/Core/Src/main.c</includedby>
+    <includedby refid="stm32f4xx__hal__msp_8c" local="yes">IgnitionController_STM32/Core/Src/stm32f4xx_hal_msp.c</includedby>
+    <includedby refid="stm32f4xx__it_8c" local="yes">IgnitionController_STM32/Core/Src/stm32f4xx_it.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>IgnitionCotrol_Main.h</label>
+        <link refid="_ignition_cotrol___main_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>IgnitionCtrl_CalculateTimesAndAngles.h</label>
+        <link refid="_ignition_ctrl___calculate_times_and_angles_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>IgnitionCtrl_Config.h</label>
+        <link refid="_ignition_ctrl___config_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>IgnitionCtrl_HW_Wrapper.h</label>
+        <link refid="_ignition_ctrl___h_w___wrapper_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>IgnitionCtrl_IgnAngleTable.h</label>
+        <link refid="_ignition_ctrl___ign_angle_table_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>IgnitionCtrl_Init.h</label>
+        <link refid="_ignition_ctrl___init_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IgnitionController_STM32/Core/Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>math.h</label>
+      </node>
+      <node id="9">
+        <label>stdbool.h</label>
+      </node>
+      <node id="8">
+        <label>stddef.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+      <node id="2">
+        <label>stm32f4xx_hal.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCotrol_Main.h</label>
+        <link refid="_ignition_cotrol___main_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h</label>
+        <link refid="_ignition_ctrl___calculate_times_and_angles_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h</label>
+        <link refid="_ignition_ctrl___h_w___wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_IgnAngleTable.h</label>
+        <link refid="_ignition_ctrl___ign_angle_table_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h</label>
+        <link refid="_ignition_ctrl___init_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IgnitionController_STM32/Core/Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCotrol_Main.c</label>
+        <link refid="_ignition_cotrol___main_8c"/>
+      </node>
+      <node id="8">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c</label>
+        <link refid="_ignition_ctrl___calculate_times_and_angles_8c"/>
+      </node>
+      <node id="9">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c</label>
+        <link refid="_ignition_ctrl___h_w___wrapper_8c"/>
+      </node>
+      <node id="10">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_IgnAngleTable.c</label>
+        <link refid="_ignition_ctrl___ign_angle_table_8c"/>
+      </node>
+      <node id="11">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c</label>
+        <link refid="_ignition_ctrl___init_8c"/>
+      </node>
+      <node id="12">
+        <label>IgnitionController_STM32/Core/Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="13">
+        <label>IgnitionController_STM32/Core/Src/stm32f4xx_hal_msp.c</label>
+        <link refid="stm32f4xx__hal__msp_8c"/>
+      </node>
+      <node id="14">
+        <label>IgnitionController_STM32/Core/Src/stm32f4xx_it.c</label>
+        <link refid="stm32f4xx__it_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="main_8h_1a5dae5c66a2fb82ae243304f213f3eb2c" prot="public" static="no">
+        <name>CS_I2C_SPI_Pin</name>
+        <initializer>GPIO_PIN_3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="60" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a7376069a8614f3df165407bb66f3bf96" prot="public" static="no">
+        <name>CS_I2C_SPI_GPIO_Port</name>
+        <initializer>GPIOE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="61" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a7d43c0c8b91a6510d9f474f78f57e5c9" prot="public" static="no">
+        <name>PC14_OSC32_IN_Pin</name>
+        <initializer>GPIO_PIN_14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="62" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ac1324283f34366c96d7372e4ee4c603a" prot="public" static="no">
+        <name>PC14_OSC32_IN_GPIO_Port</name>
+        <initializer>GPIOC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="63" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a4b7e48c6ffe3574f97f8fce18cae84de" prot="public" static="no">
+        <name>PC15_OSC32_OUT_Pin</name>
+        <initializer>GPIO_PIN_15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="64" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a77c4021efe27a551dc9d2884422b0fae" prot="public" static="no">
+        <name>PC15_OSC32_OUT_GPIO_Port</name>
+        <initializer>GPIOC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="65" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1addb0c037a01bd73baaf9f7d5a0379ac4" prot="public" static="no">
+        <name>PH0_OSC_IN_Pin</name>
+        <initializer>GPIO_PIN_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="66" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1af8885fc2f50640cd8bb5084cd998088b" prot="public" static="no">
+        <name>PH0_OSC_IN_GPIO_Port</name>
+        <initializer>GPIOH</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="67" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ac4d4c1fdbc6cd7491c705bd332f15693" prot="public" static="no">
+        <name>PH1_OSC_OUT_Pin</name>
+        <initializer>GPIO_PIN_1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="68" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a5b80653bbe01e9d4f334c74bdc5bc9f6" prot="public" static="no">
+        <name>PH1_OSC_OUT_GPIO_Port</name>
+        <initializer>GPIOH</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="69" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a4906d24ad629543e7b4c2d65a5cd1b9f" prot="public" static="no">
+        <name>OTG_FS_PowerSwitchOn_Pin</name>
+        <initializer>GPIO_PIN_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="70" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a2576ccc509ae6bbef01dc3e7bfd63d7d" prot="public" static="no">
+        <name>OTG_FS_PowerSwitchOn_GPIO_Port</name>
+        <initializer>GPIOC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="71" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a31ac298fbbc8a1d6de1dc4577a108232" prot="public" static="no">
+        <name>B1_Pin</name>
+        <initializer>GPIO_PIN_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="72" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a4926b92dcb220e465850d9616c27e171" prot="public" static="no">
+        <name>B1_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="73" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a1369274d1954044fd38a999e201c7b85" prot="public" static="no">
+        <name>Signal_1_Pin</name>
+        <initializer>GPIO_PIN_4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="74" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a0974ca02b46022750b369d86336661b3" prot="public" static="no">
+        <name>Signal_1_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="75" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1aebae48d3fc48ba1ec453ecd93f5f4b43" prot="public" static="no">
+        <name>BOOT1_Pin</name>
+        <initializer>GPIO_PIN_2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="76" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a70e2b63cb50fea2a3fae3e13112e3e20" prot="public" static="no">
+        <name>BOOT1_GPIO_Port</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="77" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a6664d0311f9f672b321e0daff34b7ad4" prot="public" static="no">
+        <name>LD4_Pin</name>
+        <initializer>GPIO_PIN_12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="78" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a4cc05543336aab13c54fd6aa62fd4523" prot="public" static="no">
+        <name>LD4_GPIO_Port</name>
+        <initializer>GPIOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="79" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a71154fae0eacbdf882bd1481164f0652" prot="public" static="no">
+        <name>LD3_Pin</name>
+        <initializer>GPIO_PIN_13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="80" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ae851c2d6146e6d4fac9f4a9983f5cf1f" prot="public" static="no">
+        <name>LD3_GPIO_Port</name>
+        <initializer>GPIOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="81" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1aee7b888dd4dbc9a801963f319ed98b11" prot="public" static="no">
+        <name>LD5_Pin</name>
+        <initializer>GPIO_PIN_14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="82" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a58b48323bdbf7421c8d6e9e3e050ebad" prot="public" static="no">
+        <name>LD5_GPIO_Port</name>
+        <initializer>GPIOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="83" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1af752fb7d74e778ecaf48784c6f2fa107" prot="public" static="no">
+        <name>LD6_Pin</name>
+        <initializer>GPIO_PIN_15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="84" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a4154850b2c5b4cfc8bbdd4c3b5abd0eb" prot="public" static="no">
+        <name>LD6_GPIO_Port</name>
+        <initializer>GPIOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="85" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ac30893c7c5dd78cf02632dc653c3e74e" prot="public" static="no">
+        <name>SWDIO_Pin</name>
+        <initializer>GPIO_PIN_13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="86" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a0d6c5c9d267a552e5bb02eb57498f683" prot="public" static="no">
+        <name>SWDIO_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="87" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1ad2e9165c92edc48968db01ca88c27822" prot="public" static="no">
+        <name>SWCLK_Pin</name>
+        <initializer>GPIO_PIN_14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="88" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a54d419ccaa2653d1bceae3f1a7206890" prot="public" static="no">
+        <name>SWCLK_GPIO_Port</name>
+        <initializer>GPIOA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="89" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a2f3e6e13c04b994c6058e37ecb83e24d" prot="public" static="no">
+        <name>Audio_RST_Pin</name>
+        <initializer>GPIO_PIN_4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="90" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a123a8e625fce2076aab4937fa36c7727" prot="public" static="no">
+        <name>Audio_RST_GPIO_Port</name>
+        <initializer>GPIOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="91" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a6309490f48597e6babbceea1d42f3098" prot="public" static="no">
+        <name>OTG_FS_OverCurrent_Pin</name>
+        <initializer>GPIO_PIN_5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="92" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a19f80096efa2ccb7bc032c1816b3edbf" prot="public" static="no">
+        <name>OTG_FS_OverCurrent_GPIO_Port</name>
+        <initializer>GPIOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="93" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a92aba89301afeefb00b6dfbc6e874027" prot="public" static="no">
+        <name>SWO_Pin</name>
+        <initializer>GPIO_PIN_3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="94" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a1540b1bd5614d42feb933c5b943263c0" prot="public" static="no">
+        <name>SWO_GPIO_Port</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="95" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1aedae192e198dc4a023c277564019a424" prot="public" static="no">
+        <name>MEMS_INT2_Pin</name>
+        <initializer>GPIO_PIN_1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="96" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a1595caf6a5809bd945b50aef66ea6705" prot="public" static="no">
+        <name>MEMS_INT2_GPIO_Port</name>
+        <initializer>GPIOE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="97" column="9" bodyfile="IgnitionController_STM32/Core/Inc/main.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8h_1a1730ffe1e560465665eb47d9264826f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Error_Handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>Error_Handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function is executed in case of error occurrence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/main.h" line="53" column="6" bodyfile="IgnitionController_STM32/Core/Src/main.c" bodystart="292" bodyend="301" declfile="IgnitionController_STM32/Core/Inc/main.h" declline="53" declcolumn="6"/>
+        <referencedby refid="main_8c_1a70af21c671abfcc773614a9a4f63d920" compoundref="main_8c" startline="116" endline="155">SystemClock_Config</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>: Header for <ref refid="main_8c" kindref="compound">main.c</ref> file. This file contains the common defines of the application. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="attention"><para></para>
+</simplesect>
+Copyright (c) 2022 STMicroelectronics. All rights reserved.</para>
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+    </detaileddescription>
+    <location file="IgnitionController_STM32/Core/Inc/main.h"/>
+  </compounddef>
+</doxygen>

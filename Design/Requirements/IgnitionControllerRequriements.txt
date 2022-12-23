@@ -1,0 +1,10 @@
+IgnitionControllerRequirements
+
+1. Ignition controller is able to detect the input pins for 2 cylinders.
+2. Ignition controller is able to set corresponding output signal with fixed dwell time for ignition coil.
+3. Ignition controller is able to change the ignition advance angle based on RPMs.
+4. Ignition angle advance vs RPM table shall have at least 10 entries. 
+5. If the values of ignition angle advance are between the values in table, chosen value shall be nearest to the current RPM value.
+6. Ignition controller must be capable of working reliably at 9000RPM.
+7. Ignition controller shall calculate the Ignition Advance angles and RPMs based on inputs from Camshaft sensors.
+	

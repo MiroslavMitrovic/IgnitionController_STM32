@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:DeployNotation="http://www.ibm.com/ccl/soa/deploy/notation/1.0.0/" xmlns:core="http://www.ibm.com/ccl/soa/deploy/core/1.0.0/" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmi:id="_Wiye4B8oEe2AMdNk3rU9EA" type="DeployCore" name="IgnitionControllerTopology" measurementUnit="Himetric">
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_Wiye4R8oEe2AMdNk3rU9EA"/>
+  <styles xmi:type="DeployNotation:DeployStyle" xmi:id="_Wiye4h8oEe2AMdNk3rU9EA"/>
+  <element xmi:type="core:Topology" href="IgnitionControllerTopology.topology#/"/>
+</notation:Diagram>
