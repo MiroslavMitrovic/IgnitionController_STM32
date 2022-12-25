@@ -27,7 +27,6 @@
 
 #include "IgnitionCotrol_Main.h"
 
-extern volatile tst_GlobalData GlobalDataValues;
 extern volatile uint32_t g_usSinceDetection;
 
 /*Global constant for RPM and ignition angle*/
