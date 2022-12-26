@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_links" kind="page">
+    <compoundname>Links</compoundname>
+    <title>Links</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><bold>Links</bold><itemizedlist>
+<listitem><para>Link to the repo is <ulink url="https://github.com/MiroslavMitrovic/IgnitionController_STM32.git">Ignition Controller</ulink>.</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+ </para>
+    </detaileddescription>
+    <location file="IgnitionController_STM32/Documentation/genericmdf.markdown"/>
+  </compounddef>
+</doxygen>

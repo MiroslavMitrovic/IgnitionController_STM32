@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="structtst___global_data" kind="struct"><name>tst_GlobalData</name>
+    <member refid="structtst___global_data_1a60321d94007ee03088dfeeeb7c47c70d" kind="variable"><name>CalculationState</name></member>
+    <member refid="structtst___global_data_1a1cfd72f018ee67350d267881b0ea6016" kind="variable"><name>FiringState</name></member>
+    <member refid="structtst___global_data_1aa1f61858fac1b427760352ab704130fe" kind="variable"><name>RPM</name></member>
+    <member refid="structtst___global_data_1a03fa11742e1d0959a8f3f6f1f3ccd970" kind="variable"><name>IsSynchronised</name></member>
+    <member refid="structtst___global_data_1a2741dc51e4527c3c455d31c740a9cc47" kind="variable"><name>AdvanceAngle</name></member>
+    <member refid="structtst___global_data_1a8c0bbe146378ecf798b6e83d55e87983" kind="variable"><name>Microseconds</name></member>
+    <member refid="structtst___global_data_1a8958a5843f9ebdd5d739faf158e5484e" kind="variable"><name>FiringTimeCyl_1</name></member>
+    <member refid="structtst___global_data_1af5a5e10dc60bbb58070a2679bd1d4973" kind="variable"><name>FiringTimeCyl_2</name></member>
+    <member refid="structtst___global_data_1ac984068150e375bc43d3b2ef7bc99e52" kind="variable"><name>TimeElapsedSinceDetection</name></member>
+  </compound>
+  <compound refid="_ignition_cotrol___main_8h" kind="file"><name>IgnitionCotrol_Main.h</name>
+    <member refid="_ignition_cotrol___main_8h_1ae22c32d0787ecd67d98aa7027582545b" kind="enum"><name>en_Calculation_States</name></member>
+    <member refid="_ignition_cotrol___main_8h_1ae22c32d0787ecd67d98aa7027582545bab6f03ec47399f60744f6a6473132727b" kind="enumvalue"><name>en_InitState</name></member>
+    <member refid="_ignition_cotrol___main_8h_1ae22c32d0787ecd67d98aa7027582545ba2e44664bf4828be5e8788e738dfe114c" kind="enumvalue"><name>en_InitFinished</name></member>
+    <member refid="_ignition_cotrol___main_8h_1ae22c32d0787ecd67d98aa7027582545baf40aefa9bb263487ceb83032f15e775f" kind="enumvalue"><name>en_SynchronizationOngoing</name></member>
+    <member refid="_ignition_cotrol___main_8h_1ae22c32d0787ecd67d98aa7027582545bab4a4b0035e6539c47cc5f22750947f5a" kind="enumvalue"><name>en_Synchronized</name></member>
+    <member refid="_ignition_cotrol___main_8h_1ae22c32d0787ecd67d98aa7027582545baf38972948b6172d6e52787352cef1be0" kind="enumvalue"><name>en_CalculationOngoing</name></member>
+    <member refid="_ignition_cotrol___main_8h_1ae22c32d0787ecd67d98aa7027582545ba5b612a783f7aa92c549aa68f2d79b5c9" kind="enumvalue"><name>en_CalculationFinished</name></member>
+    <member refid="_ignition_cotrol___main_8h_1ae22c32d0787ecd67d98aa7027582545ba1c39067a20a53c242c8cfcb05e6e3835" kind="enumvalue"><name>en_IdleStateCalculation</name></member>
+    <member refid="_ignition_cotrol___main_8h_1ae22c32d0787ecd67d98aa7027582545bab3bc9c5c56c94196a07d8c6ae5b6793c" kind="enumvalue"><name>en_MaxNumberOfCalculationStates</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a710bd901715e9269e6d6ad69e21d487f" kind="enum"><name>en_Firing_States</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a710bd901715e9269e6d6ad69e21d487faf79819392ec2b5ea3aa94f1a4782f0b9" kind="enumvalue"><name>en_FiringStateInit</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a710bd901715e9269e6d6ad69e21d487fa401e2c913f525622bb3af0dfea97dfb0" kind="enumvalue"><name>en_IdleStateFiring</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a710bd901715e9269e6d6ad69e21d487fa2d5e0cf40b38eb009593fbf363d19947" kind="enumvalue"><name>en_FiringCylinder1</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a710bd901715e9269e6d6ad69e21d487fadee73b92c8b73f0965f62b4954b63536" kind="enumvalue"><name>en_FiringCylinder1Completed</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a710bd901715e9269e6d6ad69e21d487fa5d5d2faeaedb48bc7024f8299ad6593f" kind="enumvalue"><name>en_FiringCylinder2</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a710bd901715e9269e6d6ad69e21d487fa5563bc20a5fe9af1c494bbb4341d4fac" kind="enumvalue"><name>en_FiringCylinder2Completed</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a710bd901715e9269e6d6ad69e21d487fae65c1ae389a4851e99b0f97edbfa00ca" kind="enumvalue"><name>en_MaxNumberOfFiringStates</name></member>
+    <member refid="_ignition_cotrol___main_8h_1afce680a3a058a839800c8a1b759a3119" kind="enum"><name>ten_IgnitionControl_Status</name></member>
+    <member refid="_ignition_cotrol___main_8h_1afce680a3a058a839800c8a1b759a3119afa886ed2ef0dd87c6f1a97753b2ba7cc" kind="enumvalue"><name>en_IgnCtrl_OK</name></member>
+    <member refid="_ignition_cotrol___main_8h_1afce680a3a058a839800c8a1b759a3119aa5bea355f49eb18b3601c43b7998381e" kind="enumvalue"><name>en_IgnCtrl_NOK</name></member>
+    <member refid="_ignition_cotrol___main_8h_1afce680a3a058a839800c8a1b759a3119a8a58598a960959010f2d751ce61189e1" kind="enumvalue"><name>en_StatusMaxNumber</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a5728cfb8ec3a8312a2ad363faa4565ea" kind="enum"><name>ten_IgnitionControl_FiringCylinderState</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a5728cfb8ec3a8312a2ad363faa4565eaad2d87be5d8b8f6af7fadef6823189e15" kind="enumvalue"><name>en_FiringStateInactive</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a5728cfb8ec3a8312a2ad363faa4565eaa35a44178c2ca34464827a0dc28f64b84" kind="enumvalue"><name>en_FiringStateActive</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a5728cfb8ec3a8312a2ad363faa4565eaac982c34e6942f85e19a9c2527239a3c8" kind="enumvalue"><name>en_FiringFinished</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a5728cfb8ec3a8312a2ad363faa4565eaa48a403f92e698003890471c8ea65ed23" kind="enumvalue"><name>en_FiringStateMaxNumber</name></member>
+    <member refid="_ignition_cotrol___main_8h_1aeaf78167b6dbf8aef77d33a30c516a9a" kind="typedef"><name>ten_Calculation_States</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a836b8c525bbafc77687f30e124d72937" kind="typedef"><name>ten_Firing_States</name></member>
+    <member refid="_ignition_cotrol___main_8h_1a02bec61a2faac061b16f6e8485df1a1f" kind="variable"><name>GlobalDataValues</name></member>
+    <member refid="_ignition_cotrol___main_8h_1ab04dd63b9b4b723a2833b84ba0ad50b2" kind="function"><name>Calculate_u_Microseconds</name></member>
+    <member refid="_ignition_cotrol___main_8h_1ae38a9b1d1db17915e348d6487b9be135" kind="function"><name>IgnitionControl_v_Main</name></member>
+  </compound>
+  <compound refid="_ignition_ctrl___calculate_times_and_angles_8h" kind="file"><name>IgnitionCtrl_CalculateTimesAndAngles.h</name>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8h_1a646bb9caf33760e0b52a8ee6a5b9f963" kind="function"><name>CalculateTime_u_FromAngle</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8h_1acb1372567c5860c1623505b302cc675d" kind="function"><name>CalculateAngle_u_FromTime</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8h_1a939e813cf5c8132fa695151454b5c502" kind="function"><name>Calculate_u_RPM</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8h_1a660403edb1c0facbab9c155959b52e3a" kind="function"><name>get_u_AdvanceAngle</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8h_1aada2d75bc8a8c6eb845bd940eadfa3fd" kind="function"><name>map</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8h_1a4580ed039652830762d8b8702cdc6e52" kind="function"><name>Calculate_u_FiringTimeCylinder</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8h_1a3bebf44fe8ed57a3509fa5392002e359" kind="function"><name>Firing_v_Cylinder1</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8h_1a248b7c0d091b3047f96cd05d75e96ce8" kind="function"><name>Firing_v_Cylinder2</name></member>
+  </compound>
+  <compound refid="_ignition_ctrl___config_8h" kind="file"><name>IgnitionCtrl_Config.h</name>
+    <member refid="_ignition_ctrl___config_8h_1a43bafb28b29491ec7f871319b5a3b2f8" kind="define"><name>F_CPU</name></member>
+    <member refid="_ignition_ctrl___config_8h_1a52bb4ed55787a925c9663846abfc0188" kind="define"><name>IGNITION_ANGLE_TABLE_COLUMNS</name></member>
+    <member refid="_ignition_ctrl___config_8h_1a83fbaa9c047696f159acfa6d8cfadce4" kind="define"><name>IGNITION_ANGLE_TABLE_ROWS</name></member>
+    <member refid="_ignition_ctrl___config_8h_1a1bb3ba304faf350d68c2c094aaaaf5f1" kind="define"><name>IGNITION_DWELL_TIME_US</name></member>
+    <member refid="_ignition_ctrl___config_8h_1a4a59906266c2e255e1d39707354720ac" kind="define"><name>IS_ENGINE_ODD_FIRE</name></member>
+    <member refid="_ignition_ctrl___config_8h_1a1323bc343cd1d3a5c09dd88a87110ebc" kind="define"><name>ODD_FIRE_ANGLE_IN_DEG</name></member>
+    <member refid="_ignition_ctrl___config_8h_1a1e7cc741c56207a8872ea58373276925" kind="define"><name>E_OK</name></member>
+    <member refid="_ignition_ctrl___config_8h_1a3af44a54c6ebc6525622174e0ddaefc7" kind="define"><name>E_NOK</name></member>
+    <member refid="_ignition_ctrl___config_8h_1a12289e8715fd56a16034f610666d900c" kind="define"><name>E_BUSY</name></member>
+    <member refid="_ignition_ctrl___config_8h_1a326df7b1fd368b717c3b11459e41ae89" kind="define"><name>SENSOR_1_AVAILABLE</name></member>
+    <member refid="_ignition_ctrl___config_8h_1ad52ae496412e385445e1c92ecd5c8acd" kind="define"><name>SENSOR_2_AVAILABLE</name></member>
+    <member refid="_ignition_ctrl___config_8h_1ab540c48af38d53327c432b762bb58290" kind="define"><name>IN_SYNC</name></member>
+    <member refid="_ignition_ctrl___config_8h_1a294b35048ce045439f35bb24a9215f09" kind="define"><name>OUT_OF_SYNC</name></member>
+  </compound>
+  <compound refid="_ignition_ctrl___h_w___wrapper_8h" kind="file"><name>IgnitionCtrl_HW_Wrapper.h</name>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1a71c2bcdb7824cb9e9e4d5b38111b06eb" kind="define"><name>PIN_SET</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1a6d990297df33b717e4d1489159aef8c0" kind="define"><name>PIN_RESET</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1a6e54384e995e26a7922f644f5c15cd20" kind="define"><name>MASK_PB_3_PIN_SET</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1ab384e6f7f26b21a46f2555d5a573fc2e" kind="define"><name>MASK_PB_4_PIN_SET</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1a132a564ae827b41a674c69cd382c1e25" kind="define"><name>PIN_CHECK</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1af4a6d2b50759f9aa757f6e2e10a060b7" kind="function"><name>HW_Timer_v_Init</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1a0b4565ca857f7032c2d82697d36d26bd" kind="function"><name>HW_GPIO_v_Init</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1a5135dd8ad7033595f8e06894491b4d27" kind="function"><name>HW_FiringPin_v_Cylinder_1_Set</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1ae0ef308764e5d6996ba4ae0cca59f852" kind="function"><name>HW_FiringPin_v_Cylinder_1_Reset</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1ad55d5e5a3aa2255aae4dce69f422c42e" kind="function"><name>HW_FiringPin_v_Cylinder_2_Set</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8h_1a590cf5a2723e29159eb734bcecd6ca73" kind="function"><name>HW_FiringPin_v_Cylinder_2_Reset</name></member>
+  </compound>
+  <compound refid="_ignition_ctrl___ign_angle_table_8h" kind="file"><name>IgnitionCtrl_IgnAngleTable.h</name>
+    <member refid="_ignition_ctrl___ign_angle_table_8h_1ac08b9d07db29adbf31b209266521c4e6" kind="function"><name>setIgnAngleTable</name></member>
+  </compound>
+  <compound refid="_ignition_ctrl___init_8h" kind="file"><name>IgnitionCtrl_Init.h</name>
+    <member refid="_ignition_ctrl___init_8h_1a85fca49f66edb482c1429ed9840502af" kind="variable"><name>g_PulseCounter</name></member>
+    <member refid="_ignition_ctrl___init_8h_1afc637b5bcfc6d598ff2e2b1d0ab4edd0" kind="variable"><name>g_uSCounter</name></member>
+    <member refid="_ignition_ctrl___init_8h_1aaac33aff8101e75177119a4b748fea63" kind="function"><name>IgnitionCtrl_v_Init</name></member>
+    <member refid="_ignition_ctrl___init_8h_1ac25cd6967969086ea17c97f3b5d00eac" kind="function"><name>Timer_v_Init</name></member>
+    <member refid="_ignition_ctrl___init_8h_1acbc6cd87e983c7303bb97021bf23413e" kind="function"><name>GPIO_v_Init</name></member>
+    <member refid="_ignition_ctrl___init_8h_1a84a56aa6eed0b212e21d6d9f2cd462b7" kind="function"><name>Clock_v_Init</name></member>
+    <member refid="_ignition_ctrl___init_8h_1a9340c33e4b9a98c980a23c1c0bd74464" kind="function"><name>Data_v_Init</name></member>
+  </compound>
+  <compound refid="main_8h" kind="file"><name>main.h</name>
+    <member refid="main_8h_1a5dae5c66a2fb82ae243304f213f3eb2c" kind="define"><name>CS_I2C_SPI_Pin</name></member>
+    <member refid="main_8h_1a7376069a8614f3df165407bb66f3bf96" kind="define"><name>CS_I2C_SPI_GPIO_Port</name></member>
+    <member refid="main_8h_1a7d43c0c8b91a6510d9f474f78f57e5c9" kind="define"><name>PC14_OSC32_IN_Pin</name></member>
+    <member refid="main_8h_1ac1324283f34366c96d7372e4ee4c603a" kind="define"><name>PC14_OSC32_IN_GPIO_Port</name></member>
+    <member refid="main_8h_1a4b7e48c6ffe3574f97f8fce18cae84de" kind="define"><name>PC15_OSC32_OUT_Pin</name></member>
+    <member refid="main_8h_1a77c4021efe27a551dc9d2884422b0fae" kind="define"><name>PC15_OSC32_OUT_GPIO_Port</name></member>
+    <member refid="main_8h_1addb0c037a01bd73baaf9f7d5a0379ac4" kind="define"><name>PH0_OSC_IN_Pin</name></member>
+    <member refid="main_8h_1af8885fc2f50640cd8bb5084cd998088b" kind="define"><name>PH0_OSC_IN_GPIO_Port</name></member>
+    <member refid="main_8h_1ac4d4c1fdbc6cd7491c705bd332f15693" kind="define"><name>PH1_OSC_OUT_Pin</name></member>
+    <member refid="main_8h_1a5b80653bbe01e9d4f334c74bdc5bc9f6" kind="define"><name>PH1_OSC_OUT_GPIO_Port</name></member>
+    <member refid="main_8h_1a4906d24ad629543e7b4c2d65a5cd1b9f" kind="define"><name>OTG_FS_PowerSwitchOn_Pin</name></member>
+    <member refid="main_8h_1a2576ccc509ae6bbef01dc3e7bfd63d7d" kind="define"><name>OTG_FS_PowerSwitchOn_GPIO_Port</name></member>
+    <member refid="main_8h_1a31ac298fbbc8a1d6de1dc4577a108232" kind="define"><name>B1_Pin</name></member>
+    <member refid="main_8h_1a4926b92dcb220e465850d9616c27e171" kind="define"><name>B1_GPIO_Port</name></member>
+    <member refid="main_8h_1a1369274d1954044fd38a999e201c7b85" kind="define"><name>Signal_1_Pin</name></member>
+    <member refid="main_8h_1a0974ca02b46022750b369d86336661b3" kind="define"><name>Signal_1_GPIO_Port</name></member>
+    <member refid="main_8h_1aebae48d3fc48ba1ec453ecd93f5f4b43" kind="define"><name>BOOT1_Pin</name></member>
+    <member refid="main_8h_1a70e2b63cb50fea2a3fae3e13112e3e20" kind="define"><name>BOOT1_GPIO_Port</name></member>
+    <member refid="main_8h_1a6664d0311f9f672b321e0daff34b7ad4" kind="define"><name>LD4_Pin</name></member>
+    <member refid="main_8h_1a4cc05543336aab13c54fd6aa62fd4523" kind="define"><name>LD4_GPIO_Port</name></member>
+    <member refid="main_8h_1a71154fae0eacbdf882bd1481164f0652" kind="define"><name>LD3_Pin</name></member>
+    <member refid="main_8h_1ae851c2d6146e6d4fac9f4a9983f5cf1f" kind="define"><name>LD3_GPIO_Port</name></member>
+    <member refid="main_8h_1aee7b888dd4dbc9a801963f319ed98b11" kind="define"><name>LD5_Pin</name></member>
+    <member refid="main_8h_1a58b48323bdbf7421c8d6e9e3e050ebad" kind="define"><name>LD5_GPIO_Port</name></member>
+    <member refid="main_8h_1af752fb7d74e778ecaf48784c6f2fa107" kind="define"><name>LD6_Pin</name></member>
+    <member refid="main_8h_1a4154850b2c5b4cfc8bbdd4c3b5abd0eb" kind="define"><name>LD6_GPIO_Port</name></member>
+    <member refid="main_8h_1ac30893c7c5dd78cf02632dc653c3e74e" kind="define"><name>SWDIO_Pin</name></member>
+    <member refid="main_8h_1a0d6c5c9d267a552e5bb02eb57498f683" kind="define"><name>SWDIO_GPIO_Port</name></member>
+    <member refid="main_8h_1ad2e9165c92edc48968db01ca88c27822" kind="define"><name>SWCLK_Pin</name></member>
+    <member refid="main_8h_1a54d419ccaa2653d1bceae3f1a7206890" kind="define"><name>SWCLK_GPIO_Port</name></member>
+    <member refid="main_8h_1a2f3e6e13c04b994c6058e37ecb83e24d" kind="define"><name>Audio_RST_Pin</name></member>
+    <member refid="main_8h_1a123a8e625fce2076aab4937fa36c7727" kind="define"><name>Audio_RST_GPIO_Port</name></member>
+    <member refid="main_8h_1a6309490f48597e6babbceea1d42f3098" kind="define"><name>OTG_FS_OverCurrent_Pin</name></member>
+    <member refid="main_8h_1a19f80096efa2ccb7bc032c1816b3edbf" kind="define"><name>OTG_FS_OverCurrent_GPIO_Port</name></member>
+    <member refid="main_8h_1a92aba89301afeefb00b6dfbc6e874027" kind="define"><name>SWO_Pin</name></member>
+    <member refid="main_8h_1a1540b1bd5614d42feb933c5b943263c0" kind="define"><name>SWO_GPIO_Port</name></member>
+    <member refid="main_8h_1aedae192e198dc4a023c277564019a424" kind="define"><name>MEMS_INT2_Pin</name></member>
+    <member refid="main_8h_1a1595caf6a5809bd945b50aef66ea6705" kind="define"><name>MEMS_INT2_GPIO_Port</name></member>
+    <member refid="main_8h_1a1730ffe1e560465665eb47d9264826f9" kind="function"><name>Error_Handler</name></member>
+  </compound>
+  <compound refid="stm32f4xx__hal__conf_8h" kind="file"><name>stm32f4xx_hal_conf.h</name>
+    <member refid="stm32f4xx__hal__conf_8h_1a877ae99e8c47a609ea97c888912bf75f" kind="define"><name>HAL_MODULE_ENABLED</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a23382b8f04b3e6db2c59dfa1ef5ea4a2" kind="define"><name>HAL_TIM_MODULE_ENABLED</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a86165f80d6078719ee0715afe13febf5" kind="define"><name>HAL_GPIO_MODULE_ENABLED</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1aeb359e861d8a92c233c3229657dbcd74" kind="define"><name>HAL_EXTI_MODULE_ENABLED</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a6552186102a1131b2849ac55a582945d" kind="define"><name>HAL_DMA_MODULE_ENABLED</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1ac3dd74314ed62ac8575e2f9f48b3ac48" kind="define"><name>HAL_RCC_MODULE_ENABLED</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a7112575efe3740911f19a13e6b170fee" kind="define"><name>HAL_FLASH_MODULE_ENABLED</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1ab51923c3716977d7923f49cc9d081aa8" kind="define"><name>HAL_PWR_MODULE_ENABLED</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1aa9b5a3a425901e097de70092dbe31e0f" kind="define"><name>HAL_CORTEX_MODULE_ENABLED</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1aeafcff4f57440c60e64812dddd13e7cb" kind="define"><name>HSE_VALUE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a68ecbc9b0a1a40a1ec9d18d5e9747c4f" kind="define"><name>HSE_STARTUP_TIMEOUT</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1aaa8c76e274d0f6dd2cefb5d0b17fbc37" kind="define"><name>HSI_VALUE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a4872023e65449c0506aac3ea6bec99e9" kind="define"><name>LSI_VALUE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a7bbb9d19e5189a6ccd0fb6fa6177d20d" kind="define"><name>LSE_VALUE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a85e6fc812dc26f7161a04be2568a5462" kind="define"><name>LSE_STARTUP_TIMEOUT</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a8c47c935e91e70569098b41718558648" kind="define"><name>EXTERNAL_CLOCK_VALUE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1aae550dad9f96d52cfce5e539adadbbb4" kind="define"><name>VDD_VALUE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1ae27809d4959b9fd5b5d974e3e1c77d2e" kind="define"><name>TICK_INT_PRIORITY</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1ad048ac737242c2c2cb9f4a72953d10ce" kind="define"><name>USE_RTOS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a13fc0d5e7bb925385c0cc0772ba6a391" kind="define"><name>PREFETCH_ENABLE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a3379989d46599c7e19a43f42e9145a4a" kind="define"><name>INSTRUCTION_CACHE_ENABLE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a5b4c32a40cf49b06c0d761e385949a6b" kind="define"><name>DATA_CACHE_ENABLE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1acc33abd5393affd16cc4a1397839dfe4" kind="define"><name>USE_HAL_ADC_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a7f6bf06dfbf91fd866a9d62ab54d0e81" kind="define"><name>USE_HAL_CAN_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a4b1a233981ef5d96551ea1f08d1a7ea8" kind="define"><name>USE_HAL_CEC_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1aab15bfcb9198618bda3d7e914193b466" kind="define"><name>USE_HAL_CRYP_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1af9580ae862dcc02cee7822030c48d6b8" kind="define"><name>USE_HAL_DAC_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a64a4d06cebee4009f08652637fbf161d" kind="define"><name>USE_HAL_DCMI_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a86882c5f53554e458434c836812093db" kind="define"><name>USE_HAL_DFSDM_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1ad3fd64734f71ef9c872f38dd0d0b8cb0" kind="define"><name>USE_HAL_DMA2D_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a6c2182c3202253ba1a70c7d25122013c" kind="define"><name>USE_HAL_DSI_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1aa24a8d7886d3a497a868d5bf2417bfdf" kind="define"><name>USE_HAL_ETH_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a0390418ff6315463b6ef161c63a69d43" kind="define"><name>USE_HAL_HASH_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a560b53001fb58138f7da15dbda8f58a6" kind="define"><name>USE_HAL_HCD_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a99be773f7f62b6277d1c87658e085725" kind="define"><name>USE_HAL_I2C_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a940b1da88a7c3b2be040ff8bd05d2e7c" kind="define"><name>USE_HAL_FMPI2C_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a46f8aba8b355db501b426e3a82620e47" kind="define"><name>USE_HAL_FMPSMBUS_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a1bdc791c35b20c7188b3d74fd6c30ebf" kind="define"><name>USE_HAL_I2S_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a4a459bcaa046998e6939fc66b0831e96" kind="define"><name>USE_HAL_IRDA_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a5b148dcae2bf8f576fc69a349794df4c" kind="define"><name>USE_HAL_LPTIM_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a2297103b8900168640d1225072361808" kind="define"><name>USE_HAL_LTDC_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1ae595e885d73a91a83fbdc20f7affcd42" kind="define"><name>USE_HAL_MMC_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a80498b459859528918535b88fed54b28" kind="define"><name>USE_HAL_NAND_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a7b38c01bd6621f3da5993d71eb5ff42e" kind="define"><name>USE_HAL_NOR_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a15d7e736835fdf5b02fe42913329a5ce" kind="define"><name>USE_HAL_PCCARD_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1afd18c04aa4a4a54446df8083be875a00" kind="define"><name>USE_HAL_PCD_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a95cbcf73c2ae3aea55fb62502ed224a2" kind="define"><name>USE_HAL_QSPI_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a9b01c64d19f0d4839b7da08bd61c7ff7" kind="define"><name>USE_HAL_RNG_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a54badbcdb096ce802d2eed981cbbc31a" kind="define"><name>USE_HAL_RTC_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a0e2ac47c259fc72ef188c0406a2af803" kind="define"><name>USE_HAL_SAI_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1acccbc010792c242ce6aae30b7c6f40df" kind="define"><name>USE_HAL_SD_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a43bb2335641440326db0f05526c1bff9" kind="define"><name>USE_HAL_SMARTCARD_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a0732f81973e1744fe9eec6d2f451faff" kind="define"><name>USE_HAL_SDRAM_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a5c7c04d57c22f5301f1ea589abc6f35f" kind="define"><name>USE_HAL_SRAM_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a91d326d554db420a247bd4eec1951961" kind="define"><name>USE_HAL_SPDIFRX_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a74cae3ff25398b4a06a579a7164a8518" kind="define"><name>USE_HAL_SMBUS_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a8d8be2d7e4ed5bfc7b64f60ba604c749" kind="define"><name>USE_HAL_SPI_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a5ef4d67cd7630f6e2e67d17370fbffdb" kind="define"><name>USE_HAL_TIM_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a68c6c7c633e6cb378824020ef00a5701" kind="define"><name>USE_HAL_UART_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1ac79983d623c7f760c5077618a453561b" kind="define"><name>USE_HAL_USART_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a6879802837c27d8761d8a8fdab626891" kind="define"><name>USE_HAL_WWDG_REGISTER_CALLBACKS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1ab84a2e15d360e2644ada09641513a941" kind="define"><name>MAC_ADDR0</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a8d14266d76690c530bee01e7e5bb4099" kind="define"><name>MAC_ADDR1</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a6c5df15bec1d305ed033ad9a85ec803d" kind="define"><name>MAC_ADDR2</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a08a36ede83ae67498aecf54676be8fc8" kind="define"><name>MAC_ADDR3</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a41e5cb0b39ad74f0aafb83dbcecf9006" kind="define"><name>MAC_ADDR4</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a3bcc92663c42ec434f527847bbc4abc1" kind="define"><name>MAC_ADDR5</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a0cdaf687f7a7f2dba570d5a722990786" kind="define"><name>ETH_RX_BUF_SIZE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1af83956dfc1b135c3c92ac409758b6cf4" kind="define"><name>ETH_TX_BUF_SIZE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a62b0f224fa9c4f2e5574c9e52526f751" kind="define"><name>ETH_RXBUFNB</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a4ad07ad8fa6f8639ab8ef362390d86c7" kind="define"><name>ETH_TXBUFNB</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a25f014091aaba92bdd9d95d0b2f00503" kind="define"><name>DP83848_PHY_ADDRESS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a0ede6087f7b71403bcddb5d3a8f47ff4" kind="define"><name>PHY_RESET_DELAY</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1abba7114255a2a41b81fdcb2a3702c270" kind="define"><name>PHY_CONFIG_DELAY</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a9d356ada86535630c403690bef0fb887" kind="define"><name>PHY_READ_TO</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a474bf13e28d09b667e41b151140ee39d" kind="define"><name>PHY_WRITE_TO</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a8abe1a40c71e68881ec669d59f513fdb" kind="define"><name>PHY_BCR</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a4b8f2c29a9e74412395e1b1809666838" kind="define"><name>PHY_BSR</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a6f5048620b3dde8583f7f1118e9de187" kind="define"><name>PHY_RESET</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a7833d885caa7e29abbebfb90a4b96f86" kind="define"><name>PHY_LOOPBACK</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a5729771244f68779fc694ba819cd60a5" kind="define"><name>PHY_FULLDUPLEX_100M</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a1ac901a4ad405241d90a5c10104b8986" kind="define"><name>PHY_HALFDUPLEX_100M</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a6b6254fd3dacbf1578a9d8058cd86373" kind="define"><name>PHY_FULLDUPLEX_10M</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a4fa7ca6faf60ee074576ebb6103f8dd4" kind="define"><name>PHY_HALFDUPLEX_10M</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a9b7f5c8f71047ee449f21562d26b1b43" kind="define"><name>PHY_AUTONEGOTIATION</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a66c4b69bd08dc25b6730365d3ff740c9" kind="define"><name>PHY_RESTART_AUTONEGOTIATION</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1aa0b1e6d4a23470fc1ac4f9222b51f8a0" kind="define"><name>PHY_POWERDOWN</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a7d5233295134a385866eb5bdafe2162b" kind="define"><name>PHY_ISOLATE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a36c4dbd5f6df1f5eaefa010929ef9773" kind="define"><name>PHY_AUTONEGO_COMPLETE</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1ace209074499dbef0b97300da5bd7c707" kind="define"><name>PHY_LINKED_STATUS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a057b4d3fb66548d65c291a5b41611be2" kind="define"><name>PHY_JABBER_DETECTION</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a32b55e84d27cf298a77f54b133cd1acc" kind="define"><name>PHY_SR</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a74c081bc55e9ff96bf229f44e96c6155" kind="define"><name>PHY_SPEED_STATUS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1ab928f45585242fde1a8d81a2d9ed22d0" kind="define"><name>PHY_DUPLEX_STATUS</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a4c6fab687afc7ba4469b1b2d34472358" kind="define"><name>USE_SPI_CRC</name></member>
+    <member refid="stm32f4xx__hal__conf_8h_1a631dea7b230e600555f979c62af1de21" kind="define"><name>assert_param</name></member>
+  </compound>
+  <compound refid="stm32f4xx__it_8h" kind="file"><name>stm32f4xx_it.h</name>
+    <member refid="stm32f4xx__it_8h_1a6ad7a5e3ee69cb6db6a6b9111ba898bc" kind="function"><name>NMI_Handler</name></member>
+    <member refid="stm32f4xx__it_8h_1a2bffc10d5bd4106753b7c30e86903bea" kind="function"><name>HardFault_Handler</name></member>
+    <member refid="stm32f4xx__it_8h_1a3150f74512510287a942624aa9b44cc5" kind="function"><name>MemManage_Handler</name></member>
+    <member refid="stm32f4xx__it_8h_1a850cefb17a977292ae5eb4cafa9976c3" kind="function"><name>BusFault_Handler</name></member>
+    <member refid="stm32f4xx__it_8h_1a1d98923de2ed6b7309b66f9ba2971647" kind="function"><name>UsageFault_Handler</name></member>
+    <member refid="stm32f4xx__it_8h_1a3e5ddb3df0d62f2dc357e64a3f04a6ce" kind="function"><name>SVC_Handler</name></member>
+    <member refid="stm32f4xx__it_8h_1adbdfb05858cc36fc520974df37ec3cb0" kind="function"><name>DebugMon_Handler</name></member>
+    <member refid="stm32f4xx__it_8h_1a6303e1f258cbdc1f970ce579cc015623" kind="function"><name>PendSV_Handler</name></member>
+    <member refid="stm32f4xx__it_8h_1ab5e09814056d617c521549e542639b7e" kind="function"><name>SysTick_Handler</name></member>
+    <member refid="stm32f4xx__it_8h_1a38ad4725462bdc5e86c4ead4f04b9fc2" kind="function"><name>TIM2_IRQHandler</name></member>
+  </compound>
+  <compound refid="_ignition_cotrol___main_8c" kind="file"><name>IgnitionCotrol_Main.c</name>
+    <member refid="_ignition_cotrol___main_8c_1a092aacf4a5d96a3ff4189089c5afa060" kind="variable"><name>g_usSinceDetection</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a1c115895137c180f27875c28cb277e59" kind="variable"><name>g_uSDebouncingSignalCounter</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a02bec61a2faac061b16f6e8485df1a1f" kind="variable"><name>GlobalDataValues</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a65e6326f39cc167bf68244ba9754b213" kind="variable"><name>g_FirstSensorTimePrevious_us</name></member>
+    <member refid="_ignition_cotrol___main_8c_1ab584a2f8065f9cbf2a8274053c5c16c6" kind="variable"><name>g_FirstSensorTimeCurrent_us</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a369335aa15b08987e0e983de711c551c" kind="variable"><name>g_SensorActivationCounter</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a15f61f7d68ef7676800e7f9eaf6b7602" kind="variable"><name>g_FirstSensorTime_us</name></member>
+    <member refid="_ignition_cotrol___main_8c_1ab3b8b6b1b0787ef930a9303d9409af9f" kind="variable"><name>g_SecondSensorTime_us</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a73df5ab91b5aa1d0129d5979383d24e9" kind="variable"><name>g_SignalFlag</name></member>
+    <member refid="_ignition_cotrol___main_8c_1ab4b9e8a901568f46ce86e5a11edd88dc" kind="variable"><name>g_SignalState</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a8b48807478f8e890f675176de041d63b" kind="variable"><name>g_SyncFlag</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a482eeec4bd359f8fdeac9197c3ef81e4" kind="variable"><name>g_FirstSensorSignalAvailable</name></member>
+    <member refid="_ignition_cotrol___main_8c_1acb0d353c0ec6540afb2be4b3f2443126" kind="function"><name>Calculation_v_Handler</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a5a4ded576a9b1765322cfa60c67a25b7" kind="function"><name>Firing_v_Handler</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a297e9b8e8330c4bea9f964a79f913d40" kind="function"><name>IgnitionControl_FirstSensorCheck</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a42ddf02e80924e60f9e44ce26971b6cd" kind="function"><name>IgnitionControl_u_FirstSensorCheck_IT</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a6180c5a647c05052ab03de97dfc161e5" kind="function"><name>IgntionControl_SyncCheck</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a220751a8c8e7671524ca414e8e884187" kind="function"><name>Calculate_u_Microseconds</name></member>
+    <member refid="_ignition_cotrol___main_8c_1ae38a9b1d1db17915e348d6487b9be135" kind="function"><name>IgnitionControl_v_Main</name></member>
+    <member refid="_ignition_cotrol___main_8c_1a939e813cf5c8132fa695151454b5c502" kind="function"><name>Calculate_u_RPM</name></member>
+  </compound>
+  <compound refid="_ignition_ctrl___calculate_times_and_angles_8c" kind="file"><name>IgnitionCtrl_CalculateTimesAndAngles.c</name>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1a02bec61a2faac061b16f6e8485df1a1f" kind="variable"><name>GlobalDataValues</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1a092aacf4a5d96a3ff4189089c5afa060" kind="variable"><name>g_usSinceDetection</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1a1c115895137c180f27875c28cb277e59" kind="variable"><name>g_uSDebouncingSignalCounter</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1a7a39b5dee8829d1e77f072c45aa1f008" kind="variable"><name>g_cIgnitionAngleTable</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1a0477563be8973280b83460910ea5a47f" kind="variable"><name>l_errorCounter</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1aada2d75bc8a8c6eb845bd940eadfa3fd" kind="function"><name>map</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1afceb4daa8c75939a90c08c9a2fa0324e" kind="function"><name>get_u_AdvanceAngle</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1a646bb9caf33760e0b52a8ee6a5b9f963" kind="function"><name>CalculateTime_u_FromAngle</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1a4580ed039652830762d8b8702cdc6e52" kind="function"><name>Calculate_u_FiringTimeCylinder</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1a3bebf44fe8ed57a3509fa5392002e359" kind="function"><name>Firing_v_Cylinder1</name></member>
+    <member refid="_ignition_ctrl___calculate_times_and_angles_8c_1a248b7c0d091b3047f96cd05d75e96ce8" kind="function"><name>Firing_v_Cylinder2</name></member>
+  </compound>
+  <compound refid="_ignition_ctrl___h_w___wrapper_8c" kind="file"><name>IgnitionCtrl_HW_Wrapper.c</name>
+    <member refid="_ignition_ctrl___h_w___wrapper_8c_1a092aacf4a5d96a3ff4189089c5afa060" kind="variable"><name>g_usSinceDetection</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8c_1afc637b5bcfc6d598ff2e2b1d0ab4edd0" kind="variable"><name>g_uSCounter</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8c_1a1c115895137c180f27875c28cb277e59" kind="variable"><name>g_uSDebouncingSignalCounter</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8c_1a0b4565ca857f7032c2d82697d36d26bd" kind="function"><name>HW_GPIO_v_Init</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8c_1af4a6d2b50759f9aa757f6e2e10a060b7" kind="function"><name>HW_Timer_v_Init</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8c_1a5135dd8ad7033595f8e06894491b4d27" kind="function"><name>HW_FiringPin_v_Cylinder_1_Set</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8c_1ae0ef308764e5d6996ba4ae0cca59f852" kind="function"><name>HW_FiringPin_v_Cylinder_1_Reset</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8c_1ad55d5e5a3aa2255aae4dce69f422c42e" kind="function"><name>HW_FiringPin_v_Cylinder_2_Set</name></member>
+    <member refid="_ignition_ctrl___h_w___wrapper_8c_1a590cf5a2723e29159eb734bcecd6ca73" kind="function"><name>HW_FiringPin_v_Cylinder_2_Reset</name></member>
+  </compound>
+  <compound refid="_ignition_ctrl___ign_angle_table_8c" kind="file"><name>IgnitionCtrl_IgnAngleTable.c</name>
+    <member refid="_ignition_ctrl___ign_angle_table_8c_1a60807d6b9e0b64f2717aa68b40905376" kind="function"><name>setIgnAngleTable</name></member>
+  </compound>
+  <compound refid="_ignition_ctrl___init_8c" kind="file"><name>IgnitionCtrl_Init.c</name>
+    <member refid="_ignition_ctrl___init_8c_1a02bec61a2faac061b16f6e8485df1a1f" kind="variable"><name>GlobalDataValues</name></member>
+    <member refid="_ignition_ctrl___init_8c_1a9340c33e4b9a98c980a23c1c0bd74464" kind="function"><name>Data_v_Init</name></member>
+    <member refid="_ignition_ctrl___init_8c_1aaac33aff8101e75177119a4b748fea63" kind="function"><name>IgnitionCtrl_v_Init</name></member>
+    <member refid="_ignition_ctrl___init_8c_1acbc6cd87e983c7303bb97021bf23413e" kind="function"><name>GPIO_v_Init</name></member>
+    <member refid="_ignition_ctrl___init_8c_1a84a56aa6eed0b212e21d6d9f2cd462b7" kind="function"><name>Clock_v_Init</name></member>
+    <member refid="_ignition_ctrl___init_8c_1ac25cd6967969086ea17c97f3b5d00eac" kind="function"><name>Timer_v_Init</name></member>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1a2c80fd5510e2990a59a5c90d745c716c" kind="variable"><name>htim2</name></member>
+    <member refid="main_8c_1a70af21c671abfcc773614a9a4f63d920" kind="function"><name>SystemClock_Config</name></member>
+    <member refid="main_8c_1ae89fdd15729ad41a66911190fcbab23a" kind="function"><name>MX_GPIO_Init</name></member>
+    <member refid="main_8c_1af952250b2d49718b385e14a76fa7c1b8" kind="function"><name>MX_TIM2_Init</name></member>
+    <member refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
+    <member refid="main_8c_1a1730ffe1e560465665eb47d9264826f9" kind="function"><name>Error_Handler</name></member>
+  </compound>
+  <compound refid="stm32f4xx__hal__msp_8c" kind="file"><name>stm32f4xx_hal_msp.c</name>
+    <member refid="stm32f4xx__hal__msp_8c_1ae4fb8e66865c87d0ebab74a726a6891f" kind="function"><name>HAL_MspInit</name></member>
+    <member refid="stm32f4xx__hal__msp_8c_1abb25ade2f7e3f7aae167bd52270c2b86" kind="function"><name>HAL_TIM_Base_MspInit</name></member>
+    <member refid="stm32f4xx__hal__msp_8c_1a555b8a2d3c7a07341f8cb1255318fa2b" kind="function"><name>HAL_TIM_Base_MspDeInit</name></member>
+  </compound>
+  <compound refid="stm32f4xx__it_8c" kind="file"><name>stm32f4xx_it.c</name>
+    <member refid="stm32f4xx__it_8c_1a2c80fd5510e2990a59a5c90d745c716c" kind="variable"><name>htim2</name></member>
+    <member refid="stm32f4xx__it_8c_1a092aacf4a5d96a3ff4189089c5afa060" kind="variable"><name>g_usSinceDetection</name></member>
+    <member refid="stm32f4xx__it_8c_1afc637b5bcfc6d598ff2e2b1d0ab4edd0" kind="variable"><name>g_uSCounter</name></member>
+    <member refid="stm32f4xx__it_8c_1a1c115895137c180f27875c28cb277e59" kind="variable"><name>g_uSDebouncingSignalCounter</name></member>
+    <member refid="stm32f4xx__it_8c_1a6ad7a5e3ee69cb6db6a6b9111ba898bc" kind="function"><name>NMI_Handler</name></member>
+    <member refid="stm32f4xx__it_8c_1a2bffc10d5bd4106753b7c30e86903bea" kind="function"><name>HardFault_Handler</name></member>
+    <member refid="stm32f4xx__it_8c_1a3150f74512510287a942624aa9b44cc5" kind="function"><name>MemManage_Handler</name></member>
+    <member refid="stm32f4xx__it_8c_1a850cefb17a977292ae5eb4cafa9976c3" kind="function"><name>BusFault_Handler</name></member>
+    <member refid="stm32f4xx__it_8c_1a1d98923de2ed6b7309b66f9ba2971647" kind="function"><name>UsageFault_Handler</name></member>
+    <member refid="stm32f4xx__it_8c_1a3e5ddb3df0d62f2dc357e64a3f04a6ce" kind="function"><name>SVC_Handler</name></member>
+    <member refid="stm32f4xx__it_8c_1adbdfb05858cc36fc520974df37ec3cb0" kind="function"><name>DebugMon_Handler</name></member>
+    <member refid="stm32f4xx__it_8c_1a6303e1f258cbdc1f970ce579cc015623" kind="function"><name>PendSV_Handler</name></member>
+    <member refid="stm32f4xx__it_8c_1ab5e09814056d617c521549e542639b7e" kind="function"><name>SysTick_Handler</name></member>
+    <member refid="stm32f4xx__it_8c_1a38ad4725462bdc5e86c4ead4f04b9fc2" kind="function"><name>TIM2_IRQHandler</name></member>
+  </compound>
+  <compound refid="syscalls_8c" kind="file"><name>syscalls.c</name>
+    <member refid="syscalls_8c_1aa006daaf11f1e2e45a6ababaf463212b" kind="variable"><name>environ</name></member>
+    <member refid="syscalls_8c_1aa53ed4b191897a1bfc205aa1da005d24" kind="function"><name>__io_putchar</name></member>
+    <member refid="syscalls_8c_1ad0122671640a3af49792ddaa59e8294e" kind="function"><name>__io_getchar</name></member>
+    <member refid="syscalls_8c_1a25c7f100d498300fff65568c2fcfe639" kind="function"><name>initialise_monitor_handles</name></member>
+    <member refid="syscalls_8c_1a945e539df8e0f66d3c73c533fe1968ee" kind="function"><name>_getpid</name></member>
+    <member refid="syscalls_8c_1a062a5101199c3128edd5170f2575bb10" kind="function"><name>_kill</name></member>
+    <member refid="syscalls_8c_1abc96bd69b58b2deaddb484478d911c1b" kind="function"><name>_exit</name></member>
+    <member refid="syscalls_8c_1af9aace1b44b73111e15aa39f06f43456" kind="function"><name>__attribute__</name></member>
+    <member refid="syscalls_8c_1a5aab5e2acfd600e3667dc915a2bbc7cb" kind="function"><name>_close</name></member>
+    <member refid="syscalls_8c_1a41eef54307912a82d20e71c3d47315aa" kind="function"><name>_fstat</name></member>
+    <member refid="syscalls_8c_1ad3134a3dc296622b8d1c5456e481505b" kind="function"><name>_isatty</name></member>
+    <member refid="syscalls_8c_1a7a61311bdf1cb025fc07dc2bdae22ce4" kind="function"><name>_lseek</name></member>
+    <member refid="syscalls_8c_1a270c9113047edd8d64186710ad76062b" kind="function"><name>_open</name></member>
+    <member refid="syscalls_8c_1aeef0c3372d04caa1bcc99fed2ab6ec72" kind="function"><name>_wait</name></member>
+    <member refid="syscalls_8c_1a70b2f211d665cded5637065aa2bb89dc" kind="function"><name>_unlink</name></member>
+    <member refid="syscalls_8c_1aaf727ebf57cd64d6c58b23e6ee4a4a69" kind="function"><name>_times</name></member>
+    <member refid="syscalls_8c_1a4711e961db985ed2c850a8be6597af50" kind="function"><name>_stat</name></member>
+    <member refid="syscalls_8c_1a31da4cd5328defa76a9e2246992aba12" kind="function"><name>_link</name></member>
+    <member refid="syscalls_8c_1a6cb6331c9d166180903d5fb78b9c9dd7" kind="function"><name>_fork</name></member>
+    <member refid="syscalls_8c_1ad2a07db8fdf26151eb98ba5711fad8c5" kind="function"><name>_execve</name></member>
+  </compound>
+  <compound refid="sysmem_8c" kind="file"><name>sysmem.c</name>
+    <member refid="sysmem_8c_1a2cf862d604e9c7cfcf0528a0f539a6a5" kind="variable"><name>__sbrk_heap_end</name></member>
+    <member refid="sysmem_8c_1a68125648bcce70b6bb3aa0be50e99700" kind="function"><name>_sbrk</name></member>
+  </compound>
+  <compound refid="system__stm32f4xx_8c" kind="file"><name>system_stm32f4xx.c</name>
+    <member refid="group___s_t_m32_f4xx___system___private___includes_1gaeafcff4f57440c60e64812dddd13e7cb" kind="define"><name>HSE_VALUE</name></member>
+    <member refid="group___s_t_m32_f4xx___system___private___includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37" kind="define"><name>HSI_VALUE</name></member>
+    <member refid="group___s_t_m32_f4xx___system___private___variables_1gaa3cd3e43291e81e795d642b79b6088e6" kind="variable"><name>SystemCoreClock</name></member>
+    <member refid="group___s_t_m32_f4xx___system___private___variables_1ga6e1d9cd666f0eacbfde31e9932a93466" kind="variable"><name>AHBPrescTable</name></member>
+    <member refid="group___s_t_m32_f4xx___system___private___variables_1ga5b4f8b768465842cf854a8f993b375e9" kind="variable"><name>APBPrescTable</name></member>
+    <member refid="group___s_t_m32_f4xx___system___private___functions_1ga93f514700ccf00d08dbdcff7f1224eb2" kind="function"><name>SystemInit</name></member>
+    <member refid="group___s_t_m32_f4xx___system___private___functions_1gae0c36a9591fe6e9c45ecb21a794f0f0f" kind="function"><name>SystemCoreClockUpdate</name></member>
+  </compound>
+  <compound refid="genericmdf_8markdown" kind="file"><name>genericmdf.markdown</name>
+  </compound>
+  <compound refid="group___c_m_s_i_s" kind="group"><name>CMSIS</name>
+  </compound>
+  <compound refid="group__stm32f4xx__system" kind="group"><name>stm32f4xx_system</name>
+  </compound>
+  <compound refid="group___s_t_m32_f4xx___system___private___includes" kind="group"><name>STM32F4xx_System_Private_Includes</name>
+    <member refid="group___s_t_m32_f4xx___system___private___includes_1gaeafcff4f57440c60e64812dddd13e7cb" kind="define"><name>HSE_VALUE</name></member>
+    <member refid="group___s_t_m32_f4xx___system___private___includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37" kind="define"><name>HSI_VALUE</name></member>
+  </compound>
+  <compound refid="group___s_t_m32_f4xx___system___private___types_definitions" kind="group"><name>STM32F4xx_System_Private_TypesDefinitions</name>
+  </compound>
+  <compound refid="group___s_t_m32_f4xx___system___private___defines" kind="group"><name>STM32F4xx_System_Private_Defines</name>
+  </compound>
+  <compound refid="group___s_t_m32_f4xx___system___private___macros" kind="group"><name>STM32F4xx_System_Private_Macros</name>
+  </compound>
+  <compound refid="group___s_t_m32_f4xx___system___private___variables" kind="group"><name>STM32F4xx_System_Private_Variables</name>
+    <member refid="group___s_t_m32_f4xx___system___private___variables_1gaa3cd3e43291e81e795d642b79b6088e6" kind="variable"><name>SystemCoreClock</name></member>
+    <member refid="group___s_t_m32_f4xx___system___private___variables_1ga6e1d9cd666f0eacbfde31e9932a93466" kind="variable"><name>AHBPrescTable</name></member>
+    <member refid="group___s_t_m32_f4xx___system___private___variables_1ga5b4f8b768465842cf854a8f993b375e9" kind="variable"><name>APBPrescTable</name></member>
+  </compound>
+  <compound refid="group___s_t_m32_f4xx___system___private___function_prototypes" kind="group"><name>STM32F4xx_System_Private_FunctionPrototypes</name>
+  </compound>
+  <compound refid="group___s_t_m32_f4xx___system___private___functions" kind="group"><name>STM32F4xx_System_Private_Functions</name>
+    <member refid="group___s_t_m32_f4xx___system___private___functions_1ga93f514700ccf00d08dbdcff7f1224eb2" kind="function"><name>SystemInit</name></member>
+    <member refid="group___s_t_m32_f4xx___system___private___functions_1gae0c36a9591fe6e9c45ecb21a794f0f0f" kind="function"><name>SystemCoreClockUpdate</name></member>
+  </compound>
+  <compound refid="_description" kind="page"><name>Description</name>
+  </compound>
+  <compound refid="_terms_and_abbreviations" kind="page"><name>TermsAndAbbreviations</name>
+  </compound>
+  <compound refid="_resources" kind="page"><name>Resources</name>
+  </compound>
+  <compound refid="_exceptions" kind="page"><name>Exceptions</name>
+  </compound>
+  <compound refid="_tests" kind="page"><name>Tests</name>
+  </compound>
+  <compound refid="_links" kind="page"><name>Links</name>
+  </compound>
+  <compound refid="dir_37390c7c9d01c8435b345b0b327b706d" kind="dir"><name>IgnitionController_STM32/Core</name>
+  </compound>
+  <compound refid="dir_16251f429df57cd7c4230dbd1c727091" kind="dir"><name>IgnitionController_STM32/Documentation</name>
+  </compound>
+  <compound refid="dir_84c3a99d771e48ebb40fac9ee8bbcb9c" kind="dir"><name>IgnitionController_STM32</name>
+  </compound>
+  <compound refid="dir_83a19c90a65021bd057fa02b52f7b569" kind="dir"><name>IgnitionController_STM32/Core/Inc</name>
+  </compound>
+  <compound refid="dir_a0c9d6ff4dc71b69cb7e294fbd37b370" kind="dir"><name>IgnitionController_STM32/Core/Src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

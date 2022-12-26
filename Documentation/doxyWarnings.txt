@@ -1,0 +1,153 @@
+warning: source './images' is not a readable file or directory... skipping.
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/stm32f4xx_hal_conf.h:4: warning: the name 'stm32f4xx_hal_conf_template.h' supplied as the argument in the \file statement is not an input file
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:5: warning: Found unknown command '@Copyright'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:22: warning: Found unknown command '@license'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:56: warning: argument 'in_u16_AdvanceAngleTime' of command @param is not found in the argument list of Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime, uint32_t in_u32_360degRevolutionTime)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:67: warning: The following parameter of Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime, uint32_t in_u32_360degRevolutionTime) is not documented:
+  parameter 'in_u32_AdvanceAngleTime'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:44: warning: argument 'none' of command @param is not found in the argument list of Calculate_u_RPM(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:108: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:111: warning: documented empty return type of HW_FiringPin_v_Cylinder_1_Reset
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:102: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:105: warning: documented empty return type of HW_FiringPin_v_Cylinder_1_Set
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:120: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:123: warning: documented empty return type of HW_FiringPin_v_Cylinder_2_Reset
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:114: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:117: warning: documented empty return type of HW_FiringPin_v_Cylinder_2_Set
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:96: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:99: warning: documented empty return type of HW_GPIO_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:90: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:93: warning: documented empty return type of HW_Timer_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:65: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:68: warning: documented empty return type of Clock_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:71: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:74: warning: documented empty return type of Data_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:59: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:62: warning: documented empty return type of GPIO_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:47: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:50: warning: documented empty return type of IgnitionCtrl_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:53: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:56: warning: documented empty return type of Timer_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/main.h:53: warning: documented empty return type of Error_Handler
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCotrol_Main.c:5: warning: Found unknown command '@Copyright'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCotrol_Main.c:22: warning: Found unknown command '@license'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:44: warning: argument 'none' of command @param is not found in the argument list of Calculate_u_RPM(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:5: warning: Found unknown command '@Copyright'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:22: warning: Found unknown command '@license'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:56: warning: argument 'in_u16_AdvanceAngleTime' of command @param is not found in the argument list of Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime, uint32_t in_u32_360degRevolutionTime)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:125: warning: The following parameter of Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime, uint32_t in_u32_360degRevolutionTime) is not documented:
+  parameter 'in_u32_AdvanceAngleTime'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:5: warning: Found unknown command '@Copyright'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:22: warning: Found unknown command '@license'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:108: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:83: warning: documented empty return type of HW_FiringPin_v_Cylinder_1_Reset
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:102: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:77: warning: documented empty return type of HW_FiringPin_v_Cylinder_1_Set
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:120: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:95: warning: documented empty return type of HW_FiringPin_v_Cylinder_2_Reset
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:114: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:89: warning: documented empty return type of HW_FiringPin_v_Cylinder_2_Set
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:96: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:55: warning: documented empty return type of HW_GPIO_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:90: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:67: warning: documented empty return type of HW_Timer_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:5: warning: Found unknown command '@Copyright'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:22: warning: Found unknown command '@license'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:65: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:64: warning: documented empty return type of Clock_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:71: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:32: warning: documented empty return type of Data_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:59: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:60: warning: documented empty return type of GPIO_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:47: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:48: warning: documented empty return type of IgnitionCtrl_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:53: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:70: warning: documented empty return type of Timer_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/main.c:292: warning: documented empty return type of Error_Handler
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/main.c:116: warning: documented empty return type of SystemClock_Config
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/stm32f4xx_hal_msp.c:112: warning: documented empty return type of HAL_TIM_Base_MspDeInit
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/stm32f4xx_hal_msp.c:87: warning: documented empty return type of HAL_TIM_Base_MspInit
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:187: warning: argument 'None' of command @param is not found in the argument list of SystemCoreClockUpdate(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:220: warning: documented empty return type of SystemCoreClockUpdate
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:161: warning: argument 'None' of command @param is not found in the argument list of SystemInit(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:167: warning: documented empty return type of SystemInit
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:44: warning: argument 'none' of command @param is not found in the argument list of Calculate_u_RPM(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:56: warning: argument 'in_u16_AdvanceAngleTime' of command @param is not found in the argument list of Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime, uint32_t in_u32_360degRevolutionTime)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:67: warning: The following parameter of Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime, uint32_t in_u32_360degRevolutionTime) is not documented:
+  parameter 'in_u32_AdvanceAngleTime'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:5: warning: Found unknown command '@Copyright'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:22: warning: Found unknown command '@license'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:90: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:93: warning: documented empty return type of HW_Timer_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:96: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:99: warning: documented empty return type of HW_GPIO_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:102: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:105: warning: documented empty return type of HW_FiringPin_v_Cylinder_1_Set
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:108: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:111: warning: documented empty return type of HW_FiringPin_v_Cylinder_1_Reset
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:114: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:117: warning: documented empty return type of HW_FiringPin_v_Cylinder_2_Set
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:120: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:123: warning: documented empty return type of HW_FiringPin_v_Cylinder_2_Reset
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:47: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:50: warning: documented empty return type of IgnitionCtrl_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:53: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:56: warning: documented empty return type of Timer_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:59: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:62: warning: documented empty return type of GPIO_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:65: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:68: warning: documented empty return type of Clock_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:71: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:74: warning: documented empty return type of Data_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/main.h:53: warning: documented empty return type of Error_Handler
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:44: warning: argument 'none' of command @param is not found in the argument list of Calculate_u_RPM(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCotrol_Main.c:5: warning: Found unknown command '@Copyright'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCotrol_Main.c:22: warning: Found unknown command '@license'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h:56: warning: argument 'in_u16_AdvanceAngleTime' of command @param is not found in the argument list of Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime, uint32_t in_u32_360degRevolutionTime)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:125: warning: The following parameter of Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime, uint32_t in_u32_360degRevolutionTime) is not documented:
+  parameter 'in_u32_AdvanceAngleTime'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:5: warning: Found unknown command '@Copyright'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c:22: warning: Found unknown command '@license'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:96: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:55: warning: documented empty return type of HW_GPIO_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:90: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:67: warning: documented empty return type of HW_Timer_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:102: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:77: warning: documented empty return type of HW_FiringPin_v_Cylinder_1_Set
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:108: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:83: warning: documented empty return type of HW_FiringPin_v_Cylinder_1_Reset
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:114: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:89: warning: documented empty return type of HW_FiringPin_v_Cylinder_2_Set
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h:120: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:95: warning: documented empty return type of HW_FiringPin_v_Cylinder_2_Reset
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:5: warning: Found unknown command '@Copyright'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c:22: warning: Found unknown command '@license'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:71: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:32: warning: documented empty return type of Data_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:47: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:48: warning: documented empty return type of IgnitionCtrl_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:59: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:60: warning: documented empty return type of GPIO_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:65: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:64: warning: documented empty return type of Clock_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h:53: warning: Found unknown command '@params'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:70: warning: documented empty return type of Timer_v_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:5: warning: Found unknown command '@Copyright'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c:22: warning: Found unknown command '@license'
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/main.c:116: warning: documented empty return type of SystemClock_Config
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/main.c:203: warning: argument 'None' of command @param is not found in the argument list of MX_GPIO_Init(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/main.c:207: warning: documented empty return type of MX_GPIO_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/main.c:158: warning: argument 'None' of command @param is not found in the argument list of MX_TIM2_Init(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/main.c:162: warning: documented empty return type of MX_TIM2_Init
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/main.c:292: warning: documented empty return type of Error_Handler
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/stm32f4xx_hal_msp.c:87: warning: documented empty return type of HAL_TIM_Base_MspInit
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/stm32f4xx_hal_msp.c:112: warning: documented empty return type of HAL_TIM_Base_MspDeInit
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:161: warning: argument 'None' of command @param is not found in the argument list of SystemInit(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:167: warning: documented empty return type of SystemInit
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:187: warning: argument 'None' of command @param is not found in the argument list of SystemCoreClockUpdate(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:220: warning: documented empty return type of SystemCoreClockUpdate
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:161: warning: argument 'None' of command @param is not found in the argument list of SystemInit(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:167: warning: documented empty return type of SystemInit
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:187: warning: argument 'None' of command @param is not found in the argument list of SystemCoreClockUpdate(void)
+d:/Projects/git/STM/IgnitionController_STM32/Core/Src/system_stm32f4xx.c:220: warning: documented empty return type of SystemCoreClockUpdate
+error: failed to run html help compiler on index.hhp

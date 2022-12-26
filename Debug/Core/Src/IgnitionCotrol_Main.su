@@ -1,9 +1,0 @@
-../Core/Src/IgnitionCotrol_Main.c:59:17:Calculate_u_Microseconds	16	static
-../Core/Src/IgnitionCotrol_Main.c:64:6:IgnitionControl_v_Main	8	static
-../Core/Src/IgnitionCotrol_Main.c:69:16:IgnitionControl_FirstSensorCheck	16	static
-../Core/Src/IgnitionCotrol_Main.c:129:13:IgnitionControl_v_UpdateSignalTime	8	static
-../Core/Src/IgnitionCotrol_Main.c:136:16:IgnitionControl_u_FirstSensorCheck_IT	4	static
-../Core/Src/IgnitionCotrol_Main.c:178:9:IgntionControl_SyncCheck	16	static
-../Core/Src/IgnitionCotrol_Main.c:207:13:Calculation_v_Handler	16	static
-../Core/Src/IgnitionCotrol_Main.c:313:13:Firing_v_Handler	8	static
-../Core/Src/IgnitionCotrol_Main.c:356:17:Calculate_u_RPM	32	static

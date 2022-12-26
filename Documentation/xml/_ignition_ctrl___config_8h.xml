@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_ignition_ctrl___config_8h" kind="file" language="C++">
+    <compoundname>IgnitionCtrl_Config.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="_ignition_cotrol___main_8h" local="yes">IgnitionController_STM32/Core/Inc/IgnitionCotrol_Main.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h</label>
+        <link refid="_ignition_ctrl___config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCotrol_Main.h</label>
+        <link refid="_ignition_cotrol___main_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_CalculateTimesAndAngles.h</label>
+        <link refid="_ignition_ctrl___calculate_times_and_angles_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h</label>
+        <link refid="_ignition_ctrl___config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_HW_Wrapper.h</label>
+        <link refid="_ignition_ctrl___h_w___wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_IgnAngleTable.h</label>
+        <link refid="_ignition_ctrl___ign_angle_table_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>IgnitionController_STM32/Core/Inc/IgnitionCtrl_Init.h</label>
+        <link refid="_ignition_ctrl___init_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>IgnitionController_STM32/Core/Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCotrol_Main.c</label>
+        <link refid="_ignition_cotrol___main_8c"/>
+      </node>
+      <node id="12">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_CalculateTimesAndAngles.c</label>
+        <link refid="_ignition_ctrl___calculate_times_and_angles_8c"/>
+      </node>
+      <node id="13">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_HW_Wrapper.c</label>
+        <link refid="_ignition_ctrl___h_w___wrapper_8c"/>
+      </node>
+      <node id="14">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_IgnAngleTable.c</label>
+        <link refid="_ignition_ctrl___ign_angle_table_8c"/>
+      </node>
+      <node id="15">
+        <label>IgnitionController_STM32/Core/Src/IgnitionCtrl_Init.c</label>
+        <link refid="_ignition_ctrl___init_8c"/>
+      </node>
+      <node id="8">
+        <label>IgnitionController_STM32/Core/Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="9">
+        <label>IgnitionController_STM32/Core/Src/stm32f4xx_hal_msp.c</label>
+        <link refid="stm32f4xx__hal__msp_8c"/>
+      </node>
+      <node id="10">
+        <label>IgnitionController_STM32/Core/Src/stm32f4xx_it.c</label>
+        <link refid="stm32f4xx__it_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a43bafb28b29491ec7f871319b5a3b2f8" prot="public" static="no">
+        <name>F_CPU</name>
+        <initializer>1000000UL</initializer>
+        <briefdescription>
+<para>8MHz </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="29" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a52bb4ed55787a925c9663846abfc0188" prot="public" static="no">
+        <name>IGNITION_ANGLE_TABLE_COLUMNS</name>
+        <initializer>2U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="39" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a83fbaa9c047696f159acfa6d8cfadce4" prot="public" static="no">
+        <name>IGNITION_ANGLE_TABLE_ROWS</name>
+        <initializer>10U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="40" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a1bb3ba304faf350d68c2c094aaaaf5f1" prot="public" static="no">
+        <name>IGNITION_DWELL_TIME_US</name>
+        <initializer>2500U</initializer>
+        <briefdescription>
+<para>Ignition coil dwell time in uS. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="41" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a4a59906266c2e255e1d39707354720ac" prot="public" static="no">
+        <name>IS_ENGINE_ODD_FIRE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="42" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a1323bc343cd1d3a5c09dd88a87110ebc" prot="public" static="no">
+        <name>ODD_FIRE_ANGLE_IN_DEG</name>
+        <initializer>225U</initializer>
+        <briefdescription>
+<para>Engine Fire Angle in degrees <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="46" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a1e7cc741c56207a8872ea58373276925" prot="public" static="no">
+        <name>E_OK</name>
+        <initializer>0U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="51" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a3af44a54c6ebc6525622174e0ddaefc7" prot="public" static="no">
+        <name>E_NOK</name>
+        <initializer>1U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="52" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a12289e8715fd56a16034f610666d900c" prot="public" static="no">
+        <name>E_BUSY</name>
+        <initializer>2U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="53" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a326df7b1fd368b717c3b11459e41ae89" prot="public" static="no">
+        <name>SENSOR_1_AVAILABLE</name>
+        <initializer>0U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="56" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1ad52ae496412e385445e1c92ecd5c8acd" prot="public" static="no">
+        <name>SENSOR_2_AVAILABLE</name>
+        <initializer>1U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="57" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1ab540c48af38d53327c432b762bb58290" prot="public" static="no">
+        <name>IN_SYNC</name>
+        <initializer>1U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="60" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_ignition_ctrl___config_8h_1a294b35048ce045439f35bb24a9215f09" prot="public" static="no">
+        <name>OUT_OF_SYNC</name>
+        <initializer>0U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" line="61" column="9" bodyfile="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="IgnitionController_STM32/Core/Inc/IgnitionCtrl_Config.h"/>
+  </compounddef>
+</doxygen>

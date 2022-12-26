@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dynamictype:DynamicTypeRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dynamictype="http://www.ibm.com/ccl/soa/deploy/dynamictype/1.0.0/">
+  <dynamicTypes>
+    <paletteEntries id="IgnitionControllerStack" kind="stack" label="IgnitionControllerStack" path="/extensionDrawer/"/>
+    <paletteEntries description="Template: Created on Thursday, 18 August 2022 21:02:08 o'clock CEST" id="IgnitionControllerTopology_Palette_Entry" kind="tool" label="IgnitionControllerTopology_Palette_Entry" largeIcon="platform:/plugin/com.ibm.ccl.soa.deploy.was/icons/pal/dploym_mng_pal24.gif" path="/extensionDrawer/IgnitionControllerStack" smallIcon="platform:/plugin/com.ibm.ccl.soa.deploy.was/icons/pal/dploym_mng_pal24.gif" templateURI="topologies/IgnitionControllerTopology.topology"/>
+  </dynamicTypes>
+</dynamictype:DynamicTypeRoot>
