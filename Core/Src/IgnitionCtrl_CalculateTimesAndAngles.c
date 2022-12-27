@@ -27,9 +27,8 @@
 
 #include "IgnitionCotrol_Main.h"
 
-extern tst_GlobalData GlobalDataValues;
 extern volatile uint32_t g_usSinceDetection;
-extern volatile uint32_t g_uSDebouncingSignalCounter;
+
 /*Global constant for RPM and ignition angle*/
 const uint16_t g_cIgnitionAngleTable [IGNITION_ANGLE_TABLE_COLUMNS] [IGNITION_ANGLE_TABLE_ROWS] =
 {   {0, 1000, 2000, 3000, 4000,  5000, 6000, 7000,  8000,  9000 },
@@ -81,16 +80,15 @@ uint8_t get_u_AdvanceAngle(uint16_t in_u8_RPM)
      }
      else
      {
-         //Do nothing
+    	 //Do nothing
      }
 
-          l_AdvanceAngleInt = (int8_t) round( ( ( l_p1 * pow(in_u8_RPM,5) ) + (l_p2 * pow(in_u8_RPM,4))
-             + (l_p3 * pow(in_u8_RPM,3)) + (l_p4 * pow(in_u8_RPM,2)) + (l_p5 * in_u8_RPM) + l_p6  ));
-      l_AdvanceAngleInt = (int8_t) round( ( ( l_p1 * (in_u8_RPM^5) ) + (l_p2 * (in_u8_RPM^4))
-             + (l_p3 * (in_u8_RPM^3)) + (l_p4 * (in_u8_RPM^2)) + (l_p5 * in_u8_RPM) + l_p6  ));
+     l_AdvanceAngleInt = (int8_t) round( ( ( l_p1 * pow(in_u8_RPM,5) ) + (l_p2 * pow(in_u8_RPM,4))
+    		 + (l_p3 * pow(in_u8_RPM,3)) + (l_p4 * pow(in_u8_RPM,2)) + (l_p5 * in_u8_RPM) + l_p6  ));
+
      if (0 > l_AdvanceAngleInt)
      {
-         l_AdvanceAngleInt = 0;
+    	 l_AdvanceAngleInt = 0;
      }
      else
      {
@@ -122,7 +120,7 @@ uint32_t CalculateTime_u_FromAngle(uint16_t in_u16_RPM, uint16_t in_u16_Angle)
     return l_CalculatedTime;
 }
 
- uint32_t Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime,  uint32_t in_u32_360degRevolutionTime)
+inline uint32_t Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime,  uint32_t in_u32_360degRevolutionTime)
 {
     uint32_t l_FiringTimeCylinder = in_u32_360degRevolutionTime - in_u32_AdvanceAngleTime; 
     
@@ -131,20 +129,22 @@ uint32_t CalculateTime_u_FromAngle(uint16_t in_u16_RPM, uint16_t in_u16_Angle)
 
 void Firing_v_Cylinder1(void)
 {
-    static uint8_t l_FiringFlag = 0;
-    if((GlobalDataValues.TimeElapsedSinceDetection >= ((GlobalDataValues.FiringTimeCyl_1 - IGNITION_DWELL_TIME_US) ) &&  (0 == l_FiringFlag) ) )
+
+    if((GlobalDataValues.TimeElapsedSinceDetection >= ((GlobalDataValues.FiringTimeCyl_1 - IGNITION_DWELL_TIME_US) )
+    		 && (false == GlobalDataValues.isCylinder1CoilCharging ) ) )
     {
         //Raise Firing Pin to HIGH 
         HW_FiringPin_v_Cylinder_1_Set();
-        l_FiringFlag = 1;
+        GlobalDataValues.isCylinder1CoilCharging = true;
     }
-    else if ((GlobalDataValues.TimeElapsedSinceDetection >= GlobalDataValues.FiringTimeCyl_1) &&  (1 == l_FiringFlag) )
+    else if ( (GlobalDataValues.TimeElapsedSinceDetection >= GlobalDataValues.FiringTimeCyl_1) )
     {
         //Set Firing Pin to LOW 
         HW_FiringPin_v_Cylinder_1_Reset();
-        l_FiringFlag = 0;
+        GlobalDataValues.isCylinder1CoilCharging = false;
         GlobalDataValues.FiringState = en_FiringCylinder1Completed;
-         //g_usSinceDetection = 0; //reset the value since detection
+        g_usSinceDetection = 0;
+
     }
 }
   void Firing_v_Cylinder2(void)
@@ -163,7 +163,6 @@ void Firing_v_Cylinder1(void)
         HW_FiringPin_v_Cylinder_2_Reset();
         l_FiringFlag = 0;
        GlobalDataValues.FiringState = en_FiringCylinder2Completed;
-       g_usSinceDetection = 0; //reset the value since detection
     }
 
 }

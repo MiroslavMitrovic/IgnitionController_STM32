@@ -52,7 +52,7 @@ typedef enum en_Calculation_States
 typedef enum en_Firing_States
 {
 	en_FiringStateInit,             ///< Initialization of state handler
-    en_IdleStateFiring,             ///< Idle state
+    en_IdleStateFiringState,        ///< Idle state
 	en_FiringCylinder1,             ///< Firing cylinder 1 ongoing
     en_FiringCylinder1Completed,    ///< Firing cylinder 1 completed
     en_FiringCylinder2,             ///< Firing cylinder 2 ongoing
@@ -65,12 +65,14 @@ typedef volatile struct
 	ten_Calculation_States CalculationState;
     ten_Firing_States       FiringState;
 	uint16_t RPM;
-	uint8_t IsSynchronised;
+	uint8_t SynchronizationStatus;
 	uint8_t AdvanceAngle;
 	uint32_t Microseconds;
     uint32_t FiringTimeCyl_1;
     uint32_t FiringTimeCyl_2;
     uint32_t TimeElapsedSinceDetection;
+    bool  isCylinder1CoilCharging;
+    bool  isCylinder2CoilCharging;
 }tst_GlobalData;
 
 typedef enum
@@ -90,7 +92,8 @@ typedef enum
 /*******************************************************************************
  * Global Variables
  *******************************************************************************/
-extern tst_GlobalData GlobalDataValues;
+extern volatile tst_GlobalData GlobalDataValues;
+extern volatile uint32_t g_uSDebouncingSignalCounter;
 /*******************************************************************************
  * Functions
  *******************************************************************************/
@@ -98,6 +101,10 @@ extern tst_GlobalData GlobalDataValues;
 extern uint32_t Calculate_u_Microseconds(uint32_t u32_MicrosecondsTicks);
 /*Main Function that will be called synchroniously and will check the states*/
 void IgnitionControl_v_Main(void);
+
+extern uint8_t IgnitionControl_u_FirstSensorCheck_IT(void);
+
+extern void IgnitionControl_v_UpdateSignalTime(void);
 
 /*******************************************************************************
  * Specific Includes

@@ -60,8 +60,8 @@ all: main-build
 main-build: IgnitionController.elf secondary-outputs
 
 # Tool invocations
-IgnitionController.elf IgnitionController.map: $(OBJS) $(USER_OBJS) D:\D_Projects_10102022\projects\STM32CubeIDE\workspace_1.9.0\IgnitionController\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "IgnitionController.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\D_Projects_10102022\projects\STM32CubeIDE\workspace_1.9.0\IgnitionController\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IgnitionController.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+IgnitionController.elf IgnitionController.map: $(OBJS) $(USER_OBJS) D:\Projects\git\STM\IgnitionController_STM32\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "IgnitionController.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Projects\git\STM\IgnitionController_STM32\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IgnitionController.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
