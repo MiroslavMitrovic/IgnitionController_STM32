@@ -1,0 +1,9 @@
+*.o
+*.d
+*.su
+*.cproject
+*.project.prefs
+*.elf
+*.map
+*.list
+*.srec
