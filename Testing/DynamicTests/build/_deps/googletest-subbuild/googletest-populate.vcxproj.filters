@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\59f9d33e22fc1bcf3356383ef0e2c595\googletest-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\59f9d33e22fc1bcf3356383ef0e2c595\googletest-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\59f9d33e22fc1bcf3356383ef0e2c595\googletest-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\59f9d33e22fc1bcf3356383ef0e2c595\googletest-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\59f9d33e22fc1bcf3356383ef0e2c595\googletest-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\59f9d33e22fc1bcf3356383ef0e2c595\googletest-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\59f9d33e22fc1bcf3356383ef0e2c595\googletest-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\59f9d33e22fc1bcf3356383ef0e2c595\googletest-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\4b1c7c403a725121615674f5caed3bb2\googletest-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\99cf397edae201ad79a5969168f0449e\googletest-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EFEA0577-C42E-31F2-8AA6-0E35C0833D5A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

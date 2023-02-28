@@ -1,0 +1,3 @@
+﻿  Building Custom Rule D:/projects/atmel/attiny85/IgnitionController/unitTests/CMakeLists.txt
+  test_IgnitionCtrl_CalculateTimesAndAngles.c
+  IgnitionCtrl_CalculateTimesAndAngles.vcxproj -> D:\projects\atmel\attiny85\IgnitionController\unitTests\build\Debug\IgnitionCtrl_CalculateTimesAndAngles.lib

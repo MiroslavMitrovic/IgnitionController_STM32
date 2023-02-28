@@ -1,0 +1,3 @@
+﻿  Building Custom Rule D:/projects/atmel/attiny85/IgnitionController/unitTests/CMakeLists.txt
+  test_main.c
+  mainApp.vcxproj -> D:\projects\atmel\attiny85\IgnitionController\unitTests\build\Debug\mainApp.exe

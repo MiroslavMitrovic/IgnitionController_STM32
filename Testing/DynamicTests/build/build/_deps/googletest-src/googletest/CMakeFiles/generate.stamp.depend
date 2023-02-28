@@ -1,0 +1,18 @@
+# CMake generation dependency list for this directory.
+C:/tools/CMake/share/cmake-3.24/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+C:/tools/CMake/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/CheckIncludeFile.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/CheckLibraryExists.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/FindPackageMessage.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/FindPython.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/FindPython/Support.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/FindThreads.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-src/googletest/CMakeLists.txt
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-src/googletest/cmake/Config.cmake.in
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-src/googletest/cmake/gtest.pc.in
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-src/googletest/cmake/gtest_main.pc.in
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-src/googletest/cmake/internal_utils.cmake

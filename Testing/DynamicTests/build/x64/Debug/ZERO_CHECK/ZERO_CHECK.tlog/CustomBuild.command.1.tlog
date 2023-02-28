@@ -1,0 +1,10 @@
+^D:\PROJECTS\ATMEL\ATTINY85\IGNITIONCONTROLLER\UNITTESTS\BUILD\CMAKEFILES\F359E9ED25AEEC21575352EBABDC9979\GENERATE.STAMP.RULE
+setlocal
+C:\tools\CMake\bin\cmake.exe -SD:/projects/atmel/attiny85/IgnitionController/unitTests -BD:/projects/atmel/attiny85/IgnitionController/unitTests/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/projects/atmel/attiny85/IgnitionController/unitTests/build/IgnitionController_UnitTesting.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

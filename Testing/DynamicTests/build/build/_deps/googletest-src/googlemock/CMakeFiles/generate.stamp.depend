@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+C:/tools/CMake/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/CheckIncludeFile.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/CheckLibraryExists.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/FindPackageMessage.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/FindThreads.cmake
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-src/googlemock/CMakeLists.txt
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-src/googlemock/cmake/gmock.pc.in
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-src/googlemock/cmake/gmock_main.pc.in

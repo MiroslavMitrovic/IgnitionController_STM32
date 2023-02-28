@@ -1,0 +1,3 @@
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-subbuild/CMakeFiles/ALL_BUILD.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-subbuild/CMakeFiles/ZERO_CHECK.dir

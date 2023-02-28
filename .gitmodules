@@ -1,0 +1,3 @@
+[submodule "Testing/DynamicTests/build/_deps/googletest-src"]
+	path = Testing/DynamicTests/build/_deps/googletest-src
+	url = ../googletest-src

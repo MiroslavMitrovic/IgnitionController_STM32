@@ -1,0 +1,17 @@
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/CMakeFiles/IgnitionCtrl_Main.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/CMakeFiles/IgnitionCtrl_CalculateTimesAndAngles.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/CMakeFiles/mainApp.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/CMakeFiles/UnitTesting.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/CMakeFiles/INSTALL.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/CMakeFiles/ALL_BUILD.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/CMakeFiles/ZERO_CHECK.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/build/_deps/googletest-src/CMakeFiles/INSTALL.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/build/_deps/googletest-src/CMakeFiles/ALL_BUILD.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/build/_deps/googletest-src/googlemock/CMakeFiles/gmock.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/build/_deps/googletest-src/googlemock/CMakeFiles/gmock_main.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/build/_deps/googletest-src/googlemock/CMakeFiles/INSTALL.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/build/_deps/googletest-src/googlemock/CMakeFiles/ALL_BUILD.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/build/_deps/googletest-src/googletest/CMakeFiles/gtest.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/build/_deps/googletest-src/googletest/CMakeFiles/gtest_main.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/build/_deps/googletest-src/googletest/CMakeFiles/INSTALL.dir
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/build/_deps/googletest-src/googletest/CMakeFiles/ALL_BUILD.dir
