@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\projects\atmel\attiny85\IgnitionController\unitTests\build\_deps\googletest-subbuild\CMakeFiles\99cf397edae201ad79a5969168f0449e\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EFEA0577-C42E-31F2-8AA6-0E35C0833D5A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,4 @@
+# CMake generation dependency list for this directory.
+C:/tools/CMake/share/cmake-3.24/Modules/CMakeDependentOption.cmake
+C:/tools/CMake/share/cmake-3.24/Modules/GNUInstallDirs.cmake
+D:/projects/atmel/attiny85/IgnitionController/unitTests/build/_deps/googletest-src/CMakeLists.txt
