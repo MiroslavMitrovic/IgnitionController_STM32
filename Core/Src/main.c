@@ -99,11 +99,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//	  if(g_uSCounter > 2000)
-//	  {
-//		  g_uSCounter = 0;
-//		  HAL_GPIO_TogglePin(LD4_GPIO_Port,LD4_Pin);
-//	  }
 	  IgnitionControl_v_Main();
   }
   /* USER CODE END 3 */

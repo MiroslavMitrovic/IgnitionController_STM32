@@ -26,11 +26,23 @@ Description
 
 # Ignition Controller for 2 Cylinder Bike
 Ignition controller powered by STM32F407VGT6 MCU. 
-### Implementation 
+## Implementation 
 -	RPM is calculated out of Sensor input from Crank or Cam shaft
 -	Firing of cylinders is performed in scheduled manner via FSM handling.
-### Architecture Display 
-TBD
+## Architecture Display 
+### File Structure
+@image html IgnitionController_IgnitionControlerFileStructure.png
+### Dependencies
+@image html IgnitionController_IgnitionControlerStructure.png
+### Activity Diagram 
+@image html IgnitionController_IgnitionControllerActivityDiagram.png
+### FSM Diagrams 
+@image html IgnitionController_StatemachineDiagram1.png
+@image html IgnitionController_StatemachineDiagram1_1.png
+### Class Diagram
+@image html IgnitionController_IgnitonControllerClasses.png
+### Use Case Diagram 
+@image html IgnitionController_UsecaseDiagram_IgnitionControl.png
 
 @page TermsAndAbbreviations
 Terms And Abbreviations 
@@ -64,7 +76,8 @@ Exception and Error Handling
 If error occurs error handler will put MCU in infinite loop and application will not function.
 
 @page Tests
-Tests 
+# Dynamic Tests
+- Dynamic Tests are available in folder Testing/Dynamic Testing. GTEST framework is used for unit testing. 
 ============================
 
 

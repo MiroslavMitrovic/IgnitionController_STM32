@@ -97,13 +97,26 @@ extern volatile uint32_t g_uSDebouncingSignalCounter;
 /*******************************************************************************
  * Functions
  *******************************************************************************/
-
+/** @brief /*Function to calculate microseconds based on Timer counter increment for each 256uS.\n
+ *  @param  [in] u32_MicrosecondsTicks
+ *  @return Microseconds
+ */
 extern uint32_t Calculate_u_Microseconds(uint32_t u32_MicrosecondsTicks);
-/*Main Function that will be called synchroniously and will check the states*/
+/** @brief Main Function that will be called synchroniously and will check the states\n
+ *  @param  none
+ *  @return none
+ */
 void IgnitionControl_v_Main(void);
-
+/** @brief /* Check for the first sensor is available, and if it is, it returns the status and
+ * sets the time for first sensor \n
+ *  @param  none
+ *  @return Sensor Status
+ */
 extern uint8_t IgnitionControl_u_FirstSensorCheck_IT(void);
-
+/** @brief /* Updates the time value and sets the availability of sensor  \n
+ *  @param  none
+ *  @return Sensor Status
+ */
 extern void IgnitionControl_v_UpdateSignalTime(void);
 
 /*******************************************************************************

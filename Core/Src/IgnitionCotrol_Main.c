@@ -95,11 +95,10 @@ static uint8_t IgnitionControl_FirstSensorCheck(void)
 						g_FirstSensorTimePrevious_us = g_FirstSensorTime_us;
 						g_SignalState = 1;
 					}
-					else if ( (g_SignalState == 1) /*&& (GPIO_PIN_SET == HAL_GPIO_ReadPin(Signal_1_GPIO_Port, Signal_1_Pin))*/)
+					else if(g_SignalState == 1)
 					{
 						g_FirstSensorTimeCurrent_us = g_FirstSensorTime_us;
 						g_SignalState = 2;
-
 					}
 
 				}
@@ -107,21 +106,16 @@ static uint8_t IgnitionControl_FirstSensorCheck(void)
 			}
 			else{}
 		}
-		else
-		{
-
-		}
+		else{}
 	}
 	if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(Signal_1_GPIO_Port, Signal_1_Pin))
 	{
 		//To clear a BIT to have status when it is OFF
-
 		l_isSignalToggled = 0;
 		l_status = E_OK;
 		g_SignalFlag &=  ~(1 << SENSOR_1_AVAILABLE);
 	}
-	else
-	{  }
+	else{}
 
 	return l_status;
 }
@@ -135,7 +129,7 @@ extern void IgnitionControl_v_UpdateSignalTime(void)
 }
 extern uint8_t IgnitionControl_u_FirstSensorCheck_IT(void)
 {
-	/*
+	/* TODO
 	 * 1. Update the current time
 	 * 2. Update the previous time
 	 * 3. Update the sync data
@@ -147,7 +141,7 @@ extern uint8_t IgnitionControl_u_FirstSensorCheck_IT(void)
 		g_FirstSensorTimePrevious_us = g_FirstSensorTime_us;
 		g_SignalState = 1;
 	}
-	else if ( (g_SignalState == 1) /*&& (GPIO_PIN_SET == HAL_GPIO_ReadPin(Signal_1_GPIO_Port, Signal_1_Pin))*/)
+	else if ( (g_SignalState == 1))
 	{
 		g_FirstSensorTimeCurrent_us = g_FirstSensorTime_us;
 		g_SignalState = 2;
@@ -171,7 +165,6 @@ uint8_t IgntionControl_SyncCheck(void)
          if( (g_SensorActivationCounter >= 2) && (g_FirstSensorTimePrevious_us != g_FirstSensorTimeCurrent_us) )
          {
               GlobalDataValues.SynchronizationStatus = IN_SYNC;
-
          }
          else
          {
@@ -185,7 +178,6 @@ uint8_t IgntionControl_SyncCheck(void)
          l_status = E_NOK;
      }
      return l_status; 
-    
 }
 
 static void Calculation_v_Handler(void)
@@ -225,7 +217,7 @@ static void Calculation_v_Handler(void)
         case en_Synchronized:
          l_Result = IgnitionControl_FirstSensorCheck();
 
-        // Again the calculation due to issue with below condition triggering randomly.
+        // Again check for uS values to get latest value for the check below
          GlobalDataValues.Microseconds = Calculate_u_Microseconds(g_uSCounter);
       	//If more than 2 Seconds have passed, disable the signal and set status to out of sync
          if( MAX_TIME_FOR_SIGNAL_AVAILABILITY <= (GlobalDataValues.Microseconds - g_FirstSensorTimeCurrent_us) )
@@ -307,7 +299,7 @@ static void Firing_v_Handler(void)
         {
             case en_FiringCylinder1:
                Firing_v_Cylinder1();
-           break;  //remove breaks for runtime improvement
+           break;
             case en_FiringCylinder1Completed:
 //TODO: Implement firing and handling for Cylinder2.
             break;
@@ -320,9 +312,7 @@ static void Firing_v_Handler(void)
                
             break;
             case en_IdleStateFiringState:
-
-            
-                // do nothing
+               // do nothing
             break;
             default:
              // should not be reached.

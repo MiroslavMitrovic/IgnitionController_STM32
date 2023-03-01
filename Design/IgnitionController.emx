@@ -1180,6 +1180,16 @@
           <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_VYAzMTelEe2FiKbIMMGdsg" fontName="Segoe UI" lineWidth="1" showStereotype="Text"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VYAzMjelEe2FiKbIMMGdsg" points="[1, -17, -24, 223]$[-33, -277, -58, -37]"/>
         </edges>
+        <edges xmi:id="_eEwF4LfCEe2grZ3_ikk1-A" element="_eEKQALfCEe2grZ3_ikk1-A" source="_eHjLoDekEe2FiKbIMMGdsg" target="_2hK3UDejEe2FiKbIMMGdsg">
+          <children xmi:id="_eEwF47fCEe2grZ3_ikk1-A" visible="false" type="KindLabel">
+            <children xmi:id="_eEws8LfCEe2grZ3_ikk1-A" type="Stereotype"/>
+            <children xmi:id="_eEws8rfCEe2grZ3_ikk1-A" type="Kind"/>
+            <children xmi:id="_eEws8bfCEe2grZ3_ikk1-A" type="Name"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eEwF5LfCEe2grZ3_ikk1-A" y="-149"/>
+          </children>
+          <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_eEwF4bfCEe2grZ3_ikk1-A" fontName="Segoe UI" lineWidth="1" showStereotype="Text"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_eEwF4rfCEe2grZ3_ikk1-A" points="[-113, 18, 290, -59]$[-293, 37, 110, -40]"/>
+        </edges>
       </contents>
       <contents xmi:type="notation:Diagram" xmi:id="_XtnvMENXEe25GYYRhHJlWg" type="Deployment" name="DeploymentDiagram1">
         <children xmi:id="_XBe7wILuEe2ptcSlgievIA" element="_XA6UAILuEe2ptcSlgievIA">
@@ -2982,7 +2992,7 @@ uint16_t g_IgnitionAngleTable [IGNITION_ANGLE_TABLE_COLUMNS] [IGNITION_ANGLE_TAB
       <ownedAttribute xmi:type="uml:Port" xmi:id="_GpXC4DekEe2FiKbIMMGdsg" name="hWInterface" type="_GpUmoDekEe2FiKbIMMGdsg" aggregation="composite"/>
       <packagedElement xmi:type="uml:Interface" xmi:id="_GpUmoDekEe2FiKbIMMGdsg" name="HWInterface"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_eHgIUDekEe2FiKbIMMGdsg" name="IgnitionController"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_eHgIUDekEe2FiKbIMMGdsg" name="IgnitionController" clientDependency="_eEKQALfCEe2grZ3_ikk1-A"/>
     <packagedElement xmi:type="uml:Component" xmi:id="_iQvOkDekEe2FiKbIMMGdsg" name="PowerSupplyCircuit">
       <ownedAttribute xmi:id="_qqrVADekEe2FiKbIMMGdsg" name="filterCircuit" visibility="private" type="_2hDikDejEe2FiKbIMMGdsg" association="_qqo4wDekEe2FiKbIMMGdsg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qqsjIDekEe2FiKbIMMGdsg" value="1"/>
@@ -3239,6 +3249,7 @@ and return RPM to 0</body>
         </ownedComment>
       </packagedElement>
     </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_eEKQALfCEe2grZ3_ikk1-A" supplier="_2hDikDejEe2FiKbIMMGdsg" client="_eHgIUDekEe2FiKbIMMGdsg"/>
     <profileApplication xmi:id="_ATyLN_jKEeytJO_1HHRBzA">
       <eAnnotations xmi:id="_ATyLOPjKEeytJO_1HHRBzA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>

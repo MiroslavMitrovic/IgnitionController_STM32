@@ -29,7 +29,7 @@
 	
 void setIgnAngleTable(uint16_t *RPM, uint16_t *AdvanceAngle)
 {
-
+  //not used
 }
 
 

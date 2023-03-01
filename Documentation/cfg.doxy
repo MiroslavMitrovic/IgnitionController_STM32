@@ -19,7 +19,7 @@
 
 # PROJECT_NAME tag is a single word that should identify the project for which configuration is generated 
 
-PROJECT_NAME = "ReflowPreheater" 
+PROJECT_NAME = "IgnitionController" 
 
 # CHM_FILE tag is used to specify name of resulting .chm file. Path can be added in front of the file if the result 
 # should not be written to the html output directory. 
@@ -35,7 +35,8 @@ CHM_FILE = ..\Ignition_Controller.chm
 #								 
 #INPUT 							= \
 INPUT 							=.\genericmdf.markdown \ 
-								 ..\Core
+								 ..\Core \ 
+								 ..\Testing\DynamicTests\code
 #								 ../Drivers 
 # RECURSIVE TAG specify should subdirectories should be searched for input files 
 # Default value is : NO. 
@@ -49,7 +50,7 @@ USE_MDFILE_AS_MAINPAGE =  ./genericmdf.markdown
 
 # IMAGE_PATH TAG is used to specify where the pictures that will be used in doxygen generation are stored. 
 
-IMAGE_PATH = ./images
+IMAGE_PATH = ./../Design
 
 # FULL_PATH_NAMES TAG 
 

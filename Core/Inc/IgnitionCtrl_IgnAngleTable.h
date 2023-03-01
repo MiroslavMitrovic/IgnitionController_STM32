@@ -34,6 +34,12 @@
 /*******************************************************************************
  * Functions
  *******************************************************************************/
+
+/** @brief Function to create ignition angle table - not used\n
+ *  @param  [in] in_u16_RPM
+ *  @param  [in] in_pu16_AdvanceAngle
+ *  @return none
+ */
 void setIgnAngleTable(uint16_t *in_pu16RPM, uint16_t *in_pu16_AdvanceAngle);
 
 

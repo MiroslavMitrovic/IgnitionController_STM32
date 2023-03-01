@@ -55,7 +55,6 @@ uint8_t get_u_AdvanceAngle(uint16_t in_u8_RPM)
         p5 = -0.010326;
         p6 = 0.22854;
 */
-    //PORTB |= ( 1<< PB1); //For debug Purposes only
 	 uint16_t l_RPMMaxValue = 8500;
 	 uint16_t l_RPMMinValue = 0; 
      int8_t l_AdvanceAngleInt = 0;

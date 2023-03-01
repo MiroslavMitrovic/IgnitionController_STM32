@@ -19,7 +19,7 @@ SET HHC_PATH=d:/Projects/git/STM/IgnitionController_STM32/Documentation/html/ind
 SET INPUT_DIR1=d:/Projects/git/STM/IgnitionController_STM32/Core
 SET PROJECT_NAME=IgnitionController
 
-SET IMG_PATH1=./images
+::SET IMG_PATH1=./images
 ::java -jar %PLANTUML_JAR% -v -o "%IMG_PATH1%" "%INPUT_DIR1%/**.(c|cpp|doc|h|md|markdown)"
 %DOXYGEN_EXE% project.doxy 
 
@@ -27,5 +27,6 @@ SET IMG_PATH1=./images
 ::hhc ./html/index.hhp
 ::Cleanup after 
 rd html /s/q 
+rd xml /s/q 
 PAUSE 
 

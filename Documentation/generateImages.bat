@@ -10,12 +10,12 @@ SET PLANTUML_JAR=C:\tools\PlantUML\plantuml.jar
 
 ::set paths for generation 
 
-SET INPUT_DIR1=d:\Projects\ReflowPreheater\ReflowPreheater\Core\Inc\
-SET PROJECT_NAME= ReflowPreheater
+SET INPUT_DIR1=d:\Projects\git\STM\IgnitionController_STM32\Core\Inc\
+SET PROJECT_NAME= IgnitionController_STM32
 
 ::Set output folder for images 
 
-SET IMG_PATH1=d:\Projects\ReflowPreheater\ReflowPreheater\Docs\images\
+SET IMG_PATH1=d:\Projects\git\STM\ReflowPreheater\Docs\images\
 
 ::generate PLANTUML images
 
