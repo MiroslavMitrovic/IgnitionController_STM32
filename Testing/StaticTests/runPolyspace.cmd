@@ -9,3 +9,10 @@ CALL ./%PROJECT_NAME%/launchingCommand.bat
 
 echo Polyspace Analysis done! 
 
+echo Opening Polyspace Report
+::command for opening the results 
+polyspace -open ./%PROJECT_NAME%/results/ps_results.pscp
+echo Report opened!
+echo opening Polyspace Project 
+::command for opening the project 
+polyspace -open IgnitionController.psprj
