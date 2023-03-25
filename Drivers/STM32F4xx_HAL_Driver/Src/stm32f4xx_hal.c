@@ -216,6 +216,7 @@ HAL_StatusTypeDef HAL_DeInit(void)
   * @brief  Initialize the MSP.
   * @retval None
   */
+#ifdef POLYSPACE_NOT_USED
 __weak void HAL_MspInit(void)
 {
   /* NOTE : This function should not be modified, when the callback is needed,
@@ -233,7 +234,7 @@ __weak void HAL_MspDeInit(void)
             the HAL_MspDeInit could be implemented in the user file
    */ 
 }
-
+#endif /* POLYSPACE_NOT_USED*/
 /**
   * @brief This function configures the source of the time base.
   *        The time source is configured  to have 1ms time base with a dedicated 
