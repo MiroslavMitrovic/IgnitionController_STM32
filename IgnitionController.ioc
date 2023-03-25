@@ -1,4 +1,7 @@
 #MicroXplorer Configuration settings - do not modify
+CAD.formats=
+CAD.pinconfig=
+CAD.provider=
 File.Version=6
 GPIO.groupedBy=Group By Peripherals
 KeepUserPlacement=false
@@ -36,8 +39,8 @@ Mcu.PinsNb=21
 Mcu.ThirdPartyNb=0
 Mcu.UserConstants=
 Mcu.UserName=STM32F407VGTx
-MxCube.Version=6.6.1
-MxDb.Version=DB.6.0.60
+MxCube.Version=6.7.0
+MxDb.Version=DB.6.0.70
 NVIC.BusFault_IRQn=true\:0\:0\:false\:false\:true\:true\:false\:false
 NVIC.DebugMonitor_IRQn=true\:0\:0\:false\:false\:true\:true\:false\:false
 NVIC.ForceEnableDMAVector=true
@@ -231,4 +234,4 @@ VP_TIM2_VS_ClockSourceINT.Mode=Internal
 VP_TIM2_VS_ClockSourceINT.Signal=TIM2_VS_ClockSourceINT
 board=STM32F407G-DISC1
 boardIOC=true
-isbadioc=false
+isbadioc=true
