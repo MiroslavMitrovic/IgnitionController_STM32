@@ -118,7 +118,7 @@ add_link_options(
     # https://blog.thea.codes/the-most-thoroughly-commented-linker-script/
     # https://ftp.gnu.org/old-gnu/Manuals/ld-2.9.1/html_chapter/ld_3.html
     -T${CMAKE_SOURCE_DIR}/STM32F407VGTX_FLASH.ld
-	-T${CMAKE_SOURCE_DIR}/STM32F407VGTX_RAM.ld
+	#-T${CMAKE_SOURCE_DIR}/STM32F407VGTX_RAM.ld
 
     # This directive instructs the linker to generate a mapfile. Mapfiles contain information about the final
     # layout of the firmware binary and are an invaluable resource for development.
@@ -176,10 +176,10 @@ PRIVATE
 target_compile_options(${EXECUTABLE}
 PRIVATE
     -Wall
-    #-Wextra
-    #-Wshadow
-    #-Wconversion
-    #-Wdouble-promotion
+    -Wextra
+    -Wshadow
+    -Wconversion
+    -Wdouble-promotion
 	#-v
 )
 
