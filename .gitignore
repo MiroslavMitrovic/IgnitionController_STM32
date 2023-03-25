@@ -7,6 +7,8 @@
 *.map
 *.list
 *.srec
+*.cproject
+.settings/language.settings.xml
 #exclusion of build folders
 build/
 debug/
