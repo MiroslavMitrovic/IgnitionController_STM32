@@ -7,3 +7,6 @@
 *.map
 *.list
 *.srec
+#exclusion of build folders
+build/
+debug/
