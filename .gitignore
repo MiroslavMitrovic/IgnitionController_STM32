@@ -16,3 +16,5 @@ debug/
 Drivers/CMakeFiles/
 Drivers/cmake_install.cmake
 Drivers/Makefile
+#exclusion of Polyspace folders
+Testing/StaticTests/IgnitionController/
