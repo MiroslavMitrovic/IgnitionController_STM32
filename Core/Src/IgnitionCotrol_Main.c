@@ -66,6 +66,7 @@ void IgnitionControl_v_Main(void)
 	Firing_v_Handler();
 	Calculation_v_Handler();
 }
+#ifdef SENSOR_POLLING_MODE
 static uint8_t IgnitionControl_FirstSensorCheck(void)
 {
 	uint8_t l_status = E_NOK;
@@ -119,6 +120,7 @@ static uint8_t IgnitionControl_FirstSensorCheck(void)
 
 	return l_status;
 }
+#endif /* SENSOR_POLLING_MODE */
 
 extern void IgnitionControl_v_UpdateSignalTime(void)
 {
@@ -198,7 +200,7 @@ static void Calculation_v_Handler(void)
         GlobalDataValues.CalculationState = en_SynchronizationOngoing;
         break;
         case    en_SynchronizationOngoing:
-#ifdef STM_INTERRUPT
+#ifdef SENSOR_INTERRUPT_MODE
         	IgnitionControl_u_FirstSensorCheck_IT();
 #else
         	l_Result = IgnitionControl_FirstSensorCheck();
@@ -215,7 +217,11 @@ static void Calculation_v_Handler(void)
         break;
 
         case en_Synchronized:
-         l_Result = IgnitionControl_FirstSensorCheck();
+    #ifdef SENSOR_INTERRUPT_MODE
+                IgnitionControl_u_FirstSensorCheck_IT();
+    #else
+                l_Result = IgnitionControl_FirstSensorCheck();
+    #endif /*STM_INTERRUPT*/
 
         // Again check for uS values to get latest value for the check below
          GlobalDataValues.Microseconds = Calculate_u_Microseconds(g_uSCounter);
