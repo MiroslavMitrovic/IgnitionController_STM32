@@ -204,6 +204,9 @@ PRIVATE
     Drivers
 )
 
+target_link_options(${EXECUTABLE}  
+PRIVATE -Wl,--end-group)
+
 # This creates a custom command that prints out the firmware binary size information.
 # Text is the code, data stores variables that have a non-zero initial value and have to be stored in flash,
 # bss stores zero initial values that only take up ram.
