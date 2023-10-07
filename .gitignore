@@ -18,3 +18,5 @@ Drivers/cmake_install.cmake
 Drivers/Makefile
 #exclusion of Polyspace folders
 Testing/StaticTests/IgnitionController/
+#exclusion of GTest folders
+Testing/DynamicTests/build/
