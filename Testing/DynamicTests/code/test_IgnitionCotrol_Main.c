@@ -5,8 +5,11 @@
  *  Author: mmitr
  */ 
 #include "test_IgnitionCotrol_Main.h"
+#ifdef VS_2022
 #include <corecrt_math_defines.h>
-
+#else
+#include "math.h"
+#endif
 tst_GlobalData GlobalDataValues;
 uint32_t g_uSCounter = 0;
 extern uint32_t g_FirstSensorTimePrevious_us;
