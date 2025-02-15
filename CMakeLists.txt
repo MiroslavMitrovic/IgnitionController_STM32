@@ -5,7 +5,7 @@
 # Generally it is advisable to set it as low as possible until features from the newer versions are required.
 # Another good approach is to check https://repology.org/project/cmake/versions for the CMake versions shipped
 # in most used Linux distributions.
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.22)
 
 
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/arm-none-eabi-gcc.cmake)
@@ -137,11 +137,15 @@ add_link_options(
 # -lc is the libc containing most standard library features
 # -lm is the libm containing math functionality
 # -lnosys provides stubs for the syscalls, essentially placeholders for what would be operating system calls
-#link_libraries("-lc -lm -lnosys")
+link_libraries("-lc -lm -lnosys")
 
 
+add_subdirectory(Drivers)
 
-
+target_include_directories(Drivers
+PRIVATE
+    Core/Inc
+)
 
 # Create a custom executable filename variable by appending the ELF extension to the project name
 set(EXECUTABLE ${PROJECT_NAME}.elf)
@@ -184,20 +188,20 @@ PRIVATE
 )
 
 
-target_link_options(${EXECUTABLE}  BEFORE
-PRIVATE -Wl,--start-group PRIVATE -lc  PRIVATE -lm PRIVATE -lnosys )
-
+#target_link_options(${EXECUTABLE}  BEFORE
+#PRIVATE -Wl,--start-group PRIVATE -lc  PRIVATE -lm PRIVATE -lnosys)
+#-Wl,--start-group -lc -lm -Wl,--end-group
 # Add library subdirectories
 # When a subdirectory is added, the CMakeLists file contained in that subdirectory is evaluated, this is usually
 # chained for composability. In this case the Drivers CMakeLists creates a static library called Drivers.
-add_subdirectory(Drivers)
+#add_subdirectory(Drivers)
 
 # In this case we need to include the Core/Inc for the drivers library, as it depends on the definitions inside
 # the Core headers.
-target_include_directories(Drivers
-PRIVATE
-    Core/Inc
-)
+#target_include_directories(Drivers
+#PRIVATE
+#    Core/Inc
+#)
 
 target_link_libraries(${EXECUTABLE} 
 PRIVATE
