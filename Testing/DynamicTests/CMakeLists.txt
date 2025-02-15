@@ -16,15 +16,15 @@ if(NOT googletest_POPULATED)
 	add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BUILD_DIR})
 endif()
 
-add_library(IgnitionCtrl_Main STATIC test_IgnitionCotrol_Main.c)
+add_library(IgnitionCtrl_Main STATIC code/test_IgnitionCotrol_Main.c)
 
-add_library(IgnitionCtrl_CalculateTimesAndAngles STATIC test_IgnitionCtrl_CalculateTimesAndAngles.c)
+add_library(IgnitionCtrl_CalculateTimesAndAngles STATIC code/test_IgnitionCtrl_CalculateTimesAndAngles.c)
 
-add_executable(mainApp test_main.c)
+add_executable(mainApp code/test_main.c)
 
 target_link_libraries(mainApp IgnitionCtrl_Main )
 
-add_executable(UnitTesting test_gtest.cpp)
+add_executable(UnitTesting code/test_gtest.cpp)
 
 target_link_libraries(UnitTesting IgnitionCtrl_Main IgnitionCtrl_CalculateTimesAndAngles gtest_main gmock_main)
 

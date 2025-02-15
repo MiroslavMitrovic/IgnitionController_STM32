@@ -10,7 +10,7 @@ set(CMAKE_ASM_COMPILER ${CMAKE_C_COMPILER})
 set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}g++)
 
 find_path(COMPILER_DIR ${CMAKE_C_COMPILER})
-set(COMPILER_DIR C:/tools/gcc-arm-none-eabi-10.3-2021.10/bin)
+set(COMPILER_DIR C:/tools/arm-none-eabi-10.3-2021.10/bin)
 get_filename_component(TOOLCHAIN_DIR ${COMPILER_DIR} DIRECTORY)
 
 set(CMAKE_OBJCOPY ${TOOLCHAIN_DIR}/bin/${TOOLCHAIN_PREFIX}objcopy.exe)

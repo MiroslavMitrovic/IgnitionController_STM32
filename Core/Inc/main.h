@@ -71,8 +71,12 @@ void Error_Handler(void);
 #define OTG_FS_PowerSwitchOn_GPIO_Port GPIOC
 #define B1_Pin GPIO_PIN_0
 #define B1_GPIO_Port GPIOA
-#define Signal_1_Pin GPIO_PIN_4
-#define Signal_1_GPIO_Port GPIOA
+#define Signal1_IntPin_Pin GPIO_PIN_4
+#define Signal1_IntPin_GPIO_Port GPIOA
+#define Signal1_IntPin_EXTI_IRQn EXTI4_IRQn
+#define Signal2_IntPin_Pin GPIO_PIN_5
+#define Signal2_IntPin_GPIO_Port GPIOA
+#define Signal2_IntPin_EXTI_IRQn EXTI9_5_IRQn
 #define BOOT1_Pin GPIO_PIN_2
 #define BOOT1_GPIO_Port GPIOB
 #define LD4_Pin GPIO_PIN_12
@@ -95,6 +99,7 @@ void Error_Handler(void);
 #define SWO_GPIO_Port GPIOB
 #define MEMS_INT2_Pin GPIO_PIN_1
 #define MEMS_INT2_GPIO_Port GPIOE
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

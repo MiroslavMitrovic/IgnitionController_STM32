@@ -118,3 +118,30 @@ void HW_FiringPin_v_Cylinder_2_Reset(void)
 	HAL_GPIO_WritePin(GPIOD, LD5_Pin, GPIO_PIN_RESET);
 #endif /*ATMEL_MCU*/
 }
+
+#ifdef STM32_MCU
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	/* Prevent unused argument(s) compilation warning */
+	if(Signal1_IntPin_Pin == GPIO_Pin)
+	{
+		if(10 < g_uSDebouncingSignalCounter)
+		{
+			IgnitionControl_v_UpdateSignalTime();
+			g_uSDebouncingSignalCounter = 0;
+		}
+	}
+	else if (Signal2_IntPin_Pin == GPIO_Pin)
+	{
+		if(10 < g_uSDebouncingSignalCounter)
+		{
+			IgnitionControl_v_UpdateSignalTime();
+			g_uSDebouncingSignalCounter = 0;
+		}
+	}
+	else{}
+  /* NOTE: This function Should not be modified, when the callback is needed,
+           the HAL_GPIO_EXTI_Callback could be implemented in the user file
+   */
+}
+#endif /* STM32_MCU */

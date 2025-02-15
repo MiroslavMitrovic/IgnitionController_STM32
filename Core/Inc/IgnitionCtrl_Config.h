@@ -78,6 +78,9 @@
 
 #define SENSOR_NOT_AVAILABLE 0xFFU
 
+// #define SENSOR_POLLING_MODE  						///< Sensors are configured in polling mode
+#define SENSOR_INTERRUPT_MODE							///< Sensors are configured in interrupt mode
+
 
 #define IN_SYNC            1U							///< Engine RPMs are synchronized
 #define OUT_OF_SYNC        0U							///< Engine RPMs are not synchronized

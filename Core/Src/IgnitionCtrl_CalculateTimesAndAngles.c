@@ -58,14 +58,23 @@ uint8_t get_u_AdvanceAngle(uint16_t in_u8_RPM)
 	 uint16_t l_RPMMaxValue = 8500;
 	 uint16_t l_RPMMinValue = 0; 
      int8_t l_AdvanceAngleInt = 0;
+     const uint16_t RPMS_OUT_OF_RANGE = 10000u;
+     #ifdef USE_POLY_CALC_IGN_ANGLE
      float l_p1 = -8.0306e-18;
      float l_p2 =  2.4472e-13;;
      float l_p3 = -2.6638e-09;
      float l_p4 = 1.1505e-05;
      float l_p5 = -0.010326; 
      float l_p6 = 0.22854;
+     #else 
+     /*Perform linear calculations based on y = kx + n up to 4000 RPM, afterwards value can remain the same */
+     const float K = 0.0107;
+     const float N = -10.07;
+     const uint16_t LINEAR_ANGLE_MAX_RPM = 4000u;
+     #endif /* USE_POLY_CALC_IGN_ANGLE*/
+
      // Check for implausability, this setup shouldn't have values more then 10000RPM.
-     if (10000 <= in_u8_RPM)
+     if (RPMS_OUT_OF_RANGE <= in_u8_RPM)
      {
          in_u8_RPM = 0;
      }
@@ -81,9 +90,21 @@ uint8_t get_u_AdvanceAngle(uint16_t in_u8_RPM)
      {
     	 //Do nothing
      }
-
+    #ifdef USE_POLY_CALC_IGN_ANGLE
      l_AdvanceAngleInt = (int8_t) round( ( ( l_p1 * pow(in_u8_RPM,5) ) + (l_p2 * pow(in_u8_RPM,4))
     		 + (l_p3 * pow(in_u8_RPM,3)) + (l_p4 * pow(in_u8_RPM,2)) + (l_p5 * in_u8_RPM) + l_p6  ));
+    #else 
+    if( LINEAR_ANGLE_MAX_RPM >= in_u8_RPM)
+    {
+        l_AdvanceAngleInt = K * in_u8_RPM + N;
+    }
+    else
+    {
+        /* Always Calculate the same value as in the case of 4000RPM due to ignition curve  */
+        in_u8_RPM = LINEAR_ANGLE_MAX_RPM;
+        l_AdvanceAngleInt = K * in_u8_RPM + N;
+    }
+    #endif /* USE_POLY_CALC_IGN_ANGLE*/
 
      if (0 > l_AdvanceAngleInt)
      {
@@ -95,7 +116,8 @@ uint8_t get_u_AdvanceAngle(uint16_t in_u8_RPM)
      }
 
 	 return (uint8_t)l_AdvanceAngleInt;
-      
+
+#undef LINEAR_ANGLE_MAX_RPM
 }
 
 uint32_t CalculateTime_u_FromAngle(uint16_t in_u16_RPM, uint16_t in_u16_Angle)
