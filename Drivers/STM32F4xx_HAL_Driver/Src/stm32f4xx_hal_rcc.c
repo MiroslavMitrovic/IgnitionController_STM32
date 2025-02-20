@@ -197,12 +197,11 @@
   *            - LSI, LSE and RTC clocks
   * @retval HAL status
   */
- #ifdef POLYSPACE_NOT_USED
 __weak HAL_StatusTypeDef HAL_RCC_DeInit(void)
 {
   return HAL_OK;
 }
-#endif /* POLYSPACE_NOT_USED*/
+
 /**
   * @brief  Initializes the RCC Oscillators according to the specified parameters in the
   *         RCC_OscInitTypeDef.

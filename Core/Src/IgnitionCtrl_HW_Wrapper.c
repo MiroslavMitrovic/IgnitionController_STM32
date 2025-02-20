@@ -38,9 +38,11 @@
 /*******************************************************************************
  * Global Variables
  *******************************************************************************/
- volatile uint32_t g_usSinceDetection;
+ volatile uint32_t g_usSinceDetectionCyl1;
+ volatile uint32_t g_usSinceDetectionCyl2;
  volatile uint32_t g_uSCounter;
  volatile uint32_t g_uSDebouncingSignalCounter;
+ volatile uint8_t  g_signalDebouncingTimerStarted;
 /*******************************************************************************
  * Static Function Prototypes
  *******************************************************************************/
@@ -63,7 +65,7 @@ DDRB |= (1 << PB4);
 PORTB &= ~(1 << PB1 );
 PORTB &= ~(1 << PB0 );
 #else
-
+/*TODO: Implement STM32Fxx handling of GPIO INIT*/
 #endif /*ATMEL_MCU*/
 }
 
@@ -74,10 +76,10 @@ void HW_Timer_v_Init(void)
 	TCNT0 = 0;
 	TIMSK |=  (1 << TOIE0);				//Enable Timer0 overflow interrupt
 #else
-
+/*TODO: Implement STM32Fxx handling of Timer INIT*/
 #endif /*ATMEL_MCU*/
 	g_uSCounter = 0;
-	g_usSinceDetection = 0;
+	g_usSinceDetectionCyl1 = 0;
 	g_uSDebouncingSignalCounter = 0;
 }
 
@@ -86,7 +88,8 @@ void HW_FiringPin_v_Cylinder_1_Set(void)
 #ifdef ATMEL_MCU
 	PORTB |= ( 1<< PB1);
 #else
-	HAL_GPIO_WritePin(GPIOD, LD4_Pin, GPIO_PIN_SET);
+	// HAL_GPIO_WritePin(GPIOD, LD4_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(TestLED1_GPIO_Port, TestLED1_Pin, GPIO_PIN_SET);
 #endif /*ATMEL_MCU*/
 
 
@@ -97,7 +100,8 @@ void HW_FiringPin_v_Cylinder_1_Reset(void)
 #ifdef ATMEL_MCU
     PORTB &= ~( 1<< PB1);
 #else
-	HAL_GPIO_WritePin(GPIOD, LD4_Pin, GPIO_PIN_RESET);
+	// HAL_GPIO_WritePin(GPIOD, LD4_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(TestLED1_GPIO_Port, TestLED1_Pin, GPIO_PIN_RESET);
 #endif /*ATMEL_MCU*/
 }
 
@@ -106,7 +110,7 @@ void HW_FiringPin_v_Cylinder_2_Set(void)
 #ifdef ATMEL_MCU
 	PORTB |= ( 1<< PB0);
 #else
-	HAL_GPIO_WritePin(GPIOD, LD5_Pin, GPIO_PIN_SET);
+	// HAL_GPIO_WritePin(GPIOD, LD5_Pin, GPIO_PIN_SET);
 #endif /*ATMEL_MCU*/
 }
 
@@ -115,7 +119,7 @@ void HW_FiringPin_v_Cylinder_2_Reset(void)
 #ifdef ATMEL_MCU
     PORTB &= ~( 1<< PB0);
 #else
-	HAL_GPIO_WritePin(GPIOD, LD5_Pin, GPIO_PIN_RESET);
+	// HAL_GPIO_WritePin(GPIOD, LD5_Pin, GPIO_PIN_RESET);
 #endif /*ATMEL_MCU*/
 }
 
@@ -125,18 +129,19 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	/* Prevent unused argument(s) compilation warning */
 	if(Signal1_IntPin_Pin == GPIO_Pin)
 	{
-		if(10 < g_uSDebouncingSignalCounter)
+		if(5U < g_uSDebouncingSignalCounter) /* Check if the signal was triggered in time less than 50uS */
 		{
 			IgnitionControl_v_UpdateSignalTime();
 			g_uSDebouncingSignalCounter = 0;
+			g_signalDebouncingTimerStarted = 1;
 		}
 	}
 	else if (Signal2_IntPin_Pin == GPIO_Pin)
 	{
-		if(10 < g_uSDebouncingSignalCounter)
+		if(5U < g_uSDebouncingSignalCounter) /* Check if the signal was triggered in time less than 50uS */
 		{
-			IgnitionControl_v_UpdateSignalTime();
-			g_uSDebouncingSignalCounter = 0;
+			// IgnitionControl_v_UpdateSignalTime();
+			// g_uSDebouncingSignalCounter = 0;
 		}
 	}
 	else{}

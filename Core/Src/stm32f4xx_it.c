@@ -57,9 +57,19 @@
 /* External variables --------------------------------------------------------*/
 extern TIM_HandleTypeDef htim2;
 /* USER CODE BEGIN EV */
-extern volatile uint32_t g_usSinceDetection;
+extern volatile uint32_t g_usSinceDetectionCyl1;
+extern volatile uint32_t g_usSinceDetectionCyl2;
 extern volatile uint32_t g_uSCounter;
 extern volatile uint32_t g_uSDebouncingSignalCounter;
+extern  volatile uint8_t  g_signalDebouncingTimerStarted;
+volatile uint32_t g_usCounterTest = 0;
+volatile uint32_t g_usCounterTest2 = 0;
+volatile uint32_t g_signalDebouncinguSTimerValue = 0;
+volatile uint32_t g_signalTimeBetweenInterrupts = 0;
+volatile uint8_t g_signalTriggerTimestamp = 0;
+volatile uint32_t g_signalTimerValueCurrent = 0;
+volatile uint32_t g_signalTimerValuePrevious = 0;
+volatile uint32_t g_signalTimerValueDifference = 0;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -206,8 +216,10 @@ void SysTick_Handler(void)
 void EXTI4_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI4_IRQn 0 */
-
+  //  HAL_GPIO_TogglePin(TestLED1_GPIO_Port,TestLED1_Pin);
+  // g_signalTimeBetweenInterrupts = g_uSCounter * 10; 
   /* USER CODE END EXTI4_IRQn 0 */
+  g_signalTriggerTimestamp = 1U;
   HAL_GPIO_EXTI_IRQHandler(Signal1_IntPin_Pin);
   /* USER CODE BEGIN EXTI4_IRQn 1 */
 
@@ -234,13 +246,33 @@ void EXTI9_5_IRQHandler(void)
 void TIM2_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM2_IRQn 0 */
+  g_uSCounter++;
+  g_usSinceDetectionCyl1++;
+  g_usSinceDetectionCyl2++;
+  g_uSDebouncingSignalCounter++;
+  g_usCounterTest++;
+  g_usCounterTest2++;
+
+  if(1U == g_signalDebouncingTimerStarted)
+  {
+    g_signalDebouncinguSTimerValue = g_usCounterTest * 10;
+    g_signalDebouncingTimerStarted = 0U;
+    g_usCounterTest = 0;
+  }
+
+  if(1U == g_signalTriggerTimestamp)
+  {
+    g_signalTimerValueCurrent = g_usCounterTest2 * 10;
+    g_signalTimerValueDifference = g_signalTimerValueCurrent - g_signalTimerValuePrevious;
+    g_signalTriggerTimestamp = 0U; 
+  }
+  
+  g_signalTimerValuePrevious =  g_signalTimerValueCurrent;
 
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */
-  g_uSCounter++;
-  g_usSinceDetection++;
-  g_uSDebouncingSignalCounter++;
+
   /* USER CODE END TIM2_IRQn 1 */
 }
 

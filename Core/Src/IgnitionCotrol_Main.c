@@ -27,7 +27,7 @@
  
 #include "IgnitionCotrol_Main.h"
 
-extern volatile uint32_t g_usSinceDetection;
+extern volatile uint32_t g_usSinceDetectionCyl1;
 uint32_t g_FirstSensorTimePrevious_us = 0;
 uint32_t g_FirstSensorTimeCurrent_us = 0;
 uint32_t g_SensorActivationCounter = 0;
@@ -56,15 +56,22 @@ static uint8_t IgnitionControl_FirstSensorCheck(void);
 /*To check if the sensors are in sync*/
 static uint8_t IgntionControl_SyncCheck(void);
 
-inline uint32_t Calculate_u_Microseconds(uint32_t MicrosecondsTicks)
+uint32_t Calculate_u_Microseconds(uint32_t MicrosecondsTicks)
 {
-	return MicrosecondsTicks << 8; //Frequency is set @ 168MHz and prescaler is 168. Counter is 255->256uS per tick.
+	return MicrosecondsTicks * 10; //Frequency is set @ 84MHz and prescaler is 10. Counter is 10->10uS per tick.
 }
 
 void IgnitionControl_v_Main(void)
 {
+    HAL_NVIC_DisableIRQ(EXTI4_IRQn);
 	Firing_v_Handler();
-	Calculation_v_Handler();
+    HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+     // HAL_GPIO_TogglePin(TestLED1_GPIO_Port,TestLED1_Pin);
+    HAL_NVIC_DisableIRQ(EXTI4_IRQn);
+    Calculation_v_Handler();
+    HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+
+    // HAL_GPIO_TogglePin(TestLED1_GPIO_Port,TestLED1_Pin);
 }
 #ifdef SENSOR_POLLING_MODE
 static uint8_t IgnitionControl_FirstSensorCheck(void)
@@ -124,13 +131,16 @@ static uint8_t IgnitionControl_FirstSensorCheck(void)
 
 extern void IgnitionControl_v_UpdateSignalTime(void)
 {
-	g_FirstSensorTimeCurrent_us = Calculate_u_Microseconds(g_uSCounter);
+	g_FirstSensorTime_us = Calculate_u_Microseconds(g_uSCounter);
 	g_SignalFlag |=  1 << SENSOR_1_AVAILABLE;
 	g_SyncFlag |= 1 << SENSOR_1_AVAILABLE;
 	g_SensorActivationCounter++; //counter to measure how many times Signal occurred
+    g_usSinceDetectionCyl1 = 0; // start time since detection of Signal
+
 }
 extern uint8_t IgnitionControl_u_FirstSensorCheck_IT(void)
 {
+    static uint32_t l_g_SensorActivationCounter = 0;
 	/* TODO
 	 * 1. Update the current time
 	 * 2. Update the previous time
@@ -138,17 +148,21 @@ extern uint8_t IgnitionControl_u_FirstSensorCheck_IT(void)
 	 * 4. Reset the firing time
 	 *
 	 * */
-	if(g_SignalState == 0)
+    /* Initial fetch of time at sensor first pulse */
+	if ( (0U == g_SignalState)  && (1U == g_SensorActivationCounter) )
 	{
 		g_FirstSensorTimePrevious_us = g_FirstSensorTime_us;
 		g_SignalState = 1;
 	}
-	else if ( (g_SignalState == 1))
+    /* fetch of time at sensor second and future pulses */
+	else if ( (g_SignalState == 1) && (1U < g_SensorActivationCounter) && (l_g_SensorActivationCounter < g_SensorActivationCounter))
 	{
 		g_FirstSensorTimeCurrent_us = g_FirstSensorTime_us;
 		g_SignalState = 2;
+        l_g_SensorActivationCounter = g_SensorActivationCounter;
 
 	}
+
 
 	return 0;
 
@@ -164,7 +178,7 @@ uint8_t IgntionControl_SyncCheck(void)
          g_SyncFlag = 0; //Clear the flag 
          l_status = E_OK;
          /*Sensor Activated 2 times */
-         if( (g_SensorActivationCounter >= 2) && (g_FirstSensorTimePrevious_us != g_FirstSensorTimeCurrent_us) )
+         if( (2U <= g_SensorActivationCounter) && (g_FirstSensorTimePrevious_us != g_FirstSensorTimeCurrent_us) )
          {
               GlobalDataValues.SynchronizationStatus = IN_SYNC;
          }
@@ -201,6 +215,7 @@ static void Calculation_v_Handler(void)
         break;
         case    en_SynchronizationOngoing:
 #ifdef SENSOR_INTERRUPT_MODE
+
         	IgnitionControl_u_FirstSensorCheck_IT();
 #else
         	l_Result = IgnitionControl_FirstSensorCheck();
@@ -209,7 +224,7 @@ static void Calculation_v_Handler(void)
         if( IN_SYNC == GlobalDataValues.SynchronizationStatus)
         {
              GlobalDataValues.CalculationState = en_Synchronized;
-            g_usSinceDetection = 0; //reset to zero to start calculating time to first cylinder firing
+            //   g_usSinceDetectionCyl1 = 0; //reset to zero to start calculating time to first cylinder firing
         }
         else
         {            //do nothing
@@ -240,7 +255,9 @@ static void Calculation_v_Handler(void)
 
          if(g_FirstSensorTimeCurrent_us != g_FirstSensorTimePrevious_us)
          {
+            // __disable_irq();
          GlobalDataValues.RPM = Calculate_u_RPM();
+            // __enable_irq();
          }
          if (30 <  GlobalDataValues.RPM )
          {
@@ -262,8 +279,8 @@ static void Calculation_v_Handler(void)
         	GlobalDataValues.AdvanceAngle = FIXED_TIMING_ANGLE;
             AdvanceAngleCalculatedTime =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, GlobalDataValues.AdvanceAngle);
 #endif /*USING_FIXED_TIMING*/
-           // to not have overlaps during firing angle offset of 60deg is added
-           OneRevolutionTimeCylinder1 =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, OneRevolutionAngleInDeg + 60);
+           // to not have overlaps during firing angle offset of 60deg is added -?
+           OneRevolutionTimeCylinder1 =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, OneRevolutionAngleInDeg);
            OneRevolutionTimeCylinder2 = CalculateTime_u_FromAngle(GlobalDataValues.RPM, (OneRevolutionAngleInDeg + SecondCylinderAngleinDeg) );
            // 2. Calculate Firing time Cyl-1
            GlobalDataValues.FiringTimeCyl_1 = Calculate_u_FiringTimeCylinder(AdvanceAngleCalculatedTime, OneRevolutionTimeCylinder1);
@@ -299,7 +316,7 @@ static void Firing_v_Handler(void)
     firing of both cylinders due to faulty handling in FSM or time overlaps
     Additional idea, put both handlers inside of 1 case en_FiringCylinders...*/
    
-	 GlobalDataValues.TimeElapsedSinceDetection = g_usSinceDetection << 8;
+	 GlobalDataValues.TimeElapsedSinceDetection = g_usSinceDetectionCyl1 * 10;
 
         switch(GlobalDataValues.FiringState)
         {
@@ -331,17 +348,18 @@ static void Firing_v_Handler(void)
 
 extern uint16_t Calculate_u_RPM(void)
 {
-    uint32_t l_TimeDifference_us = 0;
-    uint32_t l_TimeDifference_ms = 0;
-    float l_AngularVelocity = 0.0; 
     uint16_t l_CalculatedRPM = 0;
-    const float alpha = 0.5;
+    const float alpha = 0.9;
+    volatile float l_TimeDifference_us = 0.0;
+    volatile float l_TimeDifference_ms = 0.0;
+    volatile  float l_AngularVelocity = 0.0; 
+
  l_TimeDifference_us = g_FirstSensorTimeCurrent_us - g_FirstSensorTimePrevious_us;
- l_TimeDifference_ms = l_TimeDifference_us / 1000; 
- l_AngularVelocity = (2 * M_PI * 1000) /(l_TimeDifference_ms ); //[rad/S]
- l_CalculatedRPM = (uint16_t) (l_AngularVelocity * 30.0 / M_PI); 
+ l_TimeDifference_ms = l_TimeDifference_us / 1000.0f; 
+ l_AngularVelocity = (2.0 * M_PI * 1000.0) /(l_TimeDifference_ms ); //[rad/S]
+ l_CalculatedRPM = (uint16_t) (l_AngularVelocity * 30.0f / M_PI); 
 // Moving Average filter
- l_CalculatedRPM =  (uint16_t) (alpha * l_CalculatedRPM  + (1 - alpha) * GlobalDataValues.RPM);
+   l_CalculatedRPM =  (uint16_t) (alpha * l_CalculatedRPM  + (1 - alpha) * GlobalDataValues.RPM);
 
  if(MAX_RPM <= l_CalculatedRPM)
  {

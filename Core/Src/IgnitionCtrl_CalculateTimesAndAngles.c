@@ -27,7 +27,7 @@
 
 #include "IgnitionCotrol_Main.h"
 
-extern volatile uint32_t g_usSinceDetection;
+extern volatile uint32_t g_usSinceDetectionCyl1;
 
 /*Global constant for RPM and ignition angle*/
 const uint16_t g_cIgnitionAngleTable [IGNITION_ANGLE_TABLE_COLUMNS] [IGNITION_ANGLE_TABLE_ROWS] =
@@ -123,7 +123,7 @@ uint8_t get_u_AdvanceAngle(uint16_t in_u8_RPM)
 uint32_t CalculateTime_u_FromAngle(uint16_t in_u16_RPM, uint16_t in_u16_Angle)
 {
   volatile  float_t l_AngularVelocity = 0;                 //[1/s]
-    uint32_t l_TimeFor1DegreeTravel = 0;                    //[uS]
+   uint32_t l_TimeFor1DegreeTravel = 0;                    //[uS]
    volatile uint32_t l_CalculatedTime = 0;
   
     
@@ -164,7 +164,7 @@ void Firing_v_Cylinder1(void)
         HW_FiringPin_v_Cylinder_1_Reset();
         GlobalDataValues.isCylinder1CoilCharging = false;
         GlobalDataValues.FiringState = en_FiringCylinder1Completed;
-        g_usSinceDetection = 0;
+        g_usSinceDetectionCyl1 = 0;
 
     }
 }

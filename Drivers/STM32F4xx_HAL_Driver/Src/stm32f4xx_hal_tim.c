@@ -365,7 +365,6 @@ HAL_StatusTypeDef HAL_TIM_Base_DeInit(TIM_HandleTypeDef *htim)
   * @param  htim TIM Base handle
   * @retval None
   */
- #ifdef POLYSPACE_NOT_USED
 __weak void HAL_TIM_Base_MspInit(TIM_HandleTypeDef *htim)
 {
   /* Prevent unused argument(s) compilation warning */
@@ -391,7 +390,7 @@ __weak void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef *htim)
    */
 }
 
-#endif /* HAL_TIM_Base_MspInit */
+
 /**
   * @brief  Starts the TIM Base generation.
   * @param  htim TIM Base handle

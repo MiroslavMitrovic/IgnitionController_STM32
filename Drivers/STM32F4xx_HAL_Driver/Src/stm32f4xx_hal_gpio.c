@@ -504,16 +504,15 @@ void HAL_GPIO_EXTI_IRQHandler(uint16_t GPIO_Pin)
   * @param  GPIO_Pin Specifies the pins connected EXTI line
   * @retval None
   */
-  #ifdef POLYSPACE_NOT_USED
-__weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+/* __weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
   /* Prevent unused argument(s) compilation warning */
-  UNUSED(GPIO_Pin);
+/*   UNUSED(GPIO_Pin); */
   /* NOTE: This function Should not be modified, when the callback is needed,
            the HAL_GPIO_EXTI_Callback could be implemented in the user file
    */
-}
-#endif /* POLYSPACE_NOT_USED */ 
+/* } */ 
+
 /**
   * @}
   */
