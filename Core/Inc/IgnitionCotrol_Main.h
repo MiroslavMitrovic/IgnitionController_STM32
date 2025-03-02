@@ -58,7 +58,8 @@ typedef enum en_Firing_States
     en_FiringCylinder1Cranking,     ///< Firing cylinder 1 during cranking
     en_FiringCylinder1Completed,    ///< Firing cylinder 1 completed
     en_FiringCylinder2,             ///< Firing cylinder 2 ongoing
-    en_FiringCylinder2Completed,    ///< Firing cylinder 2 completed    
+    en_FiringCylinder2Completed,    ///< Firing cylinder 2 completed
+    en_RPMHardLimitState,           ///< Hard Limit state            
    	en_MaxNumberOfFiringStates
 }ten_Firing_States;
 

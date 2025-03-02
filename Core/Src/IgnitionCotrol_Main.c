@@ -258,15 +258,23 @@ static void Calculation_v_Handler(void)
          if(g_FirstSensorTimeCurrent_us != g_FirstSensorTimePrevious_us)
          {
             // __disable_irq();
-         GlobalDataValues.RPM = Calculate_u_RPM();
+            GlobalDataValues.RPM = Calculate_u_RPM();
             // __enable_irq();
-            if (CRANKING_RPM <  GlobalDataValues.RPM )
-            {
-                GlobalDataValues.CalculationState = en_CalculationOngoing;
-            }
-            else if(CRANKING_RPM >= GlobalDataValues.RPM)
+            if(CRANKING_RPM >= GlobalDataValues.RPM)
             {
                 GlobalDataValues.CalculationState = en_EngineCranking;
+            }
+            /* RPM Limiter will be implemented as a hard limiter, so if the RPMs are over 
+            from setpoint, firing event will be skipped. */
+            else if (MAX_RPM <  GlobalDataValues.RPM )
+            {
+                GlobalDataValues.CalculationState = en_Synchronized;
+                GlobalDataValues.FiringState = en_RPMHardLimitState;
+            }
+
+            else if (CRANKING_RPM <  GlobalDataValues.RPM )
+            {
+                GlobalDataValues.CalculationState = en_CalculationOngoing;
             }
          }
          
@@ -356,6 +364,9 @@ static void Firing_v_Handler(void)
             case en_FiringCylinder1Cranking:
             Firing_v_Cylinder1Cranking();
             break;
+            case en_RPMHardLimitState:
+            GlobalDataValues.FiringState = en_IdleStateFiringState;
+            break;
             case en_IdleStateFiringState:
                // do nothing
             break;
@@ -383,12 +394,7 @@ extern uint16_t Calculate_u_RPM(void)
 // Moving Average filter
 //    l_CalculatedRPM =  (uint16_t) (alpha * l_CalculatedRPM  + (1 - alpha) * GlobalDataValues.RPM);
 
- if(MAX_RPM <= l_CalculatedRPM)
- {
-	 l_CalculatedRPM = MAX_RPM;
- }
- else{}
- 
+
  /*Case when the RPM signal is already known, so we need just to update currentTime*/
  if( 2 == g_SignalState )
  {
