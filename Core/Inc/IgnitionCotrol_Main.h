@@ -46,6 +46,7 @@ typedef enum en_Calculation_States
 	en_CalculationOngoing,          ///< Ignition Angle calculation ongoing 
     en_CalculationFinished,         ///< Ignition Angle calculation finished
 	en_IdleStateCalculation,        ///< Idle state
+    en_EngineCranking,              ///< Engine Cranking state
 	en_MaxNumberOfCalculationStates
 }ten_Calculation_States;
 
@@ -54,6 +55,7 @@ typedef enum en_Firing_States
 	en_FiringStateInit,             ///< Initialization of state handler
     en_IdleStateFiringState,        ///< Idle state
 	en_FiringCylinder1,             ///< Firing cylinder 1 ongoing
+    en_FiringCylinder1Cranking,     ///< Firing cylinder 1 during cranking
     en_FiringCylinder1Completed,    ///< Firing cylinder 1 completed
     en_FiringCylinder2,             ///< Firing cylinder 2 ongoing
     en_FiringCylinder2Completed,    ///< Firing cylinder 2 completed    

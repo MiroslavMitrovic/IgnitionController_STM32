@@ -136,6 +136,7 @@ extern void IgnitionControl_v_UpdateSignalTime(void)
 	g_SyncFlag |= 1 << SENSOR_1_AVAILABLE;
 	g_SensorActivationCounter++; //counter to measure how many times Signal occurred
     g_usSinceDetectionCyl1 = 0; // start time since detection of Signal
+    GlobalDataValues.FiringState = en_FiringStateInactive; // reset the firing state for reseting the cranking firing.
 
 }
 extern uint8_t IgnitionControl_u_FirstSensorCheck_IT(void)
@@ -251,6 +252,7 @@ static void Calculation_v_Handler(void)
      		g_FirstSensorTimeCurrent_us = 0;
      		g_FirstSensorTimePrevious_us = 0;
      		g_uSCounter = 0;
+            g_LostSyncCounter++;
      	}
 
          if(g_FirstSensorTimeCurrent_us != g_FirstSensorTimePrevious_us)
@@ -258,11 +260,16 @@ static void Calculation_v_Handler(void)
             // __disable_irq();
          GlobalDataValues.RPM = Calculate_u_RPM();
             // __enable_irq();
+            if (CRANKING_RPM <  GlobalDataValues.RPM )
+            {
+                GlobalDataValues.CalculationState = en_CalculationOngoing;
+            }
+            else if(CRANKING_RPM >= GlobalDataValues.RPM)
+            {
+                GlobalDataValues.CalculationState = en_EngineCranking;
+            }
          }
-         if (30 <  GlobalDataValues.RPM )
-         {
-         GlobalDataValues.CalculationState = en_CalculationOngoing;
-         }
+         
          else if( OUT_OF_SYNC == GlobalDataValues.SynchronizationStatus)
          {
         	 GlobalDataValues.CalculationState = en_SynchronizationOngoing;
@@ -279,8 +286,8 @@ static void Calculation_v_Handler(void)
         	GlobalDataValues.AdvanceAngle = FIXED_TIMING_ANGLE;
             AdvanceAngleCalculatedTime =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, GlobalDataValues.AdvanceAngle);
 #endif /*USING_FIXED_TIMING*/
-           // to not have overlaps during firing angle offset of 60deg is added -?
-           OneRevolutionTimeCylinder1 =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, OneRevolutionAngleInDeg);
+
+           OneRevolutionTimeCylinder1 =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, OneRevolutionAngleInDeg - IGNITION_STATIC_ADVANCE_ANGLE);
            OneRevolutionTimeCylinder2 = CalculateTime_u_FromAngle(GlobalDataValues.RPM, (OneRevolutionAngleInDeg + SecondCylinderAngleinDeg) );
            // 2. Calculate Firing time Cyl-1
            GlobalDataValues.FiringTimeCyl_1 = Calculate_u_FiringTimeCylinder(AdvanceAngleCalculatedTime, OneRevolutionTimeCylinder1);
@@ -300,6 +307,16 @@ static void Calculation_v_Handler(void)
             break;
         case en_IdleStateCalculation:
             //do nothing 
+            break;
+        case en_EngineCranking:
+
+            GlobalDataValues.CalculationState = en_Synchronized;
+            /* Check if firing was executed already and don't set state to firing until the next cycle. */
+            if( ! (GlobalDataValues.FiringState == en_IdleStateFiringState) )
+            {
+                GlobalDataValues.FiringState = en_FiringCylinder1Cranking;
+            }
+            
             break;
         default: 
             // should not be reached.
@@ -324,6 +341,7 @@ static void Firing_v_Handler(void)
                Firing_v_Cylinder1();
            break;
             case en_FiringCylinder1Completed:
+            GlobalDataValues.FiringState = en_IdleStateFiringState;
 //TODO: Implement firing and handling for Cylinder2.
             break;
             case en_FiringCylinder2:
@@ -333,6 +351,10 @@ static void Firing_v_Handler(void)
                 GlobalDataValues.FiringState = en_IdleStateFiringState;
                 
                
+            break;
+
+            case en_FiringCylinder1Cranking:
+            Firing_v_Cylinder1Cranking();
             break;
             case en_IdleStateFiringState:
                // do nothing
@@ -359,7 +381,7 @@ extern uint16_t Calculate_u_RPM(void)
  l_AngularVelocity = (2.0 * M_PI * 1000.0) /(l_TimeDifference_ms ); //[rad/S]
  l_CalculatedRPM = (uint16_t) (l_AngularVelocity * 30.0f / M_PI); 
 // Moving Average filter
-   l_CalculatedRPM =  (uint16_t) (alpha * l_CalculatedRPM  + (1 - alpha) * GlobalDataValues.RPM);
+//    l_CalculatedRPM =  (uint16_t) (alpha * l_CalculatedRPM  + (1 - alpha) * GlobalDataValues.RPM);
 
  if(MAX_RPM <= l_CalculatedRPM)
  {
