@@ -39,27 +39,28 @@
  *******************************************************************************/
 typedef enum en_Calculation_States
 {
-	en_InitState,                   ///< Initialization State
-	en_InitFinished,                ///< Initialization Finished
-    en_SynchronizationOngoing,      ///< Synhronization is ongoing    
-    en_Synchronized,                ///< Synchronization finished
-	en_CalculationOngoing,          ///< Ignition Angle calculation ongoing 
-    en_CalculationFinished,         ///< Ignition Angle calculation finished
-	en_IdleStateCalculation,        ///< Idle state
-    en_EngineCranking,              ///< Engine Cranking state
+	en_InitState,                   ///< Initialization State                   0
+	en_InitFinished,                ///< Initialization Finished                1
+    en_SynchronizationOngoing,      ///< Synhronization is ongoing              2 
+    en_Synchronized,                ///< Synchronization finished               3
+	en_CalculationOngoing,          ///< Ignition Angle calculation ongoing     4 
+    en_CalculationFinished,         ///< Ignition Angle calculation finished    5
+	en_IdleStateCalculation,        ///< Idle state                             6
+    en_EngineCranking,              ///< Engine Cranking state                  7
 	en_MaxNumberOfCalculationStates
 }ten_Calculation_States;
 
 typedef enum en_Firing_States
 {
-	en_FiringStateInit,             ///< Initialization of state handler
-    en_IdleStateFiringState,        ///< Idle state
-	en_FiringCylinder1,             ///< Firing cylinder 1 ongoing
-    en_FiringCylinder1Cranking,     ///< Firing cylinder 1 during cranking
-    en_FiringCylinder1Completed,    ///< Firing cylinder 1 completed
-    en_FiringCylinder2,             ///< Firing cylinder 2 ongoing
-    en_FiringCylinder2Completed,    ///< Firing cylinder 2 completed
-    en_RPMHardLimitState,           ///< Hard Limit state            
+	en_FiringStateInit,                     ///< Initialization of state handler        0
+    en_IdleStateFiringState,                ///< Idle state                             1
+	en_FiringCylinder1,                     ///< Firing cylinder 1 ongoing              2
+    en_FiringCylinder1Cranking,             ///< Firing cylinder 1 during cranking      3
+    en_FiringCylinder1Completed,            ///< Firing cylinder 1 completed            4
+    en_FiringCylinder2,                     ///< Firing cylinder 2 ongoing              5
+    en_FiringCylinder2Completed,            ///< Firing cylinder 2 completed            6   
+    en_RPMHardLimitState,                   ///< Hard Limit state                       7
+    en_FiringCylinder1CrankingCompleted,    ///< Firing cylinder 1 during cranking      8
    	en_MaxNumberOfFiringStates
 }ten_Firing_States;
 

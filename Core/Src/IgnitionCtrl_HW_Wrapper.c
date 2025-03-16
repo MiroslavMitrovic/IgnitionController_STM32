@@ -123,6 +123,16 @@ void HW_FiringPin_v_Cylinder_2_Reset(void)
 #endif /*ATMEL_MCU*/
 }
 
+GPIO_PinState HW_FiringPin_v_Cylinder_1_Status_Read(void)
+{
+	return	HAL_GPIO_ReadPin(TestLED1_GPIO_Port,TestLED1_Pin);
+}
+
+GPIO_PinState HW_FiringPin_v_Cylinder_2_Status_Read(void)
+{
+	//HAL_GPIO_ReadPin(TestLED1_GPIO_Port,TestLED1_Pin);
+}
+
 #ifdef STM32_MCU
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {

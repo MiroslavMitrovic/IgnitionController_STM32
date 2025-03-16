@@ -26,7 +26,7 @@
  *******************************************************************************/
  
 #include "IgnitionCotrol_Main.h"
-
+extern UART_HandleTypeDef huart2;
 extern volatile uint32_t g_usSinceDetectionCyl1;
 uint32_t g_FirstSensorTimePrevious_us = 0;
 uint32_t g_FirstSensorTimeCurrent_us = 0;
@@ -42,6 +42,9 @@ uint8_t g_SignalState = 0;
 uint8_t  g_SyncFlag = 0;
 /*Flag for check if the sensor Value is already taken*/
 uint8_t g_FirstSensorSignalAvailable = false;
+
+static uint8_t g_CrankingFiringFlag = 0;
+static double l_PrevTimeDifference_us = 0.0;
 /*Handler for Calculation States*/
 static void Calculation_v_Handler(void);
 /*Handler for Firing States*/
@@ -56,6 +59,17 @@ static uint8_t IgnitionControl_FirstSensorCheck(void);
 /*To check if the sensors are in sync*/
 static uint8_t IgntionControl_SyncCheck(void);
 
+/* returns calculated rate of change of in value*/
+static uint32_t CalculateRate_u_OfChange(uint32_t *in_prevValue, uint32_t in_currValue )
+{
+    double l_DeltaTimeDifference_us = 0.0;
+    l_DeltaTimeDifference_us = (in_currValue - *(in_prevValue) ) / 1.0;
+    *in_prevValue = in_currValue;
+
+    return in_currValue +=(uint32_t)l_DeltaTimeDifference_us;
+
+}
+
 uint32_t Calculate_u_Microseconds(uint32_t MicrosecondsTicks)
 {
 	return MicrosecondsTicks * 10; //Frequency is set @ 84MHz and prescaler is 10. Counter is 10->10uS per tick.
@@ -63,6 +77,8 @@ uint32_t Calculate_u_Microseconds(uint32_t MicrosecondsTicks)
 
 void IgnitionControl_v_Main(void)
 {
+
+
     HAL_NVIC_DisableIRQ(EXTI4_IRQn);
 	Firing_v_Handler();
     HAL_NVIC_EnableIRQ(EXTI4_IRQn);
@@ -137,35 +153,37 @@ extern void IgnitionControl_v_UpdateSignalTime(void)
 	g_SensorActivationCounter++; //counter to measure how many times Signal occurred
     g_usSinceDetectionCyl1 = 0; // start time since detection of Signal
     GlobalDataValues.FiringState = en_FiringStateInactive; // reset the firing state for reseting the cranking firing.
+    GlobalDataValues.isCylinder1CoilCharging = false;
+    /* Check if the ignition coil is still active due to firing timer reset
+     between activations at cranking RPM due to incosistent RPMS during cranking, 
+     and if it so pin will go to reset to avoid damage to ignition coil. */
+     if(true == HW_FiringPin_v_Cylinder_1_Status_Read())
+     {
+        HW_FiringPin_v_Cylinder_1_Reset();
+     }
 
 }
 extern uint8_t IgnitionControl_u_FirstSensorCheck_IT(void)
 {
-    static uint32_t l_g_SensorActivationCounter = 0;
-	/* TODO
-	 * 1. Update the current time
-	 * 2. Update the previous time
-	 * 3. Update the sync data
-	 * 4. Reset the firing time
-	 *
-	 * */
+    static uint32_t l_g_SensorActivationCounter = 0U;
+
     /* Initial fetch of time at sensor first pulse */
 	if ( (0U == g_SignalState)  && (1U == g_SensorActivationCounter) )
 	{
 		g_FirstSensorTimePrevious_us = g_FirstSensorTime_us;
-		g_SignalState = 1;
+		g_SignalState = 1U;
 	}
     /* fetch of time at sensor second and future pulses */
-	else if ( (g_SignalState == 1) && (1U < g_SensorActivationCounter) && (l_g_SensorActivationCounter < g_SensorActivationCounter))
+	else if ( (g_SignalState == 1U) && (1U < g_SensorActivationCounter) && (l_g_SensorActivationCounter < g_SensorActivationCounter))
 	{
 		g_FirstSensorTimeCurrent_us = g_FirstSensorTime_us;
-		g_SignalState = 2;
+		g_SignalState = 2U;
         l_g_SensorActivationCounter = g_SensorActivationCounter;
 
 	}
 
 
-	return 0;
+	return 0U;
 
 }
 
@@ -188,15 +206,20 @@ uint8_t IgntionControl_SyncCheck(void)
              //do nothing
          }
      }
-     else
+     else if( !(g_SyncFlag == (1 << SENSOR_1_AVAILABLE)) && (GlobalDataValues.SynchronizationStatus != OUT_OF_SYNC))
      {
          GlobalDataValues.SynchronizationStatus = OUT_OF_SYNC;
          g_LostSyncCounter++;
          l_status = E_NOK;
      }
+     else 
+     {
+        // do nothing
+     }
      return l_status; 
 }
-
+/* Data array for debug purposes */
+volatile uint8_t g_LoggingGlobalDataArray[12] = {0};
 static void Calculation_v_Handler(void)
 {
     uint8_t l_Result = 0; 
@@ -205,7 +228,18 @@ static void Calculation_v_Handler(void)
     volatile static uint32_t OneRevolutionTimeCylinder1 = 0;
     volatile static uint32_t OneRevolutionTimeCylinder2 = 0;
     volatile uint8_t AdvanceAngleCalculatedTime = 0;
+    static uint8_t l_previousStateHandler = 0;
+    /* Debug data output to uart */
+    /*   
+    memcpy(&g_LoggingGlobalDataArray[0],&GlobalDataValues.RPM,2U);
+    memcpy(&g_LoggingGlobalDataArray[2],&GlobalDataValues.CalculationState,1U);
+    memcpy(&g_LoggingGlobalDataArray[3],&GlobalDataValues.FiringState,1U);
+    memcpy(&g_LoggingGlobalDataArray[4],&GlobalDataValues.TimeElapsedSinceDetection,4U);
+    memcpy(&g_LoggingGlobalDataArray[8],&GlobalDataValues.FiringTimeCyl_1,4U);
     
+    HAL_UART_Transmit(&huart2,g_LoggingGlobalDataArray,12U,10);
+    HAL_UART_Transmit(&huart2,"\r\n",2U,10);  
+    memset(g_LoggingGlobalDataArray,0U,12U); */
 
     GlobalDataValues.Microseconds = Calculate_u_Microseconds(g_uSCounter);
 
@@ -225,7 +259,7 @@ static void Calculation_v_Handler(void)
         if( IN_SYNC == GlobalDataValues.SynchronizationStatus)
         {
              GlobalDataValues.CalculationState = en_Synchronized;
-            //   g_usSinceDetectionCyl1 = 0; //reset to zero to start calculating time to first cylinder firing
+
         }
         else
         {            //do nothing
@@ -234,7 +268,7 @@ static void Calculation_v_Handler(void)
 
         case en_Synchronized:
     #ifdef SENSOR_INTERRUPT_MODE
-                IgnitionControl_u_FirstSensorCheck_IT();
+                IgnitionControl_u_FirstSensorCheck_IT(); //OK
     #else
                 l_Result = IgnitionControl_FirstSensorCheck();
     #endif /*STM_INTERRUPT*/
@@ -242,7 +276,7 @@ static void Calculation_v_Handler(void)
         // Again check for uS values to get latest value for the check below
          GlobalDataValues.Microseconds = Calculate_u_Microseconds(g_uSCounter);
       	//If more than 2 Seconds have passed, disable the signal and set status to out of sync
-         if( MAX_TIME_FOR_SIGNAL_AVAILABILITY <= (GlobalDataValues.Microseconds - g_FirstSensorTimeCurrent_us) )
+         if( (MAX_TIME_FOR_SIGNAL_AVAILABILITY <= (GlobalDataValues.Microseconds - g_FirstSensorTimeCurrent_us)) )
      	{
      		g_SignalFlag &= ~(1 << SENSOR_1_AVAILABLE) ;
      		g_SyncFlag &= ~(1 << SENSOR_1_AVAILABLE) ;
@@ -256,13 +290,14 @@ static void Calculation_v_Handler(void)
      	}
 
          if(g_FirstSensorTimeCurrent_us != g_FirstSensorTimePrevious_us)
-         {
-            // __disable_irq();
+        {
+   
             GlobalDataValues.RPM = Calculate_u_RPM();
-            // __enable_irq();
-            if(CRANKING_RPM >= GlobalDataValues.RPM)
+            /* TODO: Add calculated rate of change of RPM with corresponding filtering until a good balance is achieved...*/
+            if( (CRANKING_RPM >= GlobalDataValues.RPM) && (GlobalDataValues.RPM > 30U) ) 
             {
                 GlobalDataValues.CalculationState = en_EngineCranking;
+             
             }
             /* RPM Limiter will be implemented as a hard limiter, so if the RPMs are over 
             from setpoint, firing event will be skipped. */
@@ -271,18 +306,32 @@ static void Calculation_v_Handler(void)
                 GlobalDataValues.CalculationState = en_Synchronized;
                 GlobalDataValues.FiringState = en_RPMHardLimitState;
             }
+           
+        }
+         
+        else if( OUT_OF_SYNC == GlobalDataValues.SynchronizationStatus)
+        {
+            GlobalDataValues.CalculationState = en_SynchronizationOngoing;
+        }
 
-            else if (CRANKING_RPM <  GlobalDataValues.RPM )
+        else if (CRANKING_RPM <  GlobalDataValues.RPM )
+        {
+            /* Handling for case  of one cycle after higher rpm then cranking */
+            if( 1U == g_CrankingFiringFlag )
+            {
+                GlobalDataValues.CalculationState = en_EngineCranking; 
+                g_CrankingFiringFlag = 0U;               
+            }
+            else if (  0U == g_CrankingFiringFlag )
             {
                 GlobalDataValues.CalculationState = en_CalculationOngoing;
+
+                
             }
-         }
-         
-         else if( OUT_OF_SYNC == GlobalDataValues.SynchronizationStatus)
-         {
-        	 GlobalDataValues.CalculationState = en_SynchronizationOngoing;
-         }
-         break;
+
+          
+        }
+        break;
 
         case en_CalculationOngoing:
             // 1. Get the Advance angle
@@ -299,7 +348,9 @@ static void Calculation_v_Handler(void)
            OneRevolutionTimeCylinder2 = CalculateTime_u_FromAngle(GlobalDataValues.RPM, (OneRevolutionAngleInDeg + SecondCylinderAngleinDeg) );
            // 2. Calculate Firing time Cyl-1
            GlobalDataValues.FiringTimeCyl_1 = Calculate_u_FiringTimeCylinder(AdvanceAngleCalculatedTime, OneRevolutionTimeCylinder1);
-           // 3. Calculate Firing time Cyl-2
+           /* 2.1  Rate of change of Firing time - to be seen if it is beneficial */
+           GlobalDataValues.FiringTimeCyl_1 = CalculateRate_u_OfChange(&l_PrevTimeDifference_us, GlobalDataValues.FiringTimeCyl_1);
+            // 3. Calculate Firing time Cyl-2
             GlobalDataValues.FiringTimeCyl_2 = Calculate_u_FiringTimeCylinder(AdvanceAngleCalculatedTime, OneRevolutionTimeCylinder2 );
             // 4. set state to en_CalculationFinished
 
@@ -320,6 +371,7 @@ static void Calculation_v_Handler(void)
 
             GlobalDataValues.CalculationState = en_Synchronized;
             /* Check if firing was executed already and don't set state to firing until the next cycle. */
+            /* TODO: Check if this affect the triggering of multiple Cranking events after first trigger */
             if( ! (GlobalDataValues.FiringState == en_IdleStateFiringState) )
             {
                 GlobalDataValues.FiringState = en_FiringCylinder1Cranking;
@@ -331,12 +383,14 @@ static void Calculation_v_Handler(void)
             break; 
                    
     }
+ 
     
 }
 
 static void Firing_v_Handler(void)
 {
   
+    
   /*NOTE: PROVE at integration test level if no race condition will occur during
     firing of both cylinders due to faulty handling in FSM or time overlaps
     Additional idea, put both handlers inside of 1 case en_FiringCylinders...*/
@@ -346,10 +400,11 @@ static void Firing_v_Handler(void)
         switch(GlobalDataValues.FiringState)
         {
             case en_FiringCylinder1:
-               Firing_v_Cylinder1();
-           break;
+                Firing_v_Cylinder1();
+            break;
             case en_FiringCylinder1Completed:
             GlobalDataValues.FiringState = en_IdleStateFiringState;
+            
 //TODO: Implement firing and handling for Cylinder2.
             break;
             case en_FiringCylinder2:
@@ -362,6 +417,7 @@ static void Firing_v_Handler(void)
             break;
 
             case en_FiringCylinder1Cranking:
+            g_CrankingFiringFlag = 1U;
             Firing_v_Cylinder1Cranking();
             break;
             case en_RPMHardLimitState:
@@ -382,17 +438,21 @@ static void Firing_v_Handler(void)
 extern uint16_t Calculate_u_RPM(void)
 {
     uint16_t l_CalculatedRPM = 0;
-    const float alpha = 0.9;
-    volatile float l_TimeDifference_us = 0.0;
-    volatile float l_TimeDifference_ms = 0.0;
-    volatile  float l_AngularVelocity = 0.0; 
-
- l_TimeDifference_us = g_FirstSensorTimeCurrent_us - g_FirstSensorTimePrevious_us;
+    const double alpha = 8.0;
+    volatile double l_TimeDifference_us = 0.0;
+    volatile double l_TimeDifference_ms = 0.0;
+    volatile  double l_AngularVelocity = 0.0; 
+    volatile double l_DeltaTimeDifference_us = 0.0;
+ l_TimeDifference_us = (g_FirstSensorTimeCurrent_us - g_FirstSensorTimePrevious_us);
+ //l_DeltaTimeDifference_us = alpha * (l_TimeDifference_us - l_PrevTimeDifference_us);
+ //l_PrevTimeDifference_us = l_TimeDifference_us;
+ /* Calculated rate of change */
+// l_TimeDifference_us += l_DeltaTimeDifference_us;
  l_TimeDifference_ms = l_TimeDifference_us / 1000.0f; 
  l_AngularVelocity = (2.0 * M_PI * 1000.0) /(l_TimeDifference_ms ); //[rad/S]
  l_CalculatedRPM = (uint16_t) (l_AngularVelocity * 30.0f / M_PI); 
-// Moving Average filter
-//    l_CalculatedRPM =  (uint16_t) (alpha * l_CalculatedRPM  + (1 - alpha) * GlobalDataValues.RPM);
+// Linear fltering - not good try with moving average if the rate of change is not functioning as it should be....
+//l_CalculatedRPM =  (uint16_t) (alpha * l_CalculatedRPM  + (1.0 - alpha) * GlobalDataValues.RPM);
 
 
  /*Case when the RPM signal is already known, so we need just to update currentTime*/
