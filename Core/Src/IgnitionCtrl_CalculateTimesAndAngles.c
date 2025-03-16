@@ -150,22 +150,24 @@ inline uint32_t Calculate_u_FiringTimeCylinder(uint32_t in_u32_AdvanceAngleTime,
 
 void Firing_v_Cylinder1(void)
 {
-
-    if((GlobalDataValues.TimeElapsedSinceDetection >= ((GlobalDataValues.FiringTimeCyl_1 - IGNITION_DWELL_TIME_US) )
-    		 && (false == GlobalDataValues.isCylinder1CoilCharging ) ) )
+    if( !(GlobalDataValues.FiringState == en_FiringCylinder1Completed) )
     {
-        //Raise Firing Pin to HIGH 
-        HW_FiringPin_v_Cylinder_1_Set();
-        GlobalDataValues.isCylinder1CoilCharging = true;
-    }
-    else if ( (GlobalDataValues.TimeElapsedSinceDetection >= GlobalDataValues.FiringTimeCyl_1) )
-    {
-        //Set Firing Pin to LOW 
-        HW_FiringPin_v_Cylinder_1_Reset();
-        GlobalDataValues.isCylinder1CoilCharging = false;
-        GlobalDataValues.FiringState = en_FiringCylinder1Completed;
-        g_usSinceDetectionCyl1 = 0;
+        if((GlobalDataValues.TimeElapsedSinceDetection >= ((GlobalDataValues.FiringTimeCyl_1 - IGNITION_DWELL_TIME_US) )
+                && (false == GlobalDataValues.isCylinder1CoilCharging ) ) )
+        {
+            //Raise Firing Pin to HIGH 
+            HW_FiringPin_v_Cylinder_1_Set();
+            GlobalDataValues.isCylinder1CoilCharging = true;
+        }
+        else if ( (GlobalDataValues.TimeElapsedSinceDetection >= GlobalDataValues.FiringTimeCyl_1) )
+        {
+            //Set Firing Pin to LOW 
+            HW_FiringPin_v_Cylinder_1_Reset();
+            GlobalDataValues.isCylinder1CoilCharging = false;
+            GlobalDataValues.FiringState = en_FiringCylinder1Completed;
+            g_usSinceDetectionCyl1 = 0;
 
+        }
     }
 }
   void Firing_v_Cylinder2(void)
@@ -186,4 +188,28 @@ void Firing_v_Cylinder1(void)
        GlobalDataValues.FiringState = en_FiringCylinder2Completed;
     }
 
+}
+
+void Firing_v_Cylinder1Cranking(void)
+{
+    if( !(GlobalDataValues.FiringState == en_FiringCylinder1Completed) )
+    {
+    
+        if((GlobalDataValues.TimeElapsedSinceDetection > 0U )
+                && (false == GlobalDataValues.isCylinder1CoilCharging ) ) 
+        {
+            //Raise Firing Pin to HIGH 
+            HW_FiringPin_v_Cylinder_1_Set();
+            GlobalDataValues.isCylinder1CoilCharging = true;
+        }
+        else if ( (GlobalDataValues.TimeElapsedSinceDetection >= CRANKING_DWELL_TIME_US) )
+        {
+            //Set Firing Pin to LOW 
+            HW_FiringPin_v_Cylinder_1_Reset();
+            GlobalDataValues.isCylinder1CoilCharging = false;
+            GlobalDataValues.FiringState = en_FiringCylinder1Completed;
+            g_usSinceDetectionCyl1 = 0;
+
+        }
+    }
 }

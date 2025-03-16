@@ -53,7 +53,7 @@
 //#define USING_CAM_SIGNAL								///< Using signal from Camshaft for RPM calculation
 #define USING_ADVANCE_TIMING							///< Using Advance timing for calculation of firing angles
 //#define USING_FIXED_TIMING							///< Using Fixed timing for calculation of firing angles
-
+#define IGNITION_STATIC_ADVANCE_ANGLE	11U				///< Static ignition advance angle
 #ifdef USING_FIXED_TIMING
 #define FIXED_TIMING_ANGLE		30U						///< Fixed timing angle value in deg
 #endif /*USING_FIXED_TIMING*/
@@ -66,7 +66,8 @@
 #else
 #define EVEN_FIRE_ANGLE_IN_DEG       180U                ///< Even Fire distribution
 #endif
-
+#define CRANKING_RPM				450U				///< Max Cranking RPM
+#define CRANKING_DWELL_TIME_US		5000U				///< Cranking ignition coil dwell time in uS
 /*Status defines*/
 #define E_OK    0U
 #define E_NOK   1U 

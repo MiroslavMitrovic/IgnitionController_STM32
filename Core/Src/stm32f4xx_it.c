@@ -218,8 +218,8 @@ void EXTI4_IRQHandler(void)
   /* USER CODE BEGIN EXTI4_IRQn 0 */
   //  HAL_GPIO_TogglePin(TestLED1_GPIO_Port,TestLED1_Pin);
   // g_signalTimeBetweenInterrupts = g_uSCounter * 10; 
+   g_signalTriggerTimestamp = 1U;
   /* USER CODE END EXTI4_IRQn 0 */
-  g_signalTriggerTimestamp = 1U;
   HAL_GPIO_EXTI_IRQHandler(Signal1_IntPin_Pin);
   /* USER CODE BEGIN EXTI4_IRQn 1 */
 

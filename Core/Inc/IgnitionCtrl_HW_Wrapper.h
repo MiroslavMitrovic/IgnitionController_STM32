@@ -121,6 +121,19 @@ void HW_FiringPin_v_Cylinder_2_Set(void);
  *  @return none
  */
 void HW_FiringPin_v_Cylinder_2_Reset(void);
+/** @brief Read Firing Pin status for Cylinder 1\n
+ *
+ *  @params none
+ *  @return Status of firing pin
+ */
+
+GPIO_PinState HW_FiringPin_v_Cylinder_1_Status_Read(void);
+/** @brief Read Firing Pin status for Cylinder 1\n
+ *
+ *  @params none
+ *  @return Status of firing pin
+ */
+GPIO_PinState HW_FiringPin_v_Cylinder_2_Status_Read(void);
 
 
 #endif /* ${include_guard_symbol} */

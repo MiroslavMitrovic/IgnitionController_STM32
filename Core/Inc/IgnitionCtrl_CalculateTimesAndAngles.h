@@ -45,12 +45,18 @@ uint16_t CalculateAngle_u_FromTime(uint16_t in_u16_RPM, uint32_t in_u32_Time);
  *  @param  [none]
  *  @return RPM value
  */
-extern uint16_t Calculate_u_RPM(void);
+ extern uint16_t Calculate_u_RPM(void);
 /** @brief Function that gets the Advance angle value based on RPMs mapped in LUT\n
  *  @param  [in] in_u16_RPM 
  *  @return Advance Angle 
 */ 
 uint8_t get_u_AdvanceAngle(uint16_t in_u16_RPM);
+/** @brief Function that gets the Advance angle value based on RPMs mapped in LUT\n
+ *  @param  [in] in_u16_RPM
+ *  @param  [in] in_f_Time 
+ *  @return Crankshaft Acceleration in rad/s^2
+*/ 
+float Calculate_f_Acceleration(uint16_t in_u16_RPM, float in_f_Time);
 
 long map(long x, long in_min, long in_max, long out_min, long out_max);
 /** @brief Function for calculation of ignition firing time\n
