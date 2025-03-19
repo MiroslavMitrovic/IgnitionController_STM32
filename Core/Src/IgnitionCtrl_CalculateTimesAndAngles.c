@@ -28,7 +28,7 @@
 #include "IgnitionCotrol_Main.h"
 
 extern volatile uint32_t g_usSinceDetectionCyl1;
-
+extern uint8_t g_CrankingFiringFlag;
 /*Global constant for RPM and ignition angle*/
 const uint16_t g_cIgnitionAngleTable [IGNITION_ANGLE_TABLE_COLUMNS] [IGNITION_ANGLE_TABLE_ROWS] =
 {   {0, 1000, 2000, 3000, 4000,  5000, 6000, 7000,  8000,  9000 },
@@ -165,8 +165,6 @@ void Firing_v_Cylinder1(void)
             HW_FiringPin_v_Cylinder_1_Reset();
             GlobalDataValues.isCylinder1CoilCharging = false;
             GlobalDataValues.FiringState = en_FiringCylinder1Completed;
-            g_usSinceDetectionCyl1 = 0;
-
         }
     }
 }
@@ -208,8 +206,11 @@ void Firing_v_Cylinder1Cranking(void)
             HW_FiringPin_v_Cylinder_1_Reset();
             GlobalDataValues.isCylinder1CoilCharging = false;
             GlobalDataValues.FiringState = en_FiringCylinder1Completed;
-            g_usSinceDetectionCyl1 = 0;
-
+            if(2U == g_CrankingFiringFlag)
+            {
+                g_CrankingFiringFlag = 3U;
+            }
+            
         }
     }
 }
