@@ -53,11 +53,11 @@
 //#define USING_CAM_SIGNAL								///< Using signal from Camshaft for RPM calculation
 #define USING_ADVANCE_TIMING							///< Using Advance timing for calculation of firing angles
 //#define USING_FIXED_TIMING							///< Using Fixed timing for calculation of firing angles
-#define IGNITION_STATIC_ADVANCE_ANGLE	11U				///< Static ignition advance angle
+#define IGNITION_STATIC_ADVANCE_ANGLE	7U				///< Static ignition advance angle
 #ifdef USING_FIXED_TIMING
 #define FIXED_TIMING_ANGLE		30U						///< Fixed timing angle value in deg
 #endif /*USING_FIXED_TIMING*/
-#define MAX_TIME_FOR_SIGNAL_AVAILABILITY 2000000U		///< Time(uS) in which signal should appear, if not reset the timings and return RPM to 0
+#define MAX_TIME_FOR_SIGNAL_AVAILABILITY 500000U		///< Time(uS) in which signal should appear, if not reset the timings and return RPM to 0
 #define SIGNAL_DEBOUNCE_MULTIPLIER		 0U				///< Multiplier for signal debounce time 256uS times multiplier
 #define MAX_RPM							 8500U			///< Maximum RPM value
 /*Macro check is engine even or odd firing*/
