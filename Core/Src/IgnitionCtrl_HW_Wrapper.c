@@ -110,7 +110,7 @@ void HW_FiringPin_v_Cylinder_2_Set(void)
 #ifdef ATMEL_MCU
 	PORTB |= ( 1<< PB0);
 #else
-	// HAL_GPIO_WritePin(GPIOD, LD5_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(TestLED2_GPIO_Port, TestLED2_Pin, GPIO_PIN_SET);
 #endif /*ATMEL_MCU*/
 }
 
@@ -119,7 +119,7 @@ void HW_FiringPin_v_Cylinder_2_Reset(void)
 #ifdef ATMEL_MCU
     PORTB &= ~( 1<< PB0);
 #else
-	// HAL_GPIO_WritePin(GPIOD, LD5_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(TestLED2_GPIO_Port, TestLED2_Pin, GPIO_PIN_RESET);
 #endif /*ATMEL_MCU*/
 }
 
