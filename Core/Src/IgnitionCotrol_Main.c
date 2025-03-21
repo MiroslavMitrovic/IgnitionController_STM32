@@ -229,7 +229,7 @@ static void Calculation_v_Handler(void)
 {
     uint8_t l_Result = 0; 
     const uint16_t OneRevolutionAngleInDeg = 360; 
-    const uint16_t SecondCylinderAngleinDeg = 90;
+    const uint16_t SecondCylinderAngleinDeg = 225; // Odd firing angle at camshaft.
     volatile static uint32_t OneRevolutionTimeCylinder1 = 0;
     volatile static uint32_t OneRevolutionTimeCylinder2 = 0;
     volatile uint8_t AdvanceAngleCalculatedTime = 0;
@@ -362,8 +362,8 @@ static void Calculation_v_Handler(void)
             AdvanceAngleCalculatedTime =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, GlobalDataValues.AdvanceAngle);
 #endif /*USING_FIXED_TIMING*/
 
-           OneRevolutionTimeCylinder1 =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, OneRevolutionAngleInDeg - IGNITION_STATIC_ADVANCE_ANGLE);
-           OneRevolutionTimeCylinder2 = CalculateTime_u_FromAngle(GlobalDataValues.RPM, (OneRevolutionAngleInDeg + SecondCylinderAngleinDeg) );
+           OneRevolutionTimeCylinder1 =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, (OneRevolutionAngleInDeg - IGNITION_STATIC_ADVANCE_ANGLE) );
+           OneRevolutionTimeCylinder2 = CalculateTime_u_FromAngle(GlobalDataValues.RPM, (OneRevolutionAngleInDeg  - SecondCylinderAngleinDeg - IGNITION_STATIC_ADVANCE_ANGLE) );
            // 2. Calculate Firing time Cyl-1
            GlobalDataValues.FiringTimeCyl_1 = Calculate_u_FiringTimeCylinder(AdvanceAngleCalculatedTime, OneRevolutionTimeCylinder1);
            /* 2.1  Rate of change of Firing time - to be seen if it is beneficial */
@@ -412,14 +412,15 @@ static void Firing_v_Handler(void)
         {
             case en_FiringCylinder1:
                 Firing_v_Cylinder1();
+                Firing_v_Cylinder2();
             break;
             case en_FiringCylinder1Completed:
             GlobalDataValues.FiringState = en_IdleStateFiringState;
-            
+            GlobalDataValues.FiringStateCylinder2 = en_IdleStateFiringState;
 //TODO: Implement firing and handling for Cylinder2.
             break;
             case en_FiringCylinder2:
-                 Firing_v_Cylinder2();
+              //   Firing_v_Cylinder2();
             break;
             case en_FiringCylinder2Completed:
                 GlobalDataValues.FiringState = en_IdleStateFiringState;

@@ -87,5 +87,26 @@ long map(long x, long in_min, long in_max, long out_min, long out_max);
  *  Pin LOW start time  -  360deg + 90deg f(t) - Advance Angle f(t)       
  */
   void Firing_v_Cylinder2(void);
+/** @brief Function for Firing Cylinder1 during Cranking\n
+ *  Firing will be performed According to event trigger + CRANKING_DWELL_TIME_US
+ *  Signal must be raised to HIGH after this calculated time for the value of CRANKING_DWELL_TIME_US
+ *  to charge the ignition coil then to return it to LOW pin state.
+ *  Pin HIGH start time - Event 
+ *  Pin LOW start time  -  Event + CRANKING_DWELL_TIME_US       
+ */
+void Firing_v_Cylinder1Cranking(void);
+/** @brief Function for Firing Cylinder2 during Cranking\n
+ *  Firing will be performed According to the Calculated time - IGNITION_DWELL_TIME_US
+ *  Signal must be raised to HIGH after this calculated time for the value of CRANKING_DWELL_TIME_US
+ *  to charge the ignition coil then to return it to LOW pin state.
+ *  Pin HIGH start time - Event 
+ *  Pin LOW start time  -  Event + CRANKING_DWELL_TIME_US       
+ */       
+  void Firing_v_Cylinder2Cranking(void);
+
+
+
+
+
 
 #endif /* IGNITIONCTRL_CALCULATETIMESANDANGLES_H_ */

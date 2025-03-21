@@ -170,20 +170,25 @@ void Firing_v_Cylinder1(void)
 }
   void Firing_v_Cylinder2(void)
   { 
-    static uint8_t l_FiringFlag = 0;
+   // static uint8_t l_firingState = 0U;
+    if( !(GlobalDataValues.FiringStateCylinder2 == en_FiringCylinder2Completed) )
+    {
     
-    if((GlobalDataValues.TimeElapsedSinceDetection >= (GlobalDataValues.FiringTimeCyl_2 - IGNITION_DWELL_TIME_US) ) &&  (0 == l_FiringFlag) )
-    {
-        //Raise Firing Pin to HIGH 
-        HW_FiringPin_v_Cylinder_2_Set();
-        l_FiringFlag = 1;
-    }
-    else if ((GlobalDataValues.TimeElapsedSinceDetection >= GlobalDataValues.FiringTimeCyl_2) &&  (1 == l_FiringFlag) )
-    {
-        //Set Firing Pin to LOW 
-        HW_FiringPin_v_Cylinder_2_Reset();
-        l_FiringFlag = 0;
-       GlobalDataValues.FiringState = en_FiringCylinder2Completed;
+        if( (GlobalDataValues.TimeElapsedSinceDetection >= (GlobalDataValues.FiringTimeCyl_2 - IGNITION_DWELL_TIME_US) )
+                 &&  (false == GlobalDataValues.isCylinder2CoilCharging) )
+        {
+            //Raise Firing Pin to HIGH 
+            HW_FiringPin_v_Cylinder_2_Set();
+            GlobalDataValues.isCylinder2CoilCharging = true;          
+        }
+        else if ((GlobalDataValues.TimeElapsedSinceDetection >= GlobalDataValues.FiringTimeCyl_2)  )
+        {
+            //Set Firing Pin to LOW 
+            HW_FiringPin_v_Cylinder_2_Reset();
+            GlobalDataValues.isCylinder2CoilCharging = false;
+            GlobalDataValues.FiringStateCylinder2 = en_FiringCylinder2Completed;
+            //l_firingState = 1U;
+        }
     }
 
 }
@@ -205,6 +210,33 @@ void Firing_v_Cylinder1Cranking(void)
             //Set Firing Pin to LOW 
             HW_FiringPin_v_Cylinder_1_Reset();
             GlobalDataValues.isCylinder1CoilCharging = false;
+            GlobalDataValues.FiringState = en_FiringCylinder1Completed;
+            if(2U == g_CrankingFiringFlag)
+            {
+                g_CrankingFiringFlag = 3U;
+            }
+            
+        }
+    }
+}
+
+void Firing_v_Cylinder2Cranking(void)
+{
+    if( !(GlobalDataValues.FiringState == en_FiringCylinder1Completed) )
+    {
+    
+        if((GlobalDataValues.TimeElapsedSinceDetection > 0U )
+                && (false == GlobalDataValues.isCylinder2CoilCharging ) ) 
+        {
+            //Raise Firing Pin to HIGH 
+            HW_FiringPin_v_Cylinder_2_Set();
+            GlobalDataValues.isCylinder2CoilCharging = true;
+        }
+        else if ( (GlobalDataValues.TimeElapsedSinceDetection >= CRANKING_DWELL_TIME_US) )
+        {
+            //Set Firing Pin to LOW 
+            HW_FiringPin_v_Cylinder_2_Reset();
+            GlobalDataValues.isCylinder2CoilCharging = false;
             GlobalDataValues.FiringState = en_FiringCylinder1Completed;
             if(2U == g_CrankingFiringFlag)
             {

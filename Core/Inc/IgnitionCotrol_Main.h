@@ -68,6 +68,7 @@ typedef volatile struct
 {
 	ten_Calculation_States CalculationState;
     ten_Firing_States       FiringState;
+    ten_Firing_States       FiringStateCylinder2;
 	uint16_t RPM;
 	uint8_t SynchronizationStatus;
 	uint8_t AdvanceAngle;
