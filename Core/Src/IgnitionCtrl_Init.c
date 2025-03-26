@@ -39,7 +39,8 @@ void Data_v_Init(void)
     GlobalDataValues.FiringState = en_FiringStateInit;
     GlobalDataValues.FiringTimeCyl_1 = 0;
     GlobalDataValues.FiringTimeCyl_2 = 0;
-    GlobalDataValues.TimeElapsedSinceDetection = 0;
+    GlobalDataValues.TimeElapsedSinceDetectionCylinder1 = 0;
+	GlobalDataValues.TimeElapsedSinceDetectionCylinder2 = 0;
     GlobalDataValues.isCylinder1CoilCharging = false;
     GlobalDataValues.isCylinder2CoilCharging = false;
     

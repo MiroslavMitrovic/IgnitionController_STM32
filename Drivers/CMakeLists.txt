@@ -7,7 +7,7 @@ STATIC
     STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
     STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
     STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
-    STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
+    #STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
     #STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio_ex.c
     STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
     STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
