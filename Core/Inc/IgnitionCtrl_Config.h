@@ -73,7 +73,7 @@
 #define E_NOK   1U 
 #define E_BUSY  2U 
 
-/*Definitions for Sensor Availability flag*/
+/* Definitions for Sensor Availability flag */
 #define SENSOR_1_AVAILABLE 0U
 #define SENSOR_2_AVAILABLE 1U
 
@@ -86,6 +86,9 @@
 #define IN_SYNC            1U							///< Engine RPMs are synchronized
 #define OUT_OF_SYNC        0U							///< Engine RPMs are not synchronized
 
+/* Definitions for Cylinder Numbers */
+#define CYLINDER_1 		   1U 							///< Cylinder 1 Definition
+#define CYLINDER_2		   2U 							///< Cylinder 2 Definition
 
 /*Configuration error handling*/
 #ifdef CRANK_SIGNAL

@@ -46,7 +46,8 @@ typedef enum en_Calculation_States
 	en_CalculationOngoing,          ///< Ignition Angle calculation ongoing     4 
     en_CalculationFinished,         ///< Ignition Angle calculation finished    5
 	en_IdleStateCalculation,        ///< Idle state                             6
-    en_EngineCranking,              ///< Engine Cranking state                  7
+    en_EngineCrankingCylinder1,     ///< Engine Cranking state                  7
+    en_EngineCrankingCylinder2,     ///< Engine Cranking state                  8
 	en_MaxNumberOfCalculationStates
 }ten_Calculation_States;
 
@@ -57,10 +58,11 @@ typedef enum en_Firing_States
 	en_FiringCylinder1,                     ///< Firing cylinder 1 ongoing              2
     en_FiringCylinder1Cranking,             ///< Firing cylinder 1 during cranking      3
     en_FiringCylinder1Completed,            ///< Firing cylinder 1 completed            4
-    en_FiringCylinder2,                     ///< Firing cylinder 2 ongoing              5
-    en_FiringCylinder2Completed,            ///< Firing cylinder 2 completed            6   
-    en_RPMHardLimitState,                   ///< Hard Limit state                       7
-    en_FiringCylinder1CrankingCompleted,    ///< Firing cylinder 1 during cranking      8
+    en_FiringCylinder2Cranking,             ///< Firing cylinder 2 during cranking      5
+    en_FiringCylinder2,                     ///< Firing cylinder 2 ongoing              6
+    en_FiringCylinder2Completed,            ///< Firing cylinder 2 completed            7   
+    en_RPMHardLimitState,                   ///< Hard Limit state                       8
+    en_FiringCylinder1CrankingCompleted,    ///< Firing cylinder 1 during cranking      9
    	en_MaxNumberOfFiringStates
 }ten_Firing_States;
 
@@ -70,12 +72,14 @@ typedef volatile struct
     ten_Firing_States       FiringState;
     ten_Firing_States       FiringStateCylinder2;
 	uint16_t RPM;
+    uint16_t RPM2;
 	uint8_t SynchronizationStatus;
 	uint8_t AdvanceAngle;
 	uint32_t Microseconds;
     uint32_t FiringTimeCyl_1;
     uint32_t FiringTimeCyl_2;
-    uint32_t TimeElapsedSinceDetection;
+    uint32_t TimeElapsedSinceDetectionCylinder1;
+    uint32_t TimeElapsedSinceDetectionCylinder2;
     bool  isCylinder1CoilCharging;
     bool  isCylinder2CoilCharging;
 }tst_GlobalData;
@@ -118,11 +122,22 @@ void IgnitionControl_v_Main(void);
  *  @return Sensor Status
  */
 extern uint8_t IgnitionControl_u_FirstSensorCheck_IT(void);
+/** @brief /* Check for the second sensor is available, and if it is, it returns the status and
+ * sets the time for first sensor \n
+ *  @param  none
+ *  @return Sensor Status
+ */
+extern uint8_t IgnitionControl_u_SecondSensorCheck_IT(void);
 /** @brief /* Updates the time value and sets the availability of sensor  \n
  *  @param  none
  *  @return Sensor Status
  */
 extern void IgnitionControl_v_UpdateSignalTime(void);
+/** @brief /* Updates the time value and sets the availability of sensor for second cylinder.  \n
+ *  @param  none
+ *  @return Sensor Status
+ */
+extern void IgnitionControl_v_UpdateSignalTimeCylinder2(void);
 
 /*******************************************************************************
  * Specific Includes

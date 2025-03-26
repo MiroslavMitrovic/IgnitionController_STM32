@@ -42,10 +42,11 @@ uint32_t CalculateTime_u_FromAngle(uint16_t in_u16_RPM, uint16_t in_u16_Angle);
  */
 uint16_t CalculateAngle_u_FromTime(uint16_t in_u16_RPM, uint32_t in_u32_Time);
 /** @brief Function that will perform the calculation of RPM based on time between two High Signals\n
- *  @param  [none]
+ *  @param  [in] in_CurrentTime
+ *  @param  [in] in_PrevTime
  *  @return RPM value
  */
- extern uint16_t Calculate_u_RPM(void);
+ extern uint16_t Calculate_u_RPM(uint8_t in_Cylinder, uint32_t in_CurrentTime, uint32_t in_PrevTime);
 /** @brief Function that gets the Advance angle value based on RPMs mapped in LUT\n
  *  @param  [in] in_u16_RPM 
  *  @return Advance Angle 

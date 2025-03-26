@@ -142,16 +142,18 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		if(5U < g_uSDebouncingSignalCounter) /* Check if the signal was triggered in time less than 50uS */
 		{
 			IgnitionControl_v_UpdateSignalTime();
-			g_uSDebouncingSignalCounter = 0;
-			g_signalDebouncingTimerStarted = 1;
+	/* 		g_uSDebouncingSignalCounter = 0;
+			g_signalDebouncingTimerStarted = 1; */
 		}
 	}
 	else if (Signal2_IntPin_Pin == GPIO_Pin)
 	{
 		if(5U < g_uSDebouncingSignalCounter) /* Check if the signal was triggered in time less than 50uS */
 		{
-			// IgnitionControl_v_UpdateSignalTime();
-			// g_uSDebouncingSignalCounter = 0;
+			IgnitionControl_v_UpdateSignalTimeCylinder2();
+			g_uSDebouncingSignalCounter = 0;
+			g_signalDebouncingTimerStarted = 1;
+			
 		}
 	}
 	else{}
