@@ -174,14 +174,14 @@ void Firing_v_Cylinder1(void)
     if( !(GlobalDataValues.FiringStateCylinder2 == en_FiringCylinder2Completed) )
     {
     
-        if( (GlobalDataValues.TimeElapsedSinceDetectionCylinder1 >= (GlobalDataValues.FiringTimeCyl_2 - IGNITION_DWELL_TIME_US) )
+        if( (GlobalDataValues.TimeElapsedSinceDetectionCylinder2 >= (GlobalDataValues.FiringTimeCyl_2 - IGNITION_DWELL_TIME_US) )
                  &&  (false == GlobalDataValues.isCylinder2CoilCharging) )
         {
             //Raise Firing Pin to HIGH 
             HW_FiringPin_v_Cylinder_2_Set();
             GlobalDataValues.isCylinder2CoilCharging = true;          
         }
-        else if ((GlobalDataValues.TimeElapsedSinceDetectionCylinder1 >= GlobalDataValues.FiringTimeCyl_2)  )
+        else if ((GlobalDataValues.TimeElapsedSinceDetectionCylinder2 >= GlobalDataValues.FiringTimeCyl_2)  )
         {
             //Set Firing Pin to LOW 
             HW_FiringPin_v_Cylinder_2_Reset();
