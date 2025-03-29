@@ -382,6 +382,10 @@ static void Calculation_v_Handler(void)
             {
                 GlobalDataValues.CalculationState = en_EngineCrankingCylinder2;
             }
+            else if (CRANKING_RPM <  GlobalDataValues.RPM )
+            {
+                GlobalDataValues.CalculationState = en_CalculationOngoing;
+            }
         }
 
 
@@ -397,6 +401,7 @@ static void Calculation_v_Handler(void)
         {
             GlobalDataValues.CalculationState = en_Synchronized;
             GlobalDataValues.FiringState = en_RPMHardLimitState;
+            GlobalDataValues.FiringStateCylinder2 = en_RPMHardLimitState;
         }
         
         if( OUT_OF_SYNC == GlobalDataValues.SynchronizationStatus)
@@ -418,14 +423,13 @@ static void Calculation_v_Handler(void)
             AdvanceAngleCalculatedTime =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, GlobalDataValues.AdvanceAngle);
 #endif /*USING_FIXED_TIMING*/
 
-           OneRevolutionTimeCylinder1 =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, (OneRevolutionAngleInDeg - IGNITION_STATIC_ADVANCE_ANGLE) );
-           OneRevolutionTimeCylinder2 = CalculateTime_u_FromAngle(GlobalDataValues.RPM, (OneRevolutionAngleInDeg  - SecondCylinderAngleinDeg - IGNITION_STATIC_ADVANCE_ANGLE) );
-           // 2. Calculate Firing time Cyl-1
+            OneRevolutionTimeCylinder1 =  CalculateTime_u_FromAngle(GlobalDataValues.RPM, (OneRevolutionAngleInDeg - IGNITION_STATIC_ADVANCE_ANGLE) );
+          // 2. Calculate Firing time Cyl-1
            GlobalDataValues.FiringTimeCyl_1 = Calculate_u_FiringTimeCylinder(AdvanceAngleCalculatedTime, OneRevolutionTimeCylinder1);
            /* 2.1  Rate of change of Firing time - to be seen if it is beneficial */
           // GlobalDataValues.FiringTimeCyl_1 = CalculateRate_u_OfChange(&g_PrevTimeDifference_us, GlobalDataValues.FiringTimeCyl_1);
             // 3. Calculate Firing time Cyl-2
-            GlobalDataValues.FiringTimeCyl_2 = Calculate_u_FiringTimeCylinder(AdvanceAngleCalculatedTime, OneRevolutionTimeCylinder2 );
+           GlobalDataValues.FiringTimeCyl_2 = GlobalDataValues.FiringTimeCyl_1;
             // 4. set state to en_CalculationFinished
 
             if( (0 < GlobalDataValues.FiringTimeCyl_1) && (0 < GlobalDataValues.FiringTimeCyl_2))
@@ -437,6 +441,7 @@ static void Calculation_v_Handler(void)
         case en_CalculationFinished:
         	 GlobalDataValues.CalculationState = en_Synchronized;
         	 GlobalDataValues.FiringState = en_FiringCylinder1;
+             GlobalDataValues.FiringStateCylinder2 = en_FiringCylinder2;
             break;
         case en_IdleStateCalculation:
             //do nothing 
@@ -472,36 +477,22 @@ static void Firing_v_Handler(void)
 
         switch(GlobalDataValues.FiringState)
         {
+            case en_FiringCylinder1Cranking:
+                if(CRANKING_RPM >=  GlobalDataValues.RPM )
+                {
+                    g_CrankingFiringFlag = 1U;
+                }
+                Firing_v_Cylinder1Cranking();
+            break;
             case en_FiringCylinder1:
                 Firing_v_Cylinder1();
-                Firing_v_Cylinder2();
             break;
             case en_FiringCylinder1Completed:
-            GlobalDataValues.FiringState = en_IdleStateFiringState;
-            GlobalDataValues.FiringStateCylinder2 = en_IdleStateFiringState;
-//TODO: Implement firing and handling for Cylinder2.
-            break;
-            case en_FiringCylinder2:
-              //   Firing_v_Cylinder2();
-            break;
-            case en_FiringCylinder2Completed:
                 GlobalDataValues.FiringState = en_IdleStateFiringState;
-            break;
-
-            case en_FiringCylinder1Cranking:
-            if(CRANKING_RPM >=  GlobalDataValues.RPM )
-            {
-                g_CrankingFiringFlag = 1U;
-            }
-          
-            Firing_v_Cylinder1Cranking();
-            /* Will not work like this, since we need information when the second sensor triggering happened
-            since this will be executed only once! 
-            Different state needed, to be based on RPM calculation and propagated as self state when it occurs. */
-       //     Firing_v_Cylinder2Cranking();
+              
             break;
             case en_RPMHardLimitState:
-            GlobalDataValues.FiringState = en_IdleStateFiringState;
+                GlobalDataValues.FiringState = en_IdleStateFiringState;
             break;
             case en_IdleStateFiringState:
              // do nothing
@@ -514,11 +505,16 @@ static void Firing_v_Handler(void)
         switch(GlobalDataValues.FiringStateCylinder2)
         {
             case en_FiringCylinder2Cranking:
-            Firing_v_Cylinder2Cranking();
+                Firing_v_Cylinder2Cranking();
+            break;
+            case en_FiringCylinder2:
+                Firing_v_Cylinder2();
             break;
             case en_FiringCylinder2Completed:
-            // do nothing 
+            GlobalDataValues.FiringStateCylinder2 = en_IdleStateFiringState;
             break;
+            case en_RPMHardLimitState:
+            GlobalDataValues.FiringStateCylinder2 = en_IdleStateFiringState;
             case en_IdleStateFiringState:
             // do nothing 
             break;
