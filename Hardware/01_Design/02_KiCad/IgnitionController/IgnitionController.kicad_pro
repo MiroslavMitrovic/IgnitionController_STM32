@@ -619,6 +619,22 @@
     [
       "e6f5b0e2-1e07-4c62-9ce0-63af13b4d57f",
       "PMIC_sch"
+    ],
+    [
+      "00b7ff74-d119-41e1-b3dc-28d04c652cda",
+      "MCU_sch"
+    ],
+    [
+      "b29964d9-34cb-4ba1-ac3a-194222ed2ea1",
+      "Peripherals_sch"
+    ],
+    [
+      "82cf7390-e0b9-4083-92b0-693c5b950b5a",
+      "IgnitionDriver_sch"
+    ],
+    [
+      "27bce65d-aace-450f-a5c6-7da7967f2b14",
+      "Connector_sch"
     ]
   ],
   "text_variables": {}
