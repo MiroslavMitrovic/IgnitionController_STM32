@@ -3178,12 +3178,6 @@
 		(uuid "0739608b-e4fb-46ed-bd59-3e49b3f23403")
 	)
 	(junction
-		(at 68.58 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "09b76db3-4203-4ae1-825a-301fb7d7b2b2")
-	)
-	(junction
 		(at 207.01 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3268,12 +3262,6 @@
 		(uuid "5b00114d-44e4-48d0-aea1-47f1662d690f")
 	)
 	(junction
-		(at 45.72 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5db750dd-55b5-4e18-8829-55e3be66c689")
-	)
-	(junction
 		(at 135.89 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3284,6 +3272,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "79529d04-f137-4b04-9cdf-4b66349f64b4")
+	)
+	(junction
+		(at 68.58 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f35757f-d1ef-4054-9cab-c9a45e62f63b")
 	)
 	(junction
 		(at 82.55 154.94)
@@ -3320,6 +3314,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ab829c74-a39e-48c9-af8b-afb27452caa8")
+	)
+	(junction
+		(at 119.38 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ae12fba2-77a9-42da-ab3e-3bdde4386b37")
 	)
 	(junction
 		(at 121.92 149.86)
@@ -3589,16 +3589,6 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 115.57) (xy 68.58 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "46ad4205-f34b-40e9-b941-f210f98d2bcb")
-	)
-	(wire
-		(pts
 			(xy 68.58 121.92) (xy 68.58 119.38)
 		)
 		(stroke
@@ -3769,13 +3759,13 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 69.85) (xy 87.63 68.58)
+			(xy 119.38 67.31) (xy 119.38 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6d2d3e1f-9124-4ab1-b3aa-2e8da35359d9")
+		(uuid "734fd70a-c8f0-4892-b4b7-64f71e41d5a3")
 	)
 	(wire
 		(pts
@@ -3789,6 +3779,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 115.57) (xy 68.58 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76713aef-c65d-4c51-98df-59bd88cbe5b8")
+	)
+	(wire
+		(pts
 			(xy 101.6 53.34) (xy 101.6 48.26)
 		)
 		(stroke
@@ -3799,6 +3799,16 @@
 	)
 	(wire
 		(pts
+			(xy 119.38 59.69) (xy 128.27 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79d652b9-3e43-4773-b661-8368f3bba26a")
+	)
+	(wire
+		(pts
 			(xy 109.22 119.38) (xy 139.7 119.38)
 		)
 		(stroke
@@ -3806,16 +3816,6 @@
 			(type default)
 		)
 		(uuid "7a312e93-afe9-4cb7-bb10-0f27939390bb")
-	)
-	(wire
-		(pts
-			(xy 119.38 66.04) (xy 119.38 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7babfe43-3411-46fa-b072-d2343331f6a1")
 	)
 	(wire
 		(pts
@@ -3916,16 +3916,6 @@
 			(type default)
 		)
 		(uuid "92a404d8-64a5-4c85-b521-d52d0ce5969a")
-	)
-	(wire
-		(pts
-			(xy 119.38 59.69) (xy 128.27 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "95018683-0926-4145-ab67-555b1f61a089")
 	)
 	(wire
 		(pts
@@ -4269,6 +4259,16 @@
 	)
 	(wire
 		(pts
+			(xy 119.38 58.42) (xy 119.38 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee009557-6df0-4ba4-8bd1-c79610531942")
+	)
+	(wire
+		(pts
 			(xy 246.38 140.97) (xy 246.38 143.51)
 		)
 		(stroke
@@ -4404,7 +4404,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Zener")
-		(at 119.38 62.23 270)
+		(at 119.38 63.5 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4413,7 +4413,7 @@
 		(fields_autoplaced yes)
 		(uuid "09256d08-5176-4832-84c7-5e3b5022ad95")
 		(property "Reference" "D10"
-			(at 121.92 60.9599 90)
+			(at 121.92 62.2299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4422,7 +4422,7 @@
 			)
 		)
 		(property "Value" "KDZV18B"
-			(at 121.92 63.4999 90)
+			(at 121.92 64.7699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4431,7 +4431,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
-			(at 119.38 62.23 0)
+			(at 119.38 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4440,7 +4440,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 119.38 62.23 0)
+			(at 119.38 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4449,7 +4449,7 @@
 			)
 		)
 		(property "Description" "Zener diode"
-			(at 119.38 62.23 0)
+			(at 119.38 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6601,7 +6601,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 45.72 53.34 0)
+		(at 45.72 52.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6610,7 +6610,7 @@
 		(fields_autoplaced yes)
 		(uuid "9aa25289-7596-4b4e-bdbe-642076da324e")
 		(property "Reference" "#PWR014"
-			(at 45.72 57.15 0)
+			(at 45.72 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6619,7 +6619,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 45.72 48.26 0)
+			(at 45.72 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6627,7 +6627,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 53.34 0)
+			(at 45.72 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6636,7 +6636,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 53.34 0)
+			(at 45.72 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6645,7 +6645,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 45.72 53.34 0)
+			(at 45.72 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7033,7 +7033,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 59.69 53.34 0)
 			(effects
 				(font
@@ -7742,7 +7742,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ea9db473-3b36-4516-b16f-63f92edc5306")
-		(property "Reference" "R23"
+		(property "Reference" "R57"
 			(at 124.46 165.0999 0)
 			(effects
 				(font
@@ -7796,7 +7796,7 @@
 		(instances
 			(project "IgnitionController"
 				(path "/96744ec0-1e7f-4d75-9985-0095978419e2/af36972c-908c-4a23-b0c1-8f51d47880c3"
-					(reference "R23")
+					(reference "R57")
 					(unit 1)
 				)
 			)

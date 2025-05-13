@@ -1,0 +1,23 @@
+LTspice 24.1.2 for Windows
+Circuit: D:\Projects\git\STM\IgnitionController_STM32\Hardware\01_Design\01_LTSpice\Draft1.net
+Start Time: Sat May  3 13:03:45 2025
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+D:\Projects\git\STM\IgnitionController_STM32\Hardware\01_Design\01_LTSpice\Draft1.net(2): Limiting rise time to 0.05.
+
+V1 N002 0 PULSE(0 25 0 0 0 0.5 1 20)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\Projects\git\STM\IgnitionController_STM32\Hardware\01_Design\01_LTSpice\Draft1.net(2): Limiting fall time to 0.05.
+
+V1 N002 0 PULSE(0 25 0 0 0 0.5 1 20)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 0.107 seconds.
+
+Files loaded:
+D:\Projects\git\STM\IgnitionController_STM32\Hardware\01_Design\01_LTSpice\Draft1.net
+C:\Users\mmitr\AppData\Local\LTspice\lib\cmp\standard.mos
+
