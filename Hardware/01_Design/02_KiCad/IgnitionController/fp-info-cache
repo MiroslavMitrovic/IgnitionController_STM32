@@ -1,4 +1,4 @@
-24742591064968922
+24746085929193520
 4N35S
 4N35S
 4N35S-2
@@ -57266,6 +57266,13 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
+FTSH-105-01-L-DV-A
+FTSH-105-XX-YYY-DV-A
+FTSH-105-XX-YYY-DV-A
+Connector
+0
+10
+10
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -65876,6 +65883,13 @@ D2PAK DDPAK TO-263 D2PAK-3 TO-263-3 SOT-404
 0
 7
 3
+MP2338GTLZ
+MP2338GTLZ
+MP2338GTL-Z-2
+Integrated Circuit
+0
+8
+8
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
