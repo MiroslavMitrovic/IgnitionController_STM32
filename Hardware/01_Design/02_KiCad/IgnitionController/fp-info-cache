@@ -1,4 +1,4 @@
-24746085929193520
+24747835254992008
 4N35S
 4N35S
 4N35S-2
@@ -65869,6 +65869,13 @@ Yellow 5381 Series LED
 0
 2
 2
+Library
+NX2016SA16MHZEXS00ACS07826
+NX2016SA-16MHZ-EXS00A-CS07826-1
+Crystal or Oscillator
+0
+4
+4
 Library
 SMD-6_7
 6-lead though-hole mounted DIP package, row spacing 7.62mm (300 mils), SMDSocket, SmallPads
