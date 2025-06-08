@@ -3808,12 +3808,20 @@
 		(uuid "b6fe25d6-ea9a-4522-be1e-446d97aa476c")
 	)
 	(no_connect
+		(at 115.57 45.72)
+		(uuid "b9621ef2-b0ed-4256-8c18-9297570003cb")
+	)
+	(no_connect
 		(at 166.37 137.16)
 		(uuid "bd61e4d1-e565-4f30-8c7c-7bb3ee91571a")
 	)
 	(no_connect
 		(at 166.37 81.28)
 		(uuid "c7a49f4c-695d-4638-a05a-e7950b326c37")
+	)
+	(no_connect
+		(at 115.57 48.26)
+		(uuid "cc9a021b-0f98-4a40-aeaf-a18000fd3413")
 	)
 	(no_connect
 		(at 166.37 48.26)
@@ -4703,16 +4711,6 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 48.26) (xy 115.57 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4edf3ccc-f8e7-474b-9046-869419c4c217")
-	)
-	(wire
-		(pts
 			(xy 114.3 134.62) (xy 115.57 134.62)
 		)
 		(stroke
@@ -5560,16 +5558,6 @@
 			(type default)
 		)
 		(uuid "a81c651e-8dea-4f58-af1d-d8224536c872")
-	)
-	(wire
-		(pts
-			(xy 58.42 45.72) (xy 115.57 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aaf34daf-30dd-430a-b594-09b7f20c454c")
 	)
 	(wire
 		(pts
@@ -6837,28 +6825,6 @@
 			)
 		)
 	)
-	(global_label "UART_TX"
-		(shape input)
-		(at 58.42 48.26 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "95038b85-2248-4dca-94a2-1e41ee09a6cb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 47.6334 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "MCU_SPI_SCK"
 		(shape input)
 		(at 40.64 137.16 180)
@@ -7048,28 +7014,6 @@
 		(uuid "eca0e342-06a4-49dd-bde6-140cf04cdd24")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 25.1969 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "UART_RX"
-		(shape input)
-		(at 58.42 45.72 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "fd26830b-0daa-46ce-9e36-b31c2467c591")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 47.331 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
