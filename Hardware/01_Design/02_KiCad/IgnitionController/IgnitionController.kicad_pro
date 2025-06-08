@@ -501,7 +501,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "IgnitionController.step",
       "svg": "",
       "vrml": ""
     },
