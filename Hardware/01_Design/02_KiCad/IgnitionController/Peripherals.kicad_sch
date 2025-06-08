@@ -4560,7 +4560,7 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 148.59) (xy 471.17 148.59)
+			(xy 452.12 148.59) (xy 433.07 148.59)
 		)
 		(stroke
 			(width 0)
@@ -9206,14 +9206,12 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 424.18 154.94 270)
-		(mirror x)
+		(at 424.18 154.94 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "51214c96-2843-4f61-832a-d8e1de79601c")
 		(property "Reference" "R81"
 			(at 424.18 160.02 90)
@@ -11184,13 +11182,13 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 104.14 242.57 90)
+		(at 104.14 242.57 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "94627700-50bd-44de-8543-dd95fd8ad282")
 		(property "Reference" "R72"
 			(at 104.14 236.22 90)
@@ -12011,13 +12009,13 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 104.14 265.43 90)
+		(at 104.14 265.43 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a7c1d491-8eaa-4dae-9e3d-6ab4decb2c41")
 		(property "Reference" "R73"
 			(at 104.14 259.08 90)
