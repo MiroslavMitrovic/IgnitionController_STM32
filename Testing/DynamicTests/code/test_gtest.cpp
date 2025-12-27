@@ -21,8 +21,8 @@
 	{
 
 		uint16_t expectedRPM = 60;						//1 Round per second is 60 Rounds per minute
-		//EXPECT_EQ(expectedRPM, CalculateRPM());
-		EXPECT_EQ(1,2);
+		EXPECT_EQ(expectedRPM, CalculateRPM());
+		
 	}
 	TEST(IgnitionControl_CalculateTimesAndAnglesSuite, GetIgnitionAngle)
 	{
