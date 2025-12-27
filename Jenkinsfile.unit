@@ -1,0 +1,54 @@
+pipeline {
+  agent any
+
+  options {
+    timestamps()
+    buildDiscarder(logRotator(numToKeepStr: '20', daysToKeepStr: '14'))
+  }
+
+  stages {
+    stage('Tooling sanity') {
+      steps {
+        sh '''
+          set -eux
+          cmake --version
+          ninja --version
+        '''
+      }
+    }
+
+    stage('Configure (Unit tests)') {
+      steps {
+        sh '''
+          set -eux
+          cmake -S Testing/DynamicTests -B build-tests -G Ninja \
+            -DCMAKE_BUILD_TYPE=Debug
+        '''
+      }
+    }
+
+    stage('Build (Unit tests)') {
+      steps {
+        sh '''
+          set -eux
+          cmake --build build-tests -j
+        '''
+      }
+    }
+
+    stage('Run (Unit tests)') {
+      steps {
+        sh '''
+          set -eux
+          ./build-tests/UnitTesting --gtest_output=xml:build-tests/gtest.xml
+        '''
+      }
+    }
+  }
+
+  post {
+    always {
+      junit 'build-tests/gtest.xml'
+    }
+  }
+}
