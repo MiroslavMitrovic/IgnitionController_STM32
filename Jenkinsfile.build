@@ -41,41 +41,43 @@ pipeline {
         '''
       }
     }
-   stage('Release upload') {
-  when { buildingTag() }
-  steps {
-    withCredentials([usernamePassword(
-      credentialsId: 'nexus-jenkins-creds',
-      usernameVariable: 'NEXUS_USER',
-      passwordVariable: 'NEXUS_PASS'
-    )]) {
-      sh '''
-        set -euo pipefail
+    stage('Release upload') {
+      when { buildingTag() }
+      steps {
+        withCredentials([usernamePassword(
+          credentialsId: 'nexus-jenkins-creds',
+          usernameVariable: 'NEXUS_USER',
+          passwordVariable: 'NEXUS_PASS'
+        )]) {
+          sh '''
+            set -euo pipefail
 
-        NEXUS_BASE="https://nexus.mitemco.com"
-        NEXUS_REPO="Ignition-controller-fw-release"
+            NEXUS_BASE="https://nexus.mitemco.com"
+            NEXUS_REPO="Ignition-controller-fw-release"
 
-        TAG="${TAG_NAME:-}"
-        echo "$TAG" | grep -Eq '^v[0-9]+\\.[0-9]+\\.[0-9]+$' || { echo "Not a release tag: $TAG"; exit 1; }
+            TAG="${TAG_NAME:-}"
+            echo "$TAG" | grep -Eq '^v[0-9]+\\.[0-9]+\\.[0-9]+$' || { echo "Not a release tag: $TAG"; exit 1; }
 
-        rm -rf dist && mkdir -p dist
-        find build -maxdepth 2 -type f \\( -name "*.elf" -o -name "*.hex" -o -name "*.bin" -o -name "*.mot" \\) \
-          -print -exec cp -v "{}" dist/ \\;
+            rm -rf dist && mkdir -p dist
+            find build -maxdepth 2 -type f \\( -name "*.elf" -o -name "*.hex" -o -name "*.bin" -o -name "*.mot" \\) \
+              -print -exec cp -v "{}" dist/ \\;
 
-        if [ ! -e dist/* ]; then
-          echo "ERROR: No firmware artifacts found under build/"
-          exit 1
-        fi
+            if [ ! -e dist/* ]; then
+              echo "ERROR: No firmware artifacts found under build/"
+              exit 1
+            fi
 
-        for f in dist/*; do
-          name="$(basename "$f")"
-          url="${NEXUS_BASE}/repository/${NEXUS_REPO}/${TAG}/${name}"
-          echo "Uploading ${name} -> ${url}"
-          curl -fsS -u "$NEXUS_USER:$NEXUS_PASS" --upload-file "$f" "$url"
-        done
-      '''
+            for f in dist/*; do
+              name="$(basename "$f")"
+              url="${NEXUS_BASE}/repository/${NEXUS_REPO}/${TAG}/${name}"
+              echo "Uploading ${name} -> ${url}"
+              curl -fsS -u "$NEXUS_USER:$NEXUS_PASS" --upload-file "$f" "$url"
+            done
+          '''
+        }
+      }
     }
-  }
+
 
     stage('Archive artifacts') {
       steps {
