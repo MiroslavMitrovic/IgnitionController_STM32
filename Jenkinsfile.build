@@ -77,12 +77,6 @@ pipeline {
         }
       }
     }
-
-
-    stage('Archive artifacts') {
-      steps {
-        archiveArtifacts artifacts: 'build/**/*.{elf,hex,bin,map}', allowEmptyArchive: true
-      }
-    }
+    
   }
 }
